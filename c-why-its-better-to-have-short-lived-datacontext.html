@@ -3,10 +3,10 @@
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="http://rok-povsic.github.io/theme/stylesheet/style.min.css">
 
-  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://rok-povsic.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://rok-povsic.github.io/theme/font-awesome/css/font-awesome.min.css">
 
 
 
@@ -22,34 +22,31 @@
 <meta name="author" content="Rok Povšič" />
 <meta name="description" content="This is the content of my super blog post. rk with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert ..." />
 <meta name="keywords" content="c#, datacontext">
-<meta property="og:site_name" content="Rok Povsic blog"/>
+<meta property="og:site_name" content="Rok Povšič blog"/>
 <meta property="og:title" content="[C#] Why it’s better to have short-lived DataContext"/>
 <meta property="og:description" content="This is the content of my super blog post. rk with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert ..."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="/c-why-its-better-to-have-short-lived-datacontext.html"/>
+<meta property="og:url" content="http://rok-povsic.github.io/c-why-its-better-to-have-short-lived-datacontext.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2014-08-20 10:20:00+02:00"/>
 <meta property="article:modified_time" content=""/>
-<meta property="article:author" content="/author/rok-povsic.html">
+<meta property="article:author" content="http://rok-povsic.github.io/author/rok-povsic.html">
 <meta property="article:section" content="C#"/>
 <meta property="article:tag" content="c#"/>
 <meta property="article:tag" content="datacontext"/>
 <meta property="og:image" content="">
-  <title>Rok Povsic blog &ndash; [C#] Why it’s better to have short-lived DataContext</title>
+  <title>Rok Povšič blog &ndash; [C#] Why it’s better to have short-lived DataContext</title>
 </head>
 <body>
   <aside>
     <div>
-      <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
+      <a href="http://rok-povsic.github.io">
+        <img src="http://rok-povsic.github.io/theme/img/profile.png" alt="" title="">
       </a>
-      <h1><a href=""></a></h1>
+      <h1><a href="http://rok-povsic.github.io"></a></h1>
       <nav>
         <ul class="list">
-          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-          <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
+          <li><a href="/about" target="_blank">About</a></li>
         </ul>
       </nav>
       <ul class="social">
@@ -63,24 +60,94 @@
 <article>
   <header>
     <h1 id="c-why-its-better-to-have-short-lived-datacontext">[C#] Why it’s better to have short-lived DataContext</h1>
-    <p>Posted on Wed 20 August 2014 in <a href="/category/c.html">C#</a></p>
+    <p>Posted on Wed 20 August 2014 in <a href="http://rok-povsic.github.io/category/c.html">C#</a></p>
   </header>
   <div>
     <p>This is the content of my super blog post.
 rk with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.</p>
 <p>If the project is not too large, you could have all your dealings with database abstracted in one class. That puts all your database logic in one place. You also can easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.</p>
 <p>When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.</p>
+<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">MyDatabaseDataContext</span> <span class="n">_context</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">DatabaseOperations</span><span class="p">(</span><span class="n">MyDatabaseDataContext</span> <span class="n">context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_context</span> <span class="p">=</span> <span class="n">context</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">GetUsers</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Retrieve users by using _context.</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Role</span><span class="p">&gt;</span> <span class="n">GetRoles</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Retrieve roles by using _context.</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Group</span><span class="p">&gt;</span> <span class="n">GetGroups</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Retrieve groups by using _context.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Another way would be without the context instance as a field. Here each method creates and closes its own context. Sample code:</p>
+<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">_connectionString</span> <span class="p">=</span> <span class="s">&quot;myConnStr&quot;</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">GetUsers</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDatabaseDataContext</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="c1">// Retrieve users by using context.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Role</span><span class="p">&gt;</span> <span class="n">GetRoles</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDatabaseDataContext</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="c1">// Retrieve roles by using context.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Group</span><span class="p">&gt;</span> <span class="n">GetGroups</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDatabaseDataContext</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="c1">// Retrieve groups by using context.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>At first, the second approach may seem to be more wasteful as each function has to create the context. That creates some amount of duplicated code. However, there are two reasons why this second approach is preferred.</p>
+<p>The first reason is that in the first example the instance of a class DatabaseOperations can live a long time. You probably do not create new instance of the class each time you call function inside. Long lived DatabaseOperations instance means also that the injected DataContext lives long time. The DataContext, however, is supposed to be used on only small units of work. The reason is that in the first example, one instance of DataContext has to track the changes that happen in returned objects.</p>
+<p>More info in the <a href="http://msdn.microsoft.com/en-us/library/system.data.linq.datacontext(v=vs.110).aspx">official documentation</a>:</p>
+<blockquote>
+<p>In general, a DataContext instance is designed to last for one “unit of work” however your application defines that term. A DataContext is lightweight and is not expensive to create. A typical LINQ to SQL application creates DataContext instances at method scope or as a member of short-lived classes that represent a logical set of related database operations.</p>
+</blockquote>
+<p>The second reason, which is important from the design point of view, is that in first example, DataContext has to be passed in via constructor. However, the DatabaseOperations class behaves like a Service Object and in order to use dependency injection, Service Objects should take as constructor parameters only other Service Objects. DataContext is more of a Value Object which does not belong in the parameter list. The tree of Service Objects cannot be created at the start of the program.</p>
+<p>For more info see <a href="http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/">this blog article</a> by Miško Hevery (who is the author of JavaScript framework AngularJS).</p>
+<p>You could, of course, also have DataContext as a parameter in every function. That would allow your class to be a Service Object which has no Value Objects in the constructor parameter list. However, the first reason would still be violated if that DataContext is long-lived or, as the documentation says, used for more than one “unit of work”.</p>
+<p>In order to somehow mitigate the duplication of code by creating a new DataContext in every method, you might be able to use the trick from <a href="http://stackoverflow.com/a/23367569/365837">this StackOverflow answer</a>.</p>
+<p>That might or might not be useful for you, depending on where you store and how you obtain the connection string. For example, if you have it stored as a static class field, then it is appropriate. If you have to get the connection string from a file or another database, then it might get a bit complicated (in my last project, I decided against it and just used the simple approach shown in the second example).</p>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="/tag/c.html">c#</a>
-      <a href="/tag/datacontext.html">datacontext</a>
+      <a href="http://rok-povsic.github.io/tag/c.html">c#</a>
+      <a href="http://rok-povsic.github.io/tag/datacontext.html">datacontext</a>
     </p>
   </div>
 </article>
 
     <footer>
-        <p>&copy; Rok Povsic </p>
+        <p>&copy; Rok Povšič </p>
 <p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
   </main>
 
@@ -92,8 +159,8 @@ rk with SQL databases in your C# application, one way is to use LINQ to SQL fram
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " Rok Povsic blog ",
-  "url" : "",
+  "name": " Rok Povšič blog ",
+  "url" : "http://rok-povsic.github.io",
   "image": "",
   "description": ""
 }
@@ -109,10 +176,10 @@ rk with SQL databases in your C# application, one way is to use LINQ to SQL fram
   "author": {
     "@type": "Person",
     "name": "Rok Povšič",
-    "url": "/author/rok-povsic.html"
+    "url": "http://rok-povsic.github.io/author/rok-povsic.html"
   },
   "image": "{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png",
-  "url": "/c-why-its-better-to-have-short-lived-datacontext.html",
+  "url": "http://rok-povsic.github.io/c-why-its-better-to-have-short-lived-datacontext.html",
   "description": "This is the content of my super blog post. rk with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert ..."
 }
 </script></body>
