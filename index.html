@@ -3,12 +3,13 @@
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/stylesheet/style.min.css">
 
-  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/font-awesome/css/font-awesome.min.css">
 
 
+    <link href="https://rokpovsic.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rok Povšič blog Atom">
 
 
 
@@ -26,62 +27,193 @@
 <meta property="og:title" content="Rok Povšič blog"/>
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content=""/>
+<meta property="og:url" content="https://rokpovsic.com"/>
 
   <title>Rok Povšič blog</title>
 </head>
 <body>
   <aside>
     <div>
-      <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
+      <a href="https://rokpovsic.com">
+        <img src="https://rokpovsic.com/theme/img/profile.png" alt="" title="">
       </a>
-      <h1><a href=""></a></h1>
+      <h1><a href="https://rokpovsic.com"></a></h1>
       <nav>
         <ul class="list">
-          <li><a href="/pages/about-me.html#about-me">About me</a></li>
+          <li><a href="https://rokpovsic.com/pages/about-me.html#about-me">About me</a></li>
+          <li><a href="https://rokpovsic.com/pages/contact.html#contact">Contact</a></li>
         </ul>
       </nav>
       <ul class="social">
-        <li><a class="sc-You can add links in your config file" href="#" target="_blank"><i class="fa fa-You can add links in your config file"></i></a></li>
-        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rokpovsic" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rok-povsic" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
       </ul>
+
+      <h3>RECENT POSTS</h3>
+          <p>
+            <a href="https://rokpovsic.com/using-pycharm-without-a-mouse.html">Using PyCharm without a mouse</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html">How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html">[C#] Why it’s better to have short-lived DataContext</a>
+          </p>
     </div>
   </aside>
   <main>
     <nav>
-      <a href="">Home</a>
+      <a href="https://rokpovsic.com">Home</a>
       <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="https://rokpovsic.com/feeds/all.atom.xml">Atom</a>
     </nav>
 
 <article>
   <header>
-    <h2><a href="/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html#how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host">How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</a></h2>
+    <h2><a href="https://rokpovsic.com/using-pycharm-without-a-mouse.html#using-pycharm-without-a-mouse">Using PyCharm without a mouse</a></h2>
     <p>
-      Posted on Fri 12 February 2016 in <a href="/category/vmware.html">vmware</a>
+      Posted on Sat 29 October 2016 in <a href="https://rokpovsic.com/category/pycharm.html">pycharm</a>
       &#8226; Tagged with
-      <a href="/tag/c.html">c#</a>,      <a href="/tag/datacontext.html">datacontext</a>    </p>
+      <a href="https://rokpovsic.com/tag/pycharm.html">pycharm</a>,      <a href="https://rokpovsic.com/tag/shortcuts.html">shortcuts</a>    </p>
   </header>
   <div>
-      <p>There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. See the GIF below.</p>
-<p><img alt="VMWare bug" src="/images/vmware_bug.gif" /></p>
-<p><strong>How ...</strong></p>
-      <a class="btn" href="/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html#how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host">Continue reading</a>
+      <p>I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.</p>
+<h2>Run the program</h2>
+<p>So how do you go about using keyboard more and using mouse less? Well, start off by learning how to run your program with only the keyboard.</p>
+<p>How to do that? To run currently open file press <strong>CTRL + SHIFT + F10</strong>. To run lastly open file, even if you are currently in another file, press <strong>SHIFT + F10</strong>. To run an arbitrarily chosen file press <strong>SHIFT + ALT + F10</strong> to open a dialog box where you select which file to run.</p>
+<h4>Hide output window</h4>
+<p>After you run the program output window will appear if it wasn't shown before. Unlike in Visual Studio, this output window will not hide automatically. This can be annoying if you want a large screen space for code. Well, there's a simple shortcut for hiding a window you are in (besides grabbing the mouse and clicking hide window button on top right) and it's <strong>SHIFT + ESC</strong>. Press that after running the program and output window will close leaving your focus in the code and you can start typing again.</p>
+<h2>Go to a file</h2>
+<p>Press <strong>CTRL + SHIFT + N</strong> and start writing name of a file to jump to it. I've remapped the shortcut to  <strong>CTRL + T</strong> to be equal to the same shortcut in ReSharper (Visual Studio).</p>
+<h2>Refactoring</h2>
+<p>The best advantage of PyCharm is its refactoring capability. Being positioned on a variable/function/class and doing <strong>CTRL + SHIFT + ALT + T</strong>. It gives you lots of refactoring options such as:</p>
+<ul>
+<li>rename,</li>
+<li>inline,</li>
+<li>extract variable, method,</li>
+<li>change method signature.</li>
+</ul>
+<p>These PyCharm refactoring functionalities are not only huge time savers but also, unlike we humans, they don't make mistakes.</p>
+<p>Since this shortcut involves four keys, I've remapped it to <strong>CTRL + SHIFT + R</strong> (same as refactoring using ReSharper in Visual Studio).</p>
+<h4>Confirm refactoring</h4>
+<p>When refactoring, PyCharm sometimes requires a confirmation of the refactoring (e.g. after renaming a function). The button you have to click says "Do Refactor" and it's located in another window. This used to annoy me a lot since I didn't know how to press this button via keyboard. But I found the solution. After doing the renaming, simply press <strong>ALT + D</strong> and the "Do Refactor" button will be clicked. After that press <strong>SHIFT + ESC</strong> to close the refactoring window.</p>
+<h2>Toggle full screen</h2>
+<p>You can add your own shortcut to toggle full screen if you go to Settings -&gt; Keymap (shorcut to doing that is pressing <strong>CTRL + ALT + S</strong> and typing <strong>Keymap</strong>) since there is no default shortcut.</p>
+<p>But you can still do it with your keyboard pretty fast by pressing <strong>ALT + V</strong> to open the View menu and pressing <strong>down arrow</strong> and <strong>Enter</strong>.</p>
+<p>I got used to that even though it's not the completely fastest way although it's pretty fast.</p>
+<h2>You can't do everything with a keyboard</h2>
+<p>I don't use solely keyboard for every single thing in PyCharm. I still use the mouse to scroll up and down in the output window. I use the mouse to open a file for which I am not exactly sure what its name is but I know where it's located in the folder hierarchy. My goal is not to never use the mouse but to not use it when there's a fast and comfortable alternative. There is a lot of these kinds of shortcuts and they keep surprising you if you look for them.</p>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="/c-why-its-better-to-have-short-lived-datacontext.html#c-why-its-better-to-have-short-lived-datacontext">[C#] Why it’s better to have short-lived DataContext</a></h2>
+    <h2><a href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html#how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host">How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</a></h2>
     <p>
-      Posted on Wed 20 August 2014 in <a href="/category/c.html">C#</a>
+      Posted on Fri 12 February 2016 in <a href="https://rokpovsic.com/category/vmware.html">vmware</a>
       &#8226; Tagged with
-      <a href="/tag/c.html">c#</a>,      <a href="/tag/datacontext.html">datacontext</a>    </p>
+      <a href="https://rokpovsic.com/tag/vmware.html">vmware</a>,      <a href="https://rokpovsic.com/tag/bug.html">bug</a>    </p>
   </header>
   <div>
-      <p>This is the content of my super blog post.
-rk with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert ...</p>
-      <a class="btn" href="/c-why-its-better-to-have-short-lived-datacontext.html#c-why-its-better-to-have-short-lived-datacontext">Continue reading</a>
+      <p>There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. See the GIF below.</p>
+<p><img alt="VMWare bug" src="https://rokpovsic.com/images/vmware_bug.gif" /></p>
+<p><strong>How to fix it?</strong></p>
+<ul>
+<li>Locate VMWare Workstation, right click and open Properties.</li>
+<li>Under Compatibility check Disable display scaling on high DPI settings.</li>
+<li>Restart VMWare Workstation.</li>
+</ul>
+<p>The mouse should now behave normally.</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html#c-why-its-better-to-have-short-lived-datacontext">[C#] Why it’s better to have short-lived DataContext</a></h2>
+    <p>
+      Posted on Wed 20 August 2014 in <a href="https://rokpovsic.com/category/c.html">C#</a>
+      &#8226; Tagged with
+      <a href="https://rokpovsic.com/tag/c.html">c#</a>,      <a href="https://rokpovsic.com/tag/datacontext.html">datacontext</a>    </p>
+  </header>
+  <div>
+      <p>When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
+The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.</p>
+<p>If the project is not too large, you could have all your dealings with database abstracted 
+in one class. That puts all your database logic in one place. You also can 
+easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.</p>
+<p>When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.</p>
+<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">MyDatabaseDataContext</span> <span class="n">_context</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">DatabaseOperations</span><span class="p">(</span><span class="n">MyDatabaseDataContext</span> <span class="n">context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_context</span> <span class="p">=</span> <span class="n">context</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">GetUsers</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Retrieve users by using _context.</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Role</span><span class="p">&gt;</span> <span class="n">GetRoles</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Retrieve roles by using _context.</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Group</span><span class="p">&gt;</span> <span class="n">GetGroups</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Retrieve groups by using _context.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Another way would be without the context instance as a field. Here each method creates and closes its own context. Sample code:</p>
+<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">_connectionString</span> <span class="p">=</span> <span class="s">&quot;myConnStr&quot;</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">GetUsers</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDatabaseDataContext</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="c1">// Retrieve users by using context.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Role</span><span class="p">&gt;</span> <span class="n">GetRoles</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDatabaseDataContext</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="c1">// Retrieve roles by using context.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Group</span><span class="p">&gt;</span> <span class="n">GetGroups</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyDatabaseDataContext</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="c1">// Retrieve groups by using context.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>At first, the second approach may seem to be more wasteful as each function has to create the context. That creates some amount of duplicated code. However, there are two reasons why this second approach is preferred.</p>
+<p>The first reason is that in the first example the instance of a class DatabaseOperations can live a long time. You probably do not create new instance of the class each time you call function inside. Long lived DatabaseOperations instance means also that the injected DataContext lives long time. The DataContext, however, is supposed to be used on only small units of work. The reason is that in the first example, one instance of DataContext has to track the changes that happen in returned objects.</p>
+<p>More info in the <a href="http://msdn.microsoft.com/en-us/library/system.data.linq.datacontext(v=vs.110).aspx">official documentation</a>:</p>
+<blockquote>
+<p>In general, a DataContext instance is designed to last for one “unit of work” however your application defines that term. A DataContext is lightweight and is not expensive to create. A typical LINQ to SQL application creates DataContext instances at method scope or as a member of short-lived classes that represent a logical set of related database operations.</p>
+</blockquote>
+<p>The second reason, which is important from the design point of view, is that in first example, DataContext has to be passed in via constructor. However, the DatabaseOperations class behaves like a Service Object and in order to use dependency injection, Service Objects should take as constructor parameters only other Service Objects. DataContext is more of a Value Object which does not belong in the parameter list. The tree of Service Objects cannot be created at the start of the program.</p>
+<p>For more info see <a href="http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/">this blog article</a> by Miško Hevery (who is the author of JavaScript framework AngularJS).</p>
+<p>You could, of course, also have DataContext as a parameter in every function. That would allow your class to be a Service Object which has no Value Objects in the constructor parameter list. However, the first reason would still be violated if that DataContext is long-lived or, as the documentation says, used for more than one “unit of work”.</p>
+<p>In order to somehow mitigate the duplication of code by creating a new DataContext in every method, you might be able to use the trick from <a href="http://stackoverflow.com/a/23367569/365837">this StackOverflow answer</a>.</p>
+<p>That might or might not be useful for you, depending on where you store and how you obtain the connection string. For example, if you have it stored as a static class field, then it is appropriate. If you have to get the connection string from a file or another database, then it might get a bit complicated (in my last project, I decided against it and just used the simple approach shown in the second example).</p>
   </div>
 </article>
 
@@ -102,7 +234,7 @@ rk with SQL databases in your C# application, one way is to use LINQ to SQL fram
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " Rok Povšič blog ",
-  "url" : "",
+  "url" : "https://rokpovsic.com",
   "image": "",
   "description": ""
 }

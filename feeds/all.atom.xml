@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2016-10-29T16:30:00+02:00</updated><entry><title>Using PyCharm without a mouse</title><link href="https://rokpovsic.com/using-pycharm-without-a-mouse.html" rel="alternate"></link><published>2016-10-29T16:30:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-29:using-pycharm-without-a-mouse.html</id><summary type="html">&lt;p&gt;I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.&lt;/p&gt;
+&lt;h2&gt;Run the program&lt;/h2&gt;
+&lt;p&gt;So how do you go about using keyboard more and using mouse less? Well, start off by learning how to run your program with only the keyboard.&lt;/p&gt;
+&lt;p&gt;How to do that? To run currently open file press &lt;strong&gt;CTRL + SHIFT + F10&lt;/strong&gt;. To run lastly open file, even if you are currently in another file, press &lt;strong&gt;SHIFT + F10&lt;/strong&gt;. To run an arbitrarily chosen file press &lt;strong&gt;SHIFT + ALT + F10&lt;/strong&gt; to open a dialog box where you select which file to run.&lt;/p&gt;
+&lt;h4&gt;Hide output window&lt;/h4&gt;
+&lt;p&gt;After you run the program output window will appear if it wasn't shown before. Unlike in Visual Studio, this output window will not hide automatically. This can be annoying if you want a large screen space for code. Well, there's a simple shortcut for hiding a window you are in (besides grabbing the mouse and clicking hide window button on top right) and it's &lt;strong&gt;SHIFT + ESC&lt;/strong&gt;. Press that after running the program and output window will close leaving your focus in the code and you can start typing again.&lt;/p&gt;
+&lt;h2&gt;Go to a file&lt;/h2&gt;
+&lt;p&gt;Press &lt;strong&gt;CTRL + SHIFT + N&lt;/strong&gt; and start writing name of a file to jump to it. I've remapped the shortcut to  &lt;strong&gt;CTRL + T&lt;/strong&gt; to be equal to the same shortcut in ReSharper (Visual Studio).&lt;/p&gt;
+&lt;h2&gt;Refactoring&lt;/h2&gt;
+&lt;p&gt;The best advantage of PyCharm is its refactoring capability. Being positioned on a variable/function/class and doing &lt;strong&gt;CTRL + SHIFT + ALT + T&lt;/strong&gt;. It gives you lots of refactoring options such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rename,&lt;/li&gt;
+&lt;li&gt;inline,&lt;/li&gt;
+&lt;li&gt;extract variable, method,&lt;/li&gt;
+&lt;li&gt;change method signature.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These PyCharm refactoring functionalities are not only huge time savers but also, unlike we humans, they don't make mistakes.&lt;/p&gt;
+&lt;p&gt;Since this shortcut involves four keys, I've remapped it to &lt;strong&gt;CTRL + SHIFT + R&lt;/strong&gt; (same as refactoring using ReSharper in Visual Studio).&lt;/p&gt;
+&lt;h4&gt;Confirm refactoring&lt;/h4&gt;
+&lt;p&gt;When refactoring, PyCharm sometimes requires a confirmation of the refactoring (e.g. after renaming a function). The button you have to click says "Do Refactor" and it's located in another window. This used to annoy me a lot since I didn't know how to press this button via keyboard. But I found the solution. After doing the renaming, simply press &lt;strong&gt;ALT + D&lt;/strong&gt; and the "Do Refactor" button will be clicked. After that press &lt;strong&gt;SHIFT + ESC&lt;/strong&gt; to close the refactoring window.&lt;/p&gt;
+&lt;h2&gt;Toggle full screen&lt;/h2&gt;
+&lt;p&gt;You can add your own shortcut to toggle full screen if you go to Settings -&amp;gt; Keymap (shorcut to doing that is pressing &lt;strong&gt;CTRL + ALT + S&lt;/strong&gt; and typing &lt;strong&gt;Keymap&lt;/strong&gt;) since there is no default shortcut.&lt;/p&gt;
+&lt;p&gt;But you can still do it with your keyboard pretty fast by pressing &lt;strong&gt;ALT + V&lt;/strong&gt; to open the View menu and pressing &lt;strong&gt;down arrow&lt;/strong&gt; and &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I got used to that even though it's not the completely fastest way although it's pretty fast.&lt;/p&gt;
+&lt;h2&gt;You can't do everything with a keyboard&lt;/h2&gt;
+&lt;p&gt;I don't use solely keyboard for every single thing in PyCharm. I still use the mouse to scroll up and down in the output window. I use the mouse to open a file for which I am not exactly sure what its name is but I know where it's located in the folder hierarchy. My goal is not to never use the mouse but to not use it when there's a fast and comfortable alternative. There is a lot of these kinds of shortcuts and they keep surprising you if you look for them.&lt;/p&gt;</summary><category term="pycharm"></category><category term="shortcuts"></category></entry><entry><title>How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</title><link href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html" rel="alternate"></link><published>2016-02-12T18:44:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-02-12:how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html</id><summary type="html">&lt;p&gt;There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. See the GIF below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="VMWare bug" src="https://rokpovsic.com/images/vmware_bug.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to fix it?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Locate VMWare Workstation, right click and open Properties.&lt;/li&gt;
+&lt;li&gt;Under Compatibility check Disable display scaling on high DPI settings.&lt;/li&gt;
+&lt;li&gt;Restart VMWare Workstation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The mouse should now behave normally.&lt;/p&gt;</summary><category term="vmware"></category><category term="bug"></category></entry><entry><title>[C#] Why it’s better to have short-lived DataContext</title><link href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html" rel="alternate"></link><published>2014-08-20T10:20:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2014-08-20:c-why-its-better-to-have-short-lived-datacontext.html</id><summary type="html">&lt;p&gt;When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
+The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.&lt;/p&gt;
+&lt;p&gt;If the project is not too large, you could have all your dealings with database abstracted 
+in one class. That puts all your database logic in one place. You also can 
+easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.&lt;/p&gt;
+&lt;p&gt;When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DatabaseOperations&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IDatabaseOperations&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;readonly&lt;/span&gt; &lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt; &lt;span class="n"&gt;_context&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;DatabaseOperations&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;_context&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetUsers&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// Retrieve users by using _context.&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Role&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetRoles&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// Retrieve roles by using _context.&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Group&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetGroups&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// Retrieve groups by using _context.&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Another way would be without the context instance as a field. Here each method creates and closes its own context. Sample code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DatabaseOperations&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IDatabaseOperations&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;readonly&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;_connectionString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;myConnStr&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetUsers&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// Retrieve users by using context.&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Role&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetRoles&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// Retrieve roles by using context.&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Group&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetGroups&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// Retrieve groups by using context.&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;At first, the second approach may seem to be more wasteful as each function has to create the context. That creates some amount of duplicated code. However, there are two reasons why this second approach is preferred.&lt;/p&gt;
+&lt;p&gt;The first reason is that in the first example the instance of a class DatabaseOperations can live a long time. You probably do not create new instance of the class each time you call function inside. Long lived DatabaseOperations instance means also that the injected DataContext lives long time. The DataContext, however, is supposed to be used on only small units of work. The reason is that in the first example, one instance of DataContext has to track the changes that happen in returned objects.&lt;/p&gt;
+&lt;p&gt;More info in the &lt;a href="http://msdn.microsoft.com/en-us/library/system.data.linq.datacontext(v=vs.110).aspx"&gt;official documentation&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In general, a DataContext instance is designed to last for one “unit of work” however your application defines that term. A DataContext is lightweight and is not expensive to create. A typical LINQ to SQL application creates DataContext instances at method scope or as a member of short-lived classes that represent a logical set of related database operations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The second reason, which is important from the design point of view, is that in first example, DataContext has to be passed in via constructor. However, the DatabaseOperations class behaves like a Service Object and in order to use dependency injection, Service Objects should take as constructor parameters only other Service Objects. DataContext is more of a Value Object which does not belong in the parameter list. The tree of Service Objects cannot be created at the start of the program.&lt;/p&gt;
+&lt;p&gt;For more info see &lt;a href="http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/"&gt;this blog article&lt;/a&gt; by Miško Hevery (who is the author of JavaScript framework AngularJS).&lt;/p&gt;
+&lt;p&gt;You could, of course, also have DataContext as a parameter in every function. That would allow your class to be a Service Object which has no Value Objects in the constructor parameter list. However, the first reason would still be violated if that DataContext is long-lived or, as the documentation says, used for more than one “unit of work”.&lt;/p&gt;
+&lt;p&gt;In order to somehow mitigate the duplication of code by creating a new DataContext in every method, you might be able to use the trick from &lt;a href="http://stackoverflow.com/a/23367569/365837"&gt;this StackOverflow answer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That might or might not be useful for you, depending on where you store and how you obtain the connection string. For example, if you have it stored as a static class field, then it is appropriate. If you have to get the connection string from a file or another database, then it might get a bit complicated (in my last project, I decided against it and just used the simple approach shown in the second example).&lt;/p&gt;</summary><category term="c#"></category><category term="datacontext"></category></entry></feed>
