@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2016-10-29T16:30:00+02:00</updated><entry><title>Using PyCharm without a mouse</title><link href="https://rokpovsic.com/using-pycharm-without-a-mouse.html" rel="alternate"></link><published>2016-10-29T16:30:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-29:using-pycharm-without-a-mouse.html</id><summary type="html">&lt;p&gt;I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2016-10-31T10:44:00+01:00</updated><entry><title>Keyboard tricks to write code faster</title><link href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html" rel="alternate"></link><published>2016-10-31T10:44:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-31:keyboard-tricks-to-write-code-faster.html</id><summary type="html">&lt;h2&gt;Using English keyboard layout&lt;/h2&gt;
+&lt;p&gt;Using any keyboard layout other than English may be less optimal for programming, at 
+least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching 
+to the English layout made a great difference for me. It's simply faster to reach commonly used 
+characters such as []{};:,@""&amp;lt;&amp;gt;= compared some (maybe all) other layouts. I've trained myself to always use English keyboard when programming 
+and when writing in English language in general (such as now). &lt;/p&gt;
+&lt;p&gt;When writing in Slovenian 
+language I switch the keyboard layout to Slovenian and continue seamlessly as nothing changed. 
+Then only keys that I sometimes use wrong on Slovenian layout are letters Y and Z which are for some 
+reason switched in Slovenian keyboard layout.&lt;/p&gt;
+&lt;h2&gt;Try using VIM&lt;/h2&gt;
+&lt;p&gt;The next level mastery is not only to stop reaching for a mouse but also stop reaching for the 
+movement keys (UP, DOWN, LEFT and RIGHT). They are also quite far away from the keys you use to do 
+the actual writing. When programming we use movement keys a lot and minimizing or entirely
+removing the need to access them saves time and thousands of unnecessary hand movements.&lt;/p&gt;
+&lt;h2&gt;Switch Caps Lock and Esc keys&lt;/h2&gt;
+&lt;p&gt;Since I press Esc much more than Caps Lock, I switched the two keys (functionally, not physically). 
+I use software called &lt;a href="https://sharpkeys.codeplex.com/"&gt;SharpKeys&lt;/a&gt; to do that. It's much more enjoyable
+to use the keyboard like that.&lt;/p&gt;
+&lt;p&gt;I also considered switching Backspace with some other key but haven't so far found a good replacement.
+I thought about Right Shift, which I don't use a lot, but it's not that of a good improvement. &lt;/p&gt;</summary><category term="typing"></category><category term="fast"></category></entry><entry><title>Using PyCharm without a mouse</title><link href="https://rokpovsic.com/using-pycharm-without-a-mouse.html" rel="alternate"></link><published>2016-10-29T16:30:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-29:using-pycharm-without-a-mouse.html</id><summary type="html">&lt;p&gt;I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.&lt;/p&gt;
 &lt;h2&gt;Run the program&lt;/h2&gt;
 &lt;p&gt;So how do you go about using keyboard more and using mouse less? Well, start off by learning how to run your program with only the keyboard.&lt;/p&gt;
 &lt;p&gt;How to do that? To run currently open file press &lt;strong&gt;CTRL + SHIFT + F10&lt;/strong&gt;. To run lastly open file, even if you are currently in another file, press &lt;strong&gt;SHIFT + F10&lt;/strong&gt;. To run an arbitrarily chosen file press &lt;strong&gt;SHIFT + ALT + F10&lt;/strong&gt; to open a dialog box where you select which file to run.&lt;/p&gt;
