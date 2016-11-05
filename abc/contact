@@ -35,7 +35,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content=""/>
 
-  <title>Rok Povšič blog &ndash; Category: C#</title>
+  <title>Rok Povšič blog &ndash; Contact</title>
 </head>
 <body>
   <aside>
@@ -46,8 +46,8 @@
       <h1><a href=""></a></h1>
       <nav>
         <ul class="list">
-          <li><a href="/pages/about-me.html#about-me">About me</a></li>
-          <li><a href="/pages/contact.html#contact">Contact</a></li>
+          <li><a href="/abc/about-me#about-me">About me</a></li>
+          <li><a href="/abc/contact#contact">Contact</a></li>
         </ul>
       </nav>
       <ul class="social">
@@ -58,48 +58,35 @@
 
       <h3>RECENT POSTS</h3>
           <p>
-            <a href="/keyboard-tricks-to-write-code-faster.html#keyboard-tricks-to-write-code-faster">Keyboard tricks to write code faster</a>
+            <a href="/keyboard-tricks-to-write-code-faster.html">Keyboard tricks to write code faster</a>
           </p>
           <p>
-            <a href="/using-pycharm-without-a-mouse.html#using-pycharm-without-a-mouse">Using PyCharm without a mouse</a>
+            <a href="/using-pycharm-without-a-mouse.html">Using PyCharm without a mouse</a>
           </p>
           <p>
-            <a href="/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html#how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host">How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</a>
+            <a href="/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html">How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</a>
           </p>
           <p>
-            <a href="/c-why-its-better-to-have-short-lived-datacontext.html#c-why-its-better-to-have-short-lived-datacontext">[C#] Why it’s better to have short-lived DataContext</a>
+            <a href="/c-why-its-better-to-have-short-lived-datacontext.html">[C#] Why it’s better to have short-lived DataContext</a>
           </p>
     </div>
   </aside>
   <main>
     <nav>
       <a href="">Home</a>
-      <!---->
-      <!--<a href="/pages/about-me">About</a>-->
-      <!---->
-      <!--<a href="/pages/contact">Contact</a>-->
-      <!---->
-      <a href="/pages/about-me.html#about-me">About me</a>
-      <a href="/pages/contact.html#contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
       <a href="/feeds/all.atom.xml">Atom</a>
     </nav>
 
 <article>
   <header>
-    <h2><a href="/c-why-its-better-to-have-short-lived-datacontext.html#c-why-its-better-to-have-short-lived-datacontext">[C#] Why it’s better to have short-lived DataContext</a></h2>
-    <p>
-      Posted on Wed 20 August 2014 in <a href="/category/c.html">C#</a>
-      &#8226; Tagged with
-      <a href="/tag/c.html">c#</a>,      <a href="/tag/datacontext.html">datacontext</a>    </p>
+    <h1 id="contact">Contact</h1>
   </header>
   <div>
-      
-      <a class="btn" href="/c-why-its-better-to-have-short-lived-datacontext.html#c-why-its-better-to-have-short-lived-datacontext">Continue reading</a>
+    <p>You can contact me at rok.povsic AT REMOVEME gmail DOT com.</p>
   </div>
 </article>
-
-  <div class="pagination">
-  </div>
 
     <footer>
         <p>&copy; Rok Povšič </p>
