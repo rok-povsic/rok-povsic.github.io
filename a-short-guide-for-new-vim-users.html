@@ -64,6 +64,9 @@
 
       <h3>RECENT POSTS</h3>
           <p>
+            <a href="https://rokpovsic.com/a-complete-guide-to-effective-investing-for-beginners.html#a-complete-guide-to-effective-investing-for-beginners">A complete guide to effective investing for beginners</a>
+          </p>
+          <p>
             <a href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html#a-short-guide-for-new-vim-users">A short guide for new VIM users</a>
           </p>
           <p>
@@ -127,13 +130,13 @@
 <p>Searching is done by simply pressing <strong>/</strong>, typing the word to search for and pressing <strong>ENTER</strong>. The cursor is moved to the first found word. After that, pressing <strong>N</strong> will move the cursor to the next found word (and <strong>SHIFT + N</strong> will move it to the previous found word).</p>
 <p><img alt="" src="https://rokpovsic.com/images/vim_short/searching.gif" /></p>
 <h2>Replacing</h2>
-<p>Often you need to replace all words with some other words in a given text. First, you select the text (by using <strong>SHIFT + V</strong>, remember?) and then typing this (without the &lt; and &gt;): <strong>:s/<text to search>/<text to replace it with>/g</strong>. It might sound complex but once you get used to it it's so much faster and easier than using the default Find &amp; Replace functionality of whatever IDE you are using at this moment.</p>
+<p>Often you need to replace all words with some other words in a given text. First, you select the text (by using <strong>SHIFT + V</strong>, remember?) and then typing this (without the &lt; and &gt;): <strong>:s/&lt;text to search&gt;/&lt;text to replace it with&gt;/g</strong>. It might sound complex but once you get used to it it's so much faster and easier than using the default Find &amp; Replace functionality of whatever IDE you are using at this moment.</p>
 <p><img alt="" src="https://rokpovsic.com/images/vim_short/replacing.gif" /></p>
 <h2>Other small things</h2>
 <p>Pressing <strong>SHIFT + I</strong> will open <em>insert</em> mode in the beginning of the row and <strong>SHIFT + A</strong> will open <em>insert</em> mode at the end of the row.</p>
 <p><img alt="" src="https://rokpovsic.com/images/vim_short/other.gif" /></p>
 <h2>Repeating commands machine</h2>
-<p>Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing <strong>Q<some key, say A></strong>, executing the commands, and then pressing <strong>Q</strong> to end the execution and save it. Then you can replay it by pressing <strong><number of times to repeat>@a</strong>.</p>
+<p>Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing <strong>Q&lt;some key, say A&gt;</strong>, executing the commands, and then pressing <strong>Q</strong> to end the execution and save it. Then you can replay it by pressing <strong>&lt;number of times to repeat&gt;@a</strong>.</p>
 <p>Let's look at an example. Say I have these lines in my editor and I want to add parenthesis around them, with a comma on the right and a tab on the left.</p>
 <p>Marlon Brando
 Al Pacino
