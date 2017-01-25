@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2017-01-23T23:45:00+01:00</updated><entry><title>What is the chance of losing money in the stock market?</title><link href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="alternate"></link><published>2017-01-23T23:45:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-01-23:what-is-the-chance-of-losing-money-in-the-stock-market.html</id><summary type="html">&lt;p&gt;What is the percentage chance of loosing money in the stock market? Well, that
-surely depends on the investment style and is hard to quantify. If you hold a small number of companies
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2017-01-23T23:45:00+01:00</updated><entry><title>What is the chance of losing money in the stock market?</title><link href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="alternate"></link><published>2017-01-23T23:45:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-01-23:what-is-the-chance-of-losing-money-in-the-stock-market.html</id><summary type="html">&lt;p&gt;The first step of achieving good returns in the stock market is not losing money.
+What is the percentage chance of losing money in the stock market?&lt;/p&gt;
+&lt;p&gt;That depends on the investment style and can be hard to quantify. If you hold a small number of companies
 in the portfolio, the chance of losing money is greater because if any single company performs badly,
 the effect on the portfolio will be large.&lt;/p&gt;
 &lt;p&gt;But say you invest in a large number of companies, say in the companies of some stock index.
@@ -8,17 +9,24 @@ We cannot be certain of any performance of the selected companies in the future.
 What we can do is we can look at how the stock market index performed in the past.&lt;/p&gt;
 &lt;p&gt;To do this, I wanted to have as large amount of data as possible.
 The most data I could find, is for a stock index
-&lt;a href="https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"&gt;DJIA&lt;/a&gt;.
-The index consists of 30 large companies from the United States and I have data from July 1896 onwards.
-It is a good-enough heuristics of how the stock market moves.&lt;/p&gt;
-&lt;p&gt;Let's say you invested your money into the 30 companies of the DJIA index at some random point after year 1896. What's the chance your return
-after some number of years is positive or negative?&lt;/p&gt;
-&lt;p&gt;Well, that depends a lot on how long you are invested. The common wisdom says investing in the stock market should be done for a long term.
-Let's look at the data.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="DJIA chance of losing money" src="https://rokpovsic.com/images/lose_money_chance/djia_losing_chance.png" /&gt;&lt;/p&gt;
-&lt;p&gt;How about investing in gold? Below is the chance of losing money in gold, when invested for X years.&lt;/p&gt;
-&lt;p&gt;I have gold price data only from 1968 onwards so the maximum displayed number of years in position is 20.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Gold chance of losing money" src="https://rokpovsic.com/images/lose_money_chance/gold_losing_chance.png" /&gt;&lt;/p&gt;
+&lt;a href="https://en.wikipedia.org/wiki/S%26P_500_Index"&gt;S&amp;amp;P 500&lt;/a&gt;.
+The index consists of 500 large companies from the United States (large based on the market capitalization)
+and in the analysis, data from 1871 to 2016 is used. How the largest 500 companies' stock price move is a
+good-enough heuristics of how the stock market moves in the United States in general.
+The source of all data is &lt;a href="multpl.com"&gt;multpl.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let's say you invested your money into the S&amp;amp;P 500 index at some random year after year 1871, on the January 1, for X number of years.
+What's the chance your return is positive or negative?&lt;/p&gt;
+&lt;p&gt;Let's look at the data. Here we suppose all the dividends are paid on the January 1 and reinvested immediately. No tax is applied.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SPY chance of losing money, no inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_no_inflation.png" /&gt;&lt;/p&gt;
+&lt;p&gt;We can see that chance of being profitable depends a lot on how long you are invested.
+As the common wisdom says, investing in the stock market should be done for a longer term.&lt;/p&gt;
+&lt;p&gt;The data above used nominal prices, i.e. was not adjusted for inflation. The chart above should be therefore relevant to you if you
+consider either investing in the stock market or holding cash.&lt;/p&gt;
+&lt;p&gt;If you consider either investing in the stock money or keeping money in some sort of a
+financial vehicle (i.e. &lt;a href="http://www.investopedia.com/terms/t/tips.asp"&gt;TIPS&lt;/a&gt;, or perhaps a very diverse commodity index),
+I've also tested the same thing but discounted returns for each year by whatever the inflation (US CPI) was (dividends included).&lt;/p&gt;
+&lt;p&gt;The chance of beating that vehicle, investing for X years, is shown in the chart below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SPY chance of losing money, inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_inflation.png" /&gt;&lt;/p&gt;
 &lt;!-- TODO:
 - S&amp;P 500
 -  --&gt;</summary><category term="investing"></category><category term="savings"></category><category term="money"></category></entry><entry><title>A short guide for new VIM users</title><link href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html" rel="alternate"></link><published>2016-12-10T08:30:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-12-10:a-short-guide-for-new-vim-users.html</id><summary type="html">&lt;p&gt;VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is &lt;em&gt;almost&lt;/em&gt; like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.&lt;/p&gt;

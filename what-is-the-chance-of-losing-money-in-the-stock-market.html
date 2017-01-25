@@ -104,8 +104,9 @@
     <p>Posted on Mon 23 January 2017 in <a href="https://rokpovsic.com/category/finance.html">finance</a></p>
   </header>
   <div>
-    <p>What is the percentage chance of loosing money in the stock market? Well, that
-surely depends on the investment style and is hard to quantify. If you hold a small number of companies
+    <p>The first step of achieving good returns in the stock market is not losing money.
+What is the percentage chance of losing money in the stock market?</p>
+<p>That depends on the investment style and can be hard to quantify. If you hold a small number of companies
 in the portfolio, the chance of losing money is greater because if any single company performs badly,
 the effect on the portfolio will be large.</p>
 <p>But say you invest in a large number of companies, say in the companies of some stock index.
@@ -113,17 +114,24 @@ We cannot be certain of any performance of the selected companies in the future.
 What we can do is we can look at how the stock market index performed in the past.</p>
 <p>To do this, I wanted to have as large amount of data as possible.
 The most data I could find, is for a stock index
-<a href="https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average">DJIA</a>.
-The index consists of 30 large companies from the United States and I have data from July 1896 onwards.
-It is a good-enough heuristics of how the stock market moves.</p>
-<p>Let's say you invested your money into the 30 companies of the DJIA index at some random point after year 1896. What's the chance your return
-after some number of years is positive or negative?</p>
-<p>Well, that depends a lot on how long you are invested. The common wisdom says investing in the stock market should be done for a long term.
-Let's look at the data.</p>
-<p><img alt="DJIA chance of losing money" src="https://rokpovsic.com/images/lose_money_chance/djia_losing_chance.png" /></p>
-<p>How about investing in gold? Below is the chance of losing money in gold, when invested for X years.</p>
-<p>I have gold price data only from 1968 onwards so the maximum displayed number of years in position is 20.</p>
-<p><img alt="Gold chance of losing money" src="https://rokpovsic.com/images/lose_money_chance/gold_losing_chance.png" /></p>
+<a href="https://en.wikipedia.org/wiki/S%26P_500_Index">S&amp;P 500</a>.
+The index consists of 500 large companies from the United States (large based on the market capitalization)
+and in the analysis, data from 1871 to 2016 is used. How the largest 500 companies' stock price move is a
+good-enough heuristics of how the stock market moves in the United States in general.
+The source of all data is <a href="multpl.com">multpl.com</a>.</p>
+<p>Let's say you invested your money into the S&amp;P 500 index at some random year after year 1871, on the January 1, for X number of years.
+What's the chance your return is positive or negative?</p>
+<p>Let's look at the data. Here we suppose all the dividends are paid on the January 1 and reinvested immediately. No tax is applied.</p>
+<p><img alt="SPY chance of losing money, no inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_no_inflation.png" /></p>
+<p>We can see that chance of being profitable depends a lot on how long you are invested.
+As the common wisdom says, investing in the stock market should be done for a longer term.</p>
+<p>The data above used nominal prices, i.e. was not adjusted for inflation. The chart above should be therefore relevant to you if you
+consider either investing in the stock market or holding cash.</p>
+<p>If you consider either investing in the stock money or keeping money in some sort of a
+financial vehicle (i.e. <a href="http://www.investopedia.com/terms/t/tips.asp">TIPS</a>, or perhaps a very diverse commodity index),
+I've also tested the same thing but discounted returns for each year by whatever the inflation (US CPI) was (dividends included).</p>
+<p>The chance of beating that vehicle, investing for X years, is shown in the chart below.</p>
+<p><img alt="SPY chance of losing money, inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_inflation.png" /></p>
 <!-- TODO:
 - S&P 500
 -  -->
