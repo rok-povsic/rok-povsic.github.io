@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2017-03-26T21:23:00+02:00</updated><entry><title>Which language to use with TWS API (Interactive Brokers API)?</title><link href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="alternate"></link><published>2017-03-26T21:23:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-03-26:which-language-to-use-with-tws-api-interactive-brokers-api.html</id><summary type="html">&lt;h1&gt;TWS API&lt;/h1&gt;
-&lt;p&gt;Interactive Brokers has an API called &lt;a href="https://interactivebrokers.github.io"&gt;TWS API&lt;/a&gt; that you can use to programmatically
-execute trades, poll current/historical market data, get account info, etc. Official bindings for several programming languages exist, namely:
-C#, Java, C++, VB, and Python.&lt;/p&gt;
-&lt;p&gt;All the TWS API functionality is supported in all of them. Which language should you choose?&lt;/p&gt;
-&lt;h2&gt;C&lt;/h2&gt;
+&lt;p&gt;Interactive Brokers has an API called &lt;a href="https://interactivebrokers.github.io"&gt;TWS API&lt;/a&gt; which you can use to programmatically
+execute trades, poll current/historical market data, get account info, open positions, etc.
+Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python.&lt;/p&gt;
+&lt;p&gt;All the TWS API functionality is supported in all of those programming languages. Which language should you choose for your
+trading program?&lt;/p&gt;
+&lt;h3&gt;C&lt;/h3&gt;
 &lt;p&gt;C# is a programming language made by Microsoft, although you can run it on Linux too. It's a statically-typed, which means all variable types
-are known at the compile time. That means your IDE, in this case probably Visual Studio, knows all the variable types.&lt;/p&gt;
-&lt;p&gt;Since C# is primarily a language that runs on Windows, you'll most likely want to use it there. It could maybe be used on Linux although I haven't
-tried it yet.&lt;/p&gt;
-&lt;h2&gt;Java&lt;/h2&gt;
-&lt;p&gt;Java is a similar to C# (or the other way around - C# was inspired by Java) although it's more bare-boned. You could argue there's less
+are known at the compile time. That means your IDE, in this case probably Visual Studio, knows all the variable types and can help you
+a lot when writing code.&lt;/p&gt;
+&lt;p&gt;Since C# is primarily a language that runs on Windows, you'll most likely want to use it on that platform.
+These days when .NET is becoming more platform-independent, it could maybe be used on Linux/Max also although I haven't tried it yet.
+Most likely I'd just use Java on those platforms.&lt;/p&gt;
+&lt;h3&gt;Java&lt;/h3&gt;
+&lt;p&gt;Java is similar to C# (it's more proper to say it the other way around since C# was created after and was greatly inspired by Java)
+although it's more bare-boned. You could argue there's less
 batteries included although that'd probably depend on the developer.&lt;/p&gt;
 &lt;p&gt;You can run trading programs written in Java on Linux, Windows, and Mac.&lt;/p&gt;
-&lt;h2&gt;C++&lt;/h2&gt;
+&lt;h3&gt;C++&lt;/h3&gt;
 &lt;p&gt;C++ is the oldest programming language here, and the most low-level. Its advantages are speed and the increased control.&lt;/p&gt;
 &lt;p&gt;There several reasons why I don't recommend using C++ for the use with TWS API. The first is that the development speed is much slower.
 With increased control comes increased needed time investment to do an equivalent trading program in C++ compared to other
@@ -23,9 +27,9 @@ Interactive Brokers might not be the best option. Its servers are probably locat
 located, and the time needed for the data to travel over the network is probably much larger than that of running the trading program.&lt;/p&gt;
 &lt;p&gt;I'd only use C++ in the case where a heavy algorithm needs to be run in real-time, calculating, for example, some large matrixes.
 Although even in that case it'd probably be better to use single-threaded Java with Garbage Collector disabled, or something like that.&lt;/p&gt;
-&lt;h2&gt;VB&lt;/h2&gt;
+&lt;h3&gt;VB&lt;/h3&gt;
 &lt;p&gt;You don't want to use VB. Its variants take 3 out of 4 places for the most dreaded languages in the &lt;a href="https://stackoverflow.com/insights/survey/2017"&gt;Stack Overflow's 2017 Developer Survey&lt;/a&gt;. Use it only if its the only language you know.&lt;/p&gt;
-&lt;h2&gt;Python&lt;/h2&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;Although still only supported by the TWS API Beta at the time of this writing, all functionality is implemented.
 Python is relatively easy-to-use programming language in which you can write code fast. Since it's not statically-typed, there are limitations
 to how much IDE can help you with hints, but the advantage is that less code is required.&lt;/p&gt;
@@ -34,12 +38,15 @@ the languages equally well). It's quite easy to make trading program and a backt
 you want to do if you want to be sure the backtest works correctly. This would take more time in C# or Java.&lt;/p&gt;
 &lt;p&gt;It runs on Windows, Linux, and Mac.&lt;/p&gt;
 &lt;h2&gt;The Winner&lt;/h2&gt;
-&lt;p&gt;In most cases, probably 80%+, I'd recommend Python, especially once it comes out of Beta. Smaller and middle-sized trading programs will benefit the most for
+&lt;p&gt;In most cases, probably 80%+, I'd recommend Python, especially once it comes out of Beta. Smaller and middle-sized trading programs will benefit the most from
 the easiness-of-use that comes with Python.&lt;/p&gt;
-&lt;p&gt;I would not recommend Python when there the project is going to be larger. With the increased size the lack of static types can hurt the program.
-It's easier to introduce bugs. After a certain project size, it takes longer to read/write Python code than one of a more strict programming language. I'd choose C# when using Windows and Java when using other platforms.&lt;/p&gt;
-&lt;p&gt;In the end you want to choose the programming language you know best or want to learn. If you know all equally well or know none, I'd recommend
-what I've written above.&lt;/p&gt;</summary><category term="investing"></category><category term="api"></category><category term="interactive brokers"></category><category term="tws"></category></entry><entry><title>What is the chance of losing money in the stock market?</title><link href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="alternate"></link><published>2017-01-23T23:45:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-01-23:what-is-the-chance-of-losing-money-in-the-stock-market.html</id><summary type="html">&lt;p&gt;The first step of achieving good returns in the stock market is not losing money.
+&lt;p&gt;But I would not recommend Python when the project is going to be larger. I'd say that is more than around 10,000 lines of code.
+With the increased size the lack of static types can hurt the ability to write robust code.
+It's easier to introduce bugs. After a certain project size, it just takes longer to read/write Python code
+than when using one of the more strict programming languages.
+I'd choose C# when using Windows and Java when using other platforms.&lt;/p&gt;
+&lt;p&gt;In the end, you want to choose the programming language you know best, or one you want to learn.
+If you know all equally well or know none, I'd recommend what I've written above - probably Python, or C#/Java with large projects.&lt;/p&gt;</summary><category term="investing"></category><category term="api"></category><category term="interactive brokers"></category><category term="tws"></category></entry><entry><title>What is the chance of losing money in the stock market?</title><link href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="alternate"></link><published>2017-01-23T23:45:00+01:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-01-23:what-is-the-chance-of-losing-money-in-the-stock-market.html</id><summary type="html">&lt;p&gt;The first step of achieving good returns in the stock market is not losing money.
 What is the percentage chance of losing money in the stock market?&lt;/p&gt;
 &lt;p&gt;That depends on the investment style and can be hard to quantify. If you hold a small number of companies
 in the portfolio, the chance of losing money is greater because if any single company performs badly,
