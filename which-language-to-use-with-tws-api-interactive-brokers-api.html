@@ -28,22 +28,23 @@
 
 <meta name="author" content="Rok Povšič" />
 <meta name="description" content="" />
-<meta name="keywords" content="investing, savings, money">
+<meta name="keywords" content="investing, api, interactive brokers, tws">
 <meta property="og:site_name" content="Rok Povšič blog"/>
-<meta property="og:title" content="What is the chance of losing money in the stock market?"/>
+<meta property="og:title" content="Which language to use with TWS API (Interactive Brokers API)?"/>
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html"/>
+<meta property="og:url" content="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2017-01-23 23:45:00+01:00"/>
+<meta property="article:published_time" content="2017-03-26 21:23:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://rokpovsic.com/author/rok-povsic.html">
 <meta property="article:section" content="finance"/>
 <meta property="article:tag" content="investing"/>
-<meta property="article:tag" content="savings"/>
-<meta property="article:tag" content="money"/>
+<meta property="article:tag" content="api"/>
+<meta property="article:tag" content="interactive brokers"/>
+<meta property="article:tag" content="tws"/>
 <meta property="og:image" content="">
-  <title>Rok Povšič blog &ndash; What is the chance of losing money in the stock market?</title>
+  <title>Rok Povšič blog &ndash; Which language to use with TWS API (Interactive Brokers API)?</title>
 </head>
 <body>
   <aside>
@@ -100,47 +101,58 @@
 
 <article>
   <header>
-    <h1 id="what-is-the-chance-of-losing-money-in-the-stock-market">What is the chance of losing money in the stock market?</h1>
-    <p>Posted on Mon 23 January 2017 in <a href="https://rokpovsic.com/category/finance.html">finance</a></p>
+    <h1 id="which-language-to-use-with-tws-api-interactive-brokers-api">Which language to use with TWS API (Interactive Brokers API)?</h1>
+    <p>Posted on Sun 26 March 2017 in <a href="https://rokpovsic.com/category/finance.html">finance</a></p>
   </header>
   <div>
-    <p>The first step of achieving good returns in the stock market is not losing money.
-What is the percentage chance of losing money in the stock market?</p>
-<p>That depends on the investment style and can be hard to quantify. If you hold a small number of companies
-in the portfolio, the chance of losing money is greater because if any single company performs badly,
-the effect on the portfolio will be large.</p>
-<p>But say you invest in a large number of companies, say in the companies of some stock index.
-We cannot be certain of any performance of the selected companies in the future.
-What we can do is we can look at how the stock market index performed in the past.</p>
-<p>To do this, I wanted to have as large amount of data as possible.
-The most data I could find, is for a stock index
-<a href="https://en.wikipedia.org/wiki/S%26P_500_Index">S&amp;P 500</a>.
-The index consists of 500 large companies from the United States (large based on the market capitalization)
-and in the analysis, data from 1871 to 2016 is used. How the largest 500 companies' stock price move is a
-good-enough heuristics of how the stock market moves in the United States in general.
-The source of all data is <a href="multpl.com">multpl.com</a>.</p>
-<p>Let's say you invested your money into the S&amp;P 500 index at some random year after year 1871, on the January 1, for X number of years.
-What's the chance your return is positive or negative?</p>
-<p>Let's look at the data. Here we suppose all the dividends are paid on the January 1 and reinvested immediately. No tax is applied.</p>
-<p><img alt="SPY chance of losing money, no inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_no_inflation.png" /></p>
-<p>We can see that chance of being profitable depends a lot on how long you are invested.
-As the common wisdom says, investing in the stock market should be done for a longer term.</p>
-<p>The data above used nominal prices, i.e. was not adjusted for inflation. The chart above should be therefore relevant to you if you
-consider either investing in the stock market or holding cash.</p>
-<p>If you consider either investing in the stock money or keeping money in some sort of a
-financial vehicle (i.e. <a href="http://www.investopedia.com/terms/t/tips.asp">TIPS</a>, or perhaps a very diverse commodity index),
-I've also tested the same thing but discounted returns for each year by whatever the inflation (US CPI) was (dividends included).</p>
-<p>The chance of beating that vehicle, investing for X years, is shown in the chart below.</p>
-<p><img alt="SPY chance of losing money, inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_inflation.png" /></p>
-<!-- TODO:
-- S&P 500
--  -->
+    <h1>TWS API</h1>
+<p>Interactive Brokers has an API called <a href="https://interactivebrokers.github.io">TWS API</a> that you can use to programmatically
+execute trades, poll current/historical market data, get account info, etc. Official bindings for several programming languages exist, namely:
+C#, Java, C++, VB, and Python.</p>
+<p>All the TWS API functionality is supported in all of them. Which language should you choose?</p>
+<h2>C</h2>
+<p>C# is a programming language made by Microsoft, although you can run it on Linux too. It's a statically-typed, which means all variable types
+are known at the compile time. That means your IDE, in this case probably Visual Studio, knows all the variable types.</p>
+<p>Since C# is primarily a language that runs on Windows, you'll most likely want to use it there. It could maybe be used on Linux although I haven't
+tried it yet.</p>
+<h2>Java</h2>
+<p>Java is a similar to C# (or the other way around - C# was inspired by Java) although it's more bare-boned. You could argue there's less
+batteries included although that'd probably depend on the developer.</p>
+<p>You can run trading programs written in Java on Linux, Windows, and Mac.</p>
+<h2>C++</h2>
+<p>C++ is the oldest programming language here, and the most low-level. Its advantages are speed and the increased control.</p>
+<p>There several reasons why I don't recommend using C++ for the use with TWS API. The first is that the development speed is much slower.
+With increased control comes increased needed time investment to do an equivalent trading program in C++ compared to other
+TWS-supported programming languages on the list.</p>
+<p>But what if speed is really important to you and you are prepared to invest more time and resources to be fast? In that case choosing
+Interactive Brokers might not be the best option. Its servers are probably located somewhere far away from where your server is
+located, and the time needed for the data to travel over the network is probably much larger than that of running the trading program.</p>
+<p>I'd only use C++ in the case where a heavy algorithm needs to be run in real-time, calculating, for example, some large matrixes.
+Although even in that case it'd probably be better to use single-threaded Java with Garbage Collector disabled, or something like that.</p>
+<h2>VB</h2>
+<p>You don't want to use VB. Its variants take 3 out of 4 places for the most dreaded languages in the <a href="https://stackoverflow.com/insights/survey/2017">Stack Overflow's 2017 Developer Survey</a>. Use it only if its the only language you know.</p>
+<h2>Python</h2>
+<p>Although still only supported by the TWS API Beta at the time of this writing, all functionality is implemented.
+Python is relatively easy-to-use programming language in which you can write code fast. Since it's not statically-typed, there are limitations
+to how much IDE can help you with hints, but the advantage is that less code is required.</p>
+<p>It'll take much less time to write an equivalent program in Python than in any other language on the list (supposed you know all
+the languages equally well). It's quite easy to make trading program and a backtest that use the same trading-logic code, which is what
+you want to do if you want to be sure the backtest works correctly. This would take more time in C# or Java.</p>
+<p>It runs on Windows, Linux, and Mac.</p>
+<h2>The Winner</h2>
+<p>In most cases, probably 80%+, I'd recommend Python, especially once it comes out of Beta. Smaller and middle-sized trading programs will benefit the most for
+the easiness-of-use that comes with Python.</p>
+<p>I would not recommend Python when there the project is going to be larger. With the increased size the lack of static types can hurt the program.
+It's easier to introduce bugs. After a certain project size, it takes longer to read/write Python code than one of a more strict programming language. I'd choose C# when using Windows and Java when using other platforms.</p>
+<p>In the end you want to choose the programming language you know best or want to learn. If you know all equally well or know none, I'd recommend
+what I've written above.</p>
   </div>
   <div class="tag-cloud">
     <p>
       <a href="https://rokpovsic.com/tag/investing.html">investing</a>
-      <a href="https://rokpovsic.com/tag/savings.html">savings</a>
-      <a href="https://rokpovsic.com/tag/money.html">money</a>
+      <a href="https://rokpovsic.com/tag/api.html">api</a>
+      <a href="https://rokpovsic.com/tag/interactive-brokers.html">interactive brokers</a>
+      <a href="https://rokpovsic.com/tag/tws.html">tws</a>
     </p>
   </div>
 </article>
@@ -178,9 +190,9 @@ I've also tested the same thing but discounted returns for each year by whatever
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "name": "What is the chance of losing money in the stock market?",
-  "headline": "What is the chance of losing money in the stock market?",
-  "datePublished": "2017-01-23 23:45:00+01:00",
+  "name": "Which language to use with TWS API (Interactive Brokers API)?",
+  "headline": "Which language to use with TWS API (Interactive Brokers API)?",
+  "datePublished": "2017-03-26 21:23:00+02:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
@@ -188,7 +200,7 @@ I've also tested the same thing but discounted returns for each year by whatever
     "url": "https://rokpovsic.com/author/rok-povsic.html"
   },
   "image": "{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png",
-  "url": "https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html",
+  "url": "https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html",
   "description": ""
 }
 </script></body>
