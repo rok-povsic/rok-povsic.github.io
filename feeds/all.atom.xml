@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2017-03-26T21:23:00+02:00</updated><entry><title>Which language to use with TWS API (Interactive Brokers API)?</title><link href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="alternate"></link><published>2017-03-26T21:23:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-03-26:which-language-to-use-with-tws-api-interactive-brokers-api.html</id><summary type="html">&lt;h1&gt;TWS API&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2017-05-24T18:06:00+02:00</updated><entry><title>A continuous integration guide for .NET with GitLab CI</title><link href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="alternate"></link><published>2017-05-24T18:06:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-05-24:a-continuous-integration-guide-for-net-with-gitlab-ci.html</id><summary type="html">&lt;p&gt;Here, I describe the process of setting up &lt;a href="https://en.wikipedia.org/wiki/Continuous_integration"&gt;continuous integration (CI)&lt;/a&gt; for a C# project that is hosted on &lt;a href="https://gitlab.com"&gt;GitLab&lt;/a&gt;. GitLab is a code sharing platform similar to GitHub but has two distinct advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you can create private repositories for free,&lt;/li&gt;
+&lt;li&gt;it includes a free continuous integration tool called &lt;a href="https://about.gitlab.com/gitlab-ci/"&gt;GitLab CI&lt;/a&gt; that can be run either on GitLab CI servers, or on your own server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Actually, GitLab even provides their CI servers for free, called Shared Runners, but at the time of this writing only Linux servers are available, so in this guide we are going to use our own Windows server to perform the actual builds and tests on. This means that to follow this guide, you &lt;strong&gt;have to have a Windows instance available&lt;/strong&gt; in order to run a build. For a production use this is ideally a computer that runs 24/7, i.e. a computer on premises or a VPS, but can, for starters, also be your own laptop/pc.&lt;/p&gt;
+&lt;p&gt;The continuous integration process we will do will be the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You commit &amp;amp; push a set of code changes to a GitLab repository.&lt;/li&gt;
+&lt;li&gt;Your code is immediately automatically pulled from the GitLab repository to the Windows instance.&lt;/li&gt;
+&lt;li&gt;The C# compiler tries to build the code.&lt;/li&gt;
+&lt;li&gt;Badges are updated with the status.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the end, you get a report of everything that happened, together with a badge like this (if the build was successful):&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /&gt;&lt;/p&gt;
+&lt;p&gt;To do this, let's create a test project in Visual Studio. We are going to do the build first and add automatic testing later.&lt;/p&gt;
+&lt;p&gt;This is the sample code we are going to build:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;
+{
+    &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="nb"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Main&lt;/span&gt;(&lt;span class="n"&gt;string&lt;/span&gt;[] &lt;span class="n"&gt;args&lt;/span&gt;)
+    {
+        &lt;span class="n"&gt;Console&lt;/span&gt;.&lt;span class="n"&gt;WriteLine&lt;/span&gt;(&lt;span class="s"&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;);
+    }
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a new repository on GitLab. Next, install GitLab Runner, which is a program that runs on your Windows machine that is connected to the repository and that runs the build. Download the program from &lt;a href="https://docs.gitlab.com/runner/install/windows.html"&gt;here&lt;/a&gt; where you will also find more details on how to install it. It's not complicated, but the one thing you'll also need is a &lt;em&gt;token&lt;/em&gt; with which you connect Runner with the repository. You find it by opening your repository, and going to &lt;em&gt;Settings&lt;/em&gt; -&amp;gt; &lt;em&gt;CI/CD Pipelines&lt;/em&gt;. Copy the token and follow the instructions on how to install and connect the runner.&lt;/p&gt;
+&lt;p&gt;Note: If you only want to build this project on your server, click &lt;em&gt;Disable Shared Runners&lt;/em&gt; so GitLab won't try to build this project on their servers.&lt;/p&gt;
+&lt;p&gt;After this, the next step is to configure how exactly the build should be performed. This is done by creating a &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; file in the root of the project directory and specifying how to do the build. Here's a simple example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;stage&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;
+    &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;:\&lt;/span&gt;&lt;span class="n"&gt;Tools&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="n"&gt;nuget&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;exe&lt;/span&gt; &lt;span class="n"&gt;restore&lt;/span&gt;
+            &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;exe&lt;/span&gt; &lt;span class="sr"&gt;/C &amp;quot; &amp;quot;C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe&amp;quot; /p:Configuration=Release /&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Clean&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;ForexMaster&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sln&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;exit&lt;/span&gt; &lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="n"&gt;ERRORLEVEL&lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You have to specify the location of &lt;code&gt;nuget.exe&lt;/code&gt; and &lt;code&gt;MSBuild.exe&lt;/code&gt;. You may download the first from &lt;a href="http://dist.nuget.org/"&gt;here&lt;/a&gt;. See &lt;a href="https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal"&gt;this StackOverflow page&lt;/a&gt; to find out how to get the second one.&lt;/p&gt;
+&lt;p&gt;After that, every time a code is pushed on the repository, it will be automatically downloaded to the Windows machine that is running GitLab Runner. The build status will be reported under &lt;em&gt;Pipelines&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitLab Pipelines" src="https://rokpovsic.com/images/ci-gitlab/ci-pipelines.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Next, you can show the latest build status on the main repository page by copying a Markdown badge code, located under &lt;em&gt;Settings&lt;/em&gt; -&amp;gt; &lt;em&gt;CI/CD Pipelines&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /&gt;&lt;/p&gt;</summary><category term="continuous-integration"></category><category term="gitlab"></category><category term=".net"></category></entry><entry><title>Which language to use with TWS API (Interactive Brokers API)?</title><link href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="alternate"></link><published>2017-03-26T21:23:00+02:00</published><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-03-26:which-language-to-use-with-tws-api-interactive-brokers-api.html</id><summary type="html">&lt;h1&gt;TWS API&lt;/h1&gt;
 &lt;p&gt;Interactive Brokers has an API called &lt;a href="https://interactivebrokers.github.io"&gt;TWS API&lt;/a&gt; which you can use to programmatically
 execute trades, poll current/historical market data, get account info, open positions, etc.
 Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python.&lt;/p&gt;
