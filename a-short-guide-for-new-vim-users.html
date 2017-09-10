@@ -24,6 +24,7 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="" />
+  <meta name="google-site-verification" content="Is7K2KzatasiLldRphQqXxXBUO1PGhQ8tMrItplD1tk" />
 
 
 <meta name="author" content="Rok Povšič" />
@@ -107,35 +108,35 @@
 <p>The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.</p>
 <h2>Modes</h2>
 <p>When writing code (or some other text) in a regular editor the key, the keys you press appear on the screen right away. Using VIM this will happen only if you are in so called <em>insert</em> mode. When in this mode, VIM behaves as any other editor. After VIM has just started, it is in <em>normal</em> mode. If you simply want to write some text, press <strong>i</strong> to enter <em>insert</em> mode. Now you can type anything you want. To exit <em>insert</em> mode and go back to <em>normal</em> mode, press <strong>ESC</strong>.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/modes.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/modes.gif"></p>
 <h2>Moving around</h2>
 <p>So why would is this <em>normal</em> mode even needed if we use keyboard to type characters on the screen and the only way we can do that is by being in the <em>insert</em> mode. Well, VIM makes the keyboard much more versatile tool. For example, when in <em>normal</em> mode, you can use keys <strong>H</strong>, <strong>J</strong>, <strong>K</strong> and <strong>L</strong> in order to move LEFT, DOWN, UP and RIGHT, respectively. That's very useful since it removes the need to always move your hand to the arrow keys. It takes some time to get used to but once you know it, it's hard to go back. When the hands are in the typing position (left index finger on <strong>F</strong> and right index finger on <strong>J</strong>) it's much more convenient to simply press <strong>ESC</strong> (which I even virtually switched with <strong>CAPS LOCK</strong> to have it closer to the standard position) and use <strong>H</strong>, <strong>J</strong>, <strong>K</strong> and <strong>L</strong>.</p>
 <p>Moving to the start of the next word is done by pressing <strong>W</strong> and moving to the start of previous word by pressing <strong>B</strong>. It's similar to pressing <strong>CTRL + LEFT/RIGHT</strong> when using regular editor, without the need to move right hand away from natural position and pressing two keys at the same time.</p>
 <p>Another thing I use a lot is pressing <strong>{</strong> and <strong>}</strong> which will jump the cursor to previous and to next paragraph (in <strong>normal</strong> mode of course) and pressing <strong>0</strong> and <strong>$$</strong> which move the cursor to the beginning or end of the line you are currently on.</p>
 <p>I think that this alone is worth using VIM when writing code or anything else.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/hjkl.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/hjkl.gif"></p>
 <h2>Copying, deleting and pasting lines</h2>
 <p>When writing code it's common to copy a line and paste it somewhere else. Copying a line is done by pressing <strong>YY</strong> (i.e. pressing <strong>Y</strong> twice). After that you can move anywhere else and with pressing <strong>P</strong> the line will be pasted under the line your cursor is on.</p>
 <p>Deleting a line is done by pressing <strong>DD</strong>. We can imagine it's similar to cutting a line as you can still paste it using <strong>P</strong>.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/copy_paste.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/copy_paste.gif"></p>
 <h2>Undo / Redo</h2>
 <p>Undoing the last command (i.e. inserting, deleting, pasting, etc.) is done by pressing <strong>U</strong>. The redo command is <strong>CTRL + R</strong>.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/undo.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/undo.gif"></p>
 <h2>Selecting lines</h2>
 <p>Another very useful command is <strong>SHIFT + V</strong> which starts to select lines. After moving up or down (preferably with <strong>K</strong> or <strong>J</strong>) you press <strong>Y</strong> to copy them. Now you can move to some other place and press <strong>P</strong> to paste copied lines (use <strong>D</strong> instead of <strong>Y</strong> to delete them).</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/selecting.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/selecting.gif"></p>
 <h2>Saving positions and jumping</h2>
 <p>Wherever your cursor is located you can press <strong>M</strong> followed by any character an the position will be saved. After that you can press <strong>'</strong> followed by the character you used previously and your cursor will jump to saved position. Very useful!</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/save.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/save.gif"></p>
 <h2>Searching</h2>
 <p>Searching is done by simply pressing <strong>/</strong>, typing the word to search for and pressing <strong>ENTER</strong>. The cursor is moved to the first found word. After that, pressing <strong>N</strong> will move the cursor to the next found word (and <strong>SHIFT + N</strong> will move it to the previous found word).</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/searching.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/searching.gif"></p>
 <h2>Replacing</h2>
 <p>Often you need to replace all words with some other words in a given text. First, you select the text (by using <strong>SHIFT + V</strong>, remember?) and then typing this (without the &lt; and &gt;): <strong>:s/&lt;text to search&gt;/&lt;text to replace it with&gt;/g</strong>. It might sound complex but once you get used to it it's so much faster and easier than using the default Find &amp; Replace functionality of whatever IDE you are using at this moment.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/replacing.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/replacing.gif"></p>
 <h2>Other small things</h2>
 <p>Pressing <strong>SHIFT + I</strong> will open <em>insert</em> mode in the beginning of the row and <strong>SHIFT + A</strong> will open <em>insert</em> mode at the end of the row.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/other.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/other.gif"></p>
 <h2>Repeating commands machine</h2>
 <p>Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing <strong>Q&lt;some key, say A&gt;</strong>, executing the commands, and then pressing <strong>Q</strong> to end the execution and save it. Then you can replay it by pressing <strong>&lt;number of times to repeat&gt;@a</strong>.</p>
 <p>Let's look at an example. Say I have these lines in my editor and I want to add parenthesis around them, with a comma on the right and a tab on the left.</p>
@@ -147,7 +148,7 @@ Robert Duvall
 Sterling Hayden</p>
 <p>I could do it by hand or I could utilize the great power of VIM and do it singlehandedly, wizard-style. I'll do it by first moving to the first line and pressing <strong>QA</strong> - that will start recording my commands under the key A. Then I do <strong>SHIFT + I</strong> to move to the beginning of the line and open <em>normal</em> mode, followed by pressing TAB and ". Then I press <strong>ESC</strong> to exit <em>insert</em> mode and return to <em>normal</em> mode and do <strong>SHIFT + A</strong> to open <em>insert</em> mode at the end of the line. Next, I press " and ,. I exit <em>insert</em> mode again and press <strong>J</strong> to move one line down. My execution sequence is finished so I complete it by pressing <strong>Q</strong>.</p>
 <p>Now VIM has remember the whole execution and will execute it any number of times. I simply do <strong>5@A</strong> and the execution will be repeated 5 times, fixing all my lines.</p>
-<p><img alt="" src="https://rokpovsic.com/images/vim_short/repeating.gif" /></p>
+<p><img alt="" src="https://rokpovsic.com/images/vim_short/repeating.gif"></p>
 <h2>How to learn all this?</h2>
 <p>There's no need to learn everything to start using VIM. I think that VIM has major advantages even when you use only a small subset of the provided functionality. Simply start using it by installing a VIM plugin for your code editor and using mostly <em>insert</em> mode and maybe <strong>H</strong>, <strong>J</strong>, <strong>K</strong> and <strong>L</strong> (the keys to move in different directions, remember?) in the <em>normal</em> mode instead of the arrow keys. After you get a grasp of that, add some other thing that sounds interesting. It's like driving a car - at first it's hard and complex, after a few months it's completely automatic and you don't even think about it.</p>
   </div>

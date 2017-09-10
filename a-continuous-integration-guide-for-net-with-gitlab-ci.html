@@ -24,6 +24,7 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="" />
+  <meta name="google-site-verification" content="Is7K2KzatasiLldRphQqXxXBUO1PGhQ8tMrItplD1tk" />
 
 
 <meta name="author" content="Rok Povšič" />
@@ -119,16 +120,16 @@
 <li>Badges are updated with the status.</li>
 </ol>
 <p>In the end, you get a report of everything that happened, together with a badge like this (if the build was successful):</p>
-<p><img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /></p>
+<p><img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png"></p>
 <p>To do this, let's create a test project in Visual Studio. We are going to do the build first and add automatic testing later.</p>
 <p>This is the sample code we are going to build:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Program</span>
-{
-    <span class="n">static</span> <span class="nb">void</span> <span class="n">Main</span>(<span class="n">string</span>[] <span class="n">args</span>)
-    {
-        <span class="n">Console</span>.<span class="n">WriteLine</span>(<span class="s">&quot;Hello, World!&quot;</span>);
-    }
-}
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Program</span>
+<span class="p">{</span>
+    <span class="kr">static</span> <span class="k">void</span> <span class="nx">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nx">Console</span><span class="p">.</span><span class="nx">WriteLine</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -145,9 +146,9 @@
 
 <p>You have to specify your location of <code>nuget.exe</code> and <code>MSBuild.exe</code>, and the solution name. You may download <code>nuget.exe</code> from <a href="http://dist.nuget.org/">here</a>. See <a href="https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal">this StackOverflow page</a> to find out how to get <code>MSBuild.exe</code>.</p>
 <p>After that, every time a code is pushed on the repository, it will be automatically downloaded to the Windows machine that is running GitLab Runner. The build status will be reported under <em>Pipelines</em>.</p>
-<p><img alt="GitLab Pipelines" src="https://rokpovsic.com/images/ci-gitlab/ci-pipelines.png" /></p>
+<p><img alt="GitLab Pipelines" src="https://rokpovsic.com/images/ci-gitlab/ci-pipelines.png"></p>
 <p>Next, you can show the latest build status on the main repository page by copying a Markdown badge code, located under <em>Settings</em> -&gt; <em>CI/CD Pipelines</em></p>
-<p><img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /></p>
+<p><img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png"></p>
   </div>
   <div class="tag-cloud">
     <p>
