@@ -27,16 +27,22 @@
   <meta name="google-site-verification" content="Is7K2KzatasiLldRphQqXxXBUO1PGhQ8tMrItplD1tk" />
 
 
-    <meta name="author" content="Rok Povšič" />
-    <meta name="description" content="" />
+<meta name="author" content="Rok Povšič" />
+<meta name="description" content="" />
+<meta name="keywords" content="git">
 <meta property="og:site_name" content="Rok Povšič blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Rok Povšič blog"/>
+<meta property="og:title" content="A list of useful Git commands"/>
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rokpovsic.com"/>
-
-  <title>Rok Povšič blog &ndash; Tag: pycharm</title>
+<meta property="og:url" content="https://rokpovsic.com/a-list-of-useful-git-commands.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-06-29 22:06:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rokpovsic.com/author/rok-povsic.html">
+<meta property="article:section" content="git"/>
+<meta property="article:tag" content="git"/>
+<meta property="og:image" content="">
+  <title>Rok Povšič blog &ndash; A list of useful Git commands</title>
 </head>
 <body>
   <aside>
@@ -94,20 +100,49 @@
 
 <article>
   <header>
-    <h2><a href="https://rokpovsic.com/using-pycharm-without-a-mouse.html#using-pycharm-without-a-mouse">Using PyCharm without a mouse</a></h2>
-    <p>
-      Posted on Sat 29 October 2016 in <a href="https://rokpovsic.com/category/pycharm.html">pycharm</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/pycharm.html">pycharm</a>,      <a href="https://rokpovsic.com/tag/shortcuts.html">shortcuts</a>    </p>
+    <h1 id="a-list-of-useful-git-commands">A list of useful Git commands</h1>
+    <p>Posted on Fri 29 June 2018 in <a href="https://rokpovsic.com/category/git.html">git</a></p>
   </header>
   <div>
-      
-      <a class="btn" href="https://rokpovsic.com/using-pycharm-without-a-mouse.html#using-pycharm-without-a-mouse">Continue reading</a>
+    <h1>Useful Git commands</h1>
+<p>Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I don't use them every day, which means I tend to forget them and have to re-search for them. I'm storing them here for easy access. Maybe somebody's going to find them useful too.</p>
+<h2>Remove all changes from staging (but keep the actual changes)</h2>
+<div class="highlight"><pre>git reset HEAD -- .
+</pre></div>
+
+
+<h2>Delete last commit but keep the changes</h2>
+<div class="highlight"><pre>git reset HEAD^
+</pre></div>
+
+
+<h2>Delete all unstaged changes</h2>
+<div class="highlight"><pre>git clean -df
+git checkout -- .
+</pre></div>
+
+
+<h2>Revert an accidentally executed <code>git commit --amend</code></h2>
+<div class="highlight"><pre>git reset --soft HEAD@{1}
+</pre></div>
+
+
+<h2>Reset the local branch to be exactly like the remote branch</h2>
+<div class="highlight"><pre> git fetch origin
+ git reset --hard origin/branch_name
+</pre></div>
+
+
+<h2>Start the modification of the last three commits (for example to rename them)</h2>
+<div class="highlight"><pre>git rebase -i HEAD~3
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rokpovsic.com/tag/git.html">git</a>
+    </p>
   </div>
 </article>
-
-  <div class="pagination">
-  </div>
 
     <footer>
         <p>&copy; Rok Povšič </p>
@@ -138,5 +173,22 @@
   "description": ""
 }
 </script>
-</body>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "A list of useful Git commands",
+  "headline": "A list of useful Git commands",
+  "datePublished": "2018-06-29 22:06:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Rok Povšič",
+    "url": "https://rokpovsic.com/author/rok-povsic.html"
+  },
+  "image": "{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png",
+  "url": "https://rokpovsic.com/a-list-of-useful-git-commands.html",
+  "description": ""
+}
+</script></body>
 </html>

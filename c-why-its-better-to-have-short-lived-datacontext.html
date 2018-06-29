@@ -67,6 +67,9 @@
 
       <h3>RECENT POSTS</h3>
           <p>
+            <a href="https://rokpovsic.com/a-list-of-useful-git-commands.html#a-list-of-useful-git-commands">A list of useful Git commands</a>
+          </p>
+          <p>
             <a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html#a-continuous-integration-guide-for-net-with-gitlab-ci">A continuous integration guide for .NET with GitLab CI</a>
           </p>
           <p>
@@ -80,9 +83,6 @@
           </p>
           <p>
             <a href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html#keyboard-tricks-to-write-code-faster">Keyboard tricks to write code faster</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/using-pycharm-without-a-mouse.html#using-pycharm-without-a-mouse">Using PyCharm without a mouse</a>
           </p>
     </div>
   </aside>
@@ -111,7 +111,7 @@ The way to use LINQ to SQL is to create an instance of DataContext for your spec
 in one class. That puts all your database logic in one place. You also can 
 easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.</p>
 <p>When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.</p>
-<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
 <span class="p">{</span>
     <span class="k">private</span> <span class="k">readonly</span> <span class="n">MyDatabaseDataContext</span> <span class="n">_context</span><span class="p">;</span>
 
@@ -139,7 +139,7 @@ easily mock this class (as opposed to mocking DataContext). Let’s call this Da
 
 
 <p>Another way would be without the context instance as a field. Here each method creates and closes its own context. Sample code:</p>
-<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
 <span class="p">{</span>
     <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">_connectionString</span> <span class="p">=</span> <span class="s">&quot;myConnStr&quot;</span><span class="p">;</span>
 
