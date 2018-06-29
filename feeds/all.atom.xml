@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2018-06-29T22:06:00+02:00</updated><entry><title>A list of useful Git commands</title><link href="https://rokpovsic.com/a-list-of-useful-git-commands.html" rel="alternate"></link><updated>2018-06-29T22:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-06-29:a-list-of-useful-git-commands.html</id><summary type="html">&lt;h1&gt;Useful Git commands&lt;/h1&gt;
-&lt;p&gt;Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I don't use them every day, which means I tend to forget them and have to re-search for them. I'm storing them here for easy access. Maybe somebody's going to find them useful too.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rok Povšič blog</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2018-06-29T22:06:00+02:00</updated><entry><title>A list of useful Git commands</title><link href="https://rokpovsic.com/a-list-of-useful-git-commands.html" rel="alternate"></link><updated>2018-06-29T22:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-06-29:a-list-of-useful-git-commands.html</id><summary type="html">&lt;p&gt;Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.&lt;/p&gt;
 &lt;h2&gt;Remove all changes from staging (but keep the actual changes)&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git reset HEAD -- .
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Delete last commit but keep the changes&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git reset HEAD^
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Delete all unstaged changes&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git clean -df
-git checkout -- .
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clean&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Revert an accidentally executed &lt;code&gt;git commit --amend&lt;/code&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git reset --soft HEAD@{1}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;soft&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Reset the local branch to be exactly like the remote branch&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt; git fetch origin
- git reset --hard origin/branch_name
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;fetch&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;
+ &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;hard&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;branch_name&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Start the modification of the last three commits (for example to rename them)&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git rebase -i HEAD~3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;rebase&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>A continuous integration guide for .NET with GitLab CI</title><link href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="alternate"></link><updated>2017-05-24T18:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-05-24:a-continuous-integration-guide-for-net-with-gitlab-ci.html</id><summary type="html">&lt;p&gt;Here, I describe the process of setting up &lt;a href="https://en.wikipedia.org/wiki/Continuous_integration"&gt;continuous integration (CI)&lt;/a&gt; for a C# project that is hosted on &lt;a href="https://gitlab.com"&gt;GitLab&lt;/a&gt;. GitLab is a code sharing platform similar to GitHub but has two distinct advantages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;you can create private repositories for free,&lt;/li&gt;

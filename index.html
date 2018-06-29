@@ -101,37 +101,36 @@
       <a href="https://rokpovsic.com/tag/git.html">git</a>    </p>
   </header>
   <div>
-      <h1>Useful Git commands</h1>
-<p>Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I don't use them every day, which means I tend to forget them and have to re-search for them. I'm storing them here for easy access. Maybe somebody's going to find them useful too.</p>
+      <p>Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.</p>
 <h2>Remove all changes from staging (but keep the actual changes)</h2>
-<div class="highlight"><pre>git reset HEAD -- .
+<div class="highlight"><pre><span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span> <span class="o">--</span> <span class="o">.</span>
 </pre></div>
 
 
 <h2>Delete last commit but keep the changes</h2>
-<div class="highlight"><pre>git reset HEAD^
+<div class="highlight"><pre><span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span><span class="o">^</span>
 </pre></div>
 
 
 <h2>Delete all unstaged changes</h2>
-<div class="highlight"><pre>git clean -df
-git checkout -- .
+<div class="highlight"><pre><span class="n">git</span> <span class="n">clean</span> <span class="o">-</span><span class="n">df</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span> <span class="o">.</span>
 </pre></div>
 
 
 <h2>Revert an accidentally executed <code>git commit --amend</code></h2>
-<div class="highlight"><pre>git reset --soft HEAD@{1}
+<div class="highlight"><pre><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">soft</span> <span class="n">HEAD</span><span class="err">@</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
 
 <h2>Reset the local branch to be exactly like the remote branch</h2>
-<div class="highlight"><pre> git fetch origin
- git reset --hard origin/branch_name
+<div class="highlight"><pre> <span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span>
+ <span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">origin</span><span class="o">/</span><span class="n">branch_name</span>
 </pre></div>
 
 
 <h2>Start the modification of the last three commits (for example to rename them)</h2>
-<div class="highlight"><pre>git rebase -i HEAD~3
+<div class="highlight"><pre><span class="n">git</span> <span class="n">rebase</span> <span class="o">-</span><span class="n">i</span> <span class="n">HEAD</span><span class="o">~</span><span class="mi">3</span>
 </pre></div>
   </div>
   <hr />
