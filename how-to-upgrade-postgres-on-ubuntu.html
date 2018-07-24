@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>-->
+
+    <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/font-awesome/css/font-awesome.min.css">
+
+  <!--<style>-->
+    <!--body {-->
+      <!--font-family: 'Arima Madurai', sans-serif;-->
+    <!--}-->
+  <!--</style>-->
+
+
+    <link href="https://rokpovsic.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rok Povšič blog Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+  <meta name="google-site-verification" content="Is7K2KzatasiLldRphQqXxXBUO1PGhQ8tMrItplD1tk" />
+
+
+<meta name="author" content="Rok Povšič" />
+<meta name="description" content="" />
+<meta name="keywords" content="postgres, upgrade">
+<meta property="og:site_name" content="Rok Povšič blog"/>
+<meta property="og:title" content="How to upgrade Postgres on Ubuntu"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-07-23 19:25:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rokpovsic.com/author/rok-povsic.html">
+<meta property="article:section" content="postgres"/>
+<meta property="article:tag" content="postgres"/>
+<meta property="article:tag" content="upgrade"/>
+<meta property="og:image" content="">
+  <title>Rok Povšič blog &ndash; How to upgrade Postgres on Ubuntu</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rokpovsic.com">
+        <img src="https://rokpovsic.com/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="https://rokpovsic.com"></a></h1>
+      <nav>
+        <ul class="list">
+          <li><a href="https://rokpovsic.com/pages/about-me.html#about-me">About me</a></li>
+          <li><a href="https://rokpovsic.com/pages/contact.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-stackoverflow" href="http://stackoverflow.com/users/365837/yper" target="_blank"><i class="fa fa-stackoverflow"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rok-povsic" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rokpovsic" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-rss" href="feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+
+      <h3>RECENT POSTS</h3>
+          <p>
+            <a href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu.html#how-to-upgrade-postgres-on-ubuntu">How to upgrade Postgres on Ubuntu</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/a-list-of-useful-git-commands.html#a-list-of-useful-git-commands">A list of useful Git commands</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html#a-continuous-integration-guide-for-net-with-gitlab-ci">A continuous integration guide for .NET with GitLab CI</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html#which-language-to-use-with-tws-api-interactive-brokers-api">Which language to use with TWS API (Interactive Brokers API)?</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html#what-is-the-chance-of-losing-money-in-the-stock-market">What is the chance of losing money in the stock market?</a>
+          </p>
+          <p>
+            <a href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html#a-short-guide-for-new-vim-users">A short guide for new VIM users</a>
+          </p>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="https://rokpovsic.com">Home</a>
+      <!---->
+      <!--<a href="/pages/about-me">About</a>-->
+      <!---->
+      <!--<a href="/pages/contact">Contact</a>-->
+      <!---->
+      <a href="https://rokpovsic.com/pages/about-me.html#about-me">About me</a>
+      <a href="https://rokpovsic.com/pages/contact.html#contact">Contact</a>
+      <a href="https://rokpovsic.com/feeds/all.atom.xml">Atom</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="how-to-upgrade-postgres-on-ubuntu">How to upgrade Postgres on Ubuntu</h1>
+    <p>Posted on Mon 23 July 2018 in <a href="https://rokpovsic.com/category/postgres.html">postgres</a></p>
+  </header>
+  <div>
+    <p>Here's a guide on updating Postgres. These commands below install a new Postgres 9.6 instance, migrate all the data, and uninstall the old Postgres 9.5 instance.</p>
+<blockquote>
+<p>Note: I've used these exact commands on Ubuntu 16.04. Your mileage may vary on other OSes and Postgres versions.</p>
+</blockquote>
+<h2>1. Install the new version</h2>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">postgresql</span><span class="o">-</span><span class="mf">9.6</span>
+</pre></div>
+
+
+<h2>2. Make sure both version are installed and running</h2>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">pg_lsclusters</span>
+</pre></div>
+
+
+<p>The output should be something like:</p>
+<div class="highlight"><pre><span class="n">Ver</span> <span class="n">Cluster</span> <span class="n">Port</span> <span class="n">Status</span> <span class="n">Owner</span>    <span class="n">Data</span> <span class="n">directory</span>               <span class="n">Log</span> <span class="nb">file</span>
+<span class="mf">9.5</span> <span class="n">main</span>    <span class="mi">5432</span> <span class="n">online</span> <span class="n">postgres</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.5</span><span class="o">/</span><span class="n">main</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">postgresql</span><span class="o">-</span><span class="mf">9.5</span><span class="o">-</span><span class="n">main</span><span class="o">.</span><span class="n">log</span>
+<span class="mf">9.6</span> <span class="n">main</span>    <span class="mi">5433</span> <span class="n">online</span> <span class="n">postgres</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.6</span><span class="o">/</span><span class="n">main</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">postgresql</span><span class="o">-</span><span class="mf">9.6</span><span class="o">-</span><span class="n">main</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+
+
+<h2>3. Migrate the data from old to new</h2>
+<p>Replace the ports you've found from the previous command.</p>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">pg_dumpall</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">|</span> <span class="n">psql</span> <span class="o">-</span><span class="n">d</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5433</span>
+<span class="nb">exit</span>
+</pre></div>
+
+
+<h2>4. Update the ports</h2>
+<p>Open <code>postgresql.conf</code> and set the <code>port</code> value of the 9.6 instance in to 5432. If you're going to keep the 9.5 version, also set its port to some other integer (e.g. 5433).</p>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.5</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.6</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+
+
+<h2>5. Uninstall the old version (optional)</h2>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="n">postgresql</span><span class="o">-</span><span class="mf">9.5</span>
+</pre></div>
+
+
+<h2>6. Ensure the new version is up</h2>
+<p>Make sure the port is set correctly.</p>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">service</span> <span class="n">postgresql</span> <span class="n">start</span>
+<span class="n">sudo</span> <span class="n">pg_lsclusters</span>
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rokpovsic.com/tag/postgres.html">postgres</a>
+      <a href="https://rokpovsic.com/tag/upgrade.html">upgrade</a>
+    </p>
+  </div>
+</article>
+
+    <footer>
+        <p>&copy; Rok Povšič </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41532619-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rok Povšič blog ",
+  "url" : "https://rokpovsic.com",
+  "image": "",
+  "description": ""
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "How to upgrade Postgres on Ubuntu",
+  "headline": "How to upgrade Postgres on Ubuntu",
+  "datePublished": "2018-07-23 19:25:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Rok Povšič",
+    "url": "https://rokpovsic.com/author/rok-povsic.html"
+  },
+  "image": "{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png",
+  "url": "https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu.html",
+  "description": ""
+}
+</script></body>
+</html>
