@@ -36,7 +36,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rokpovsic.com"/>
 
-  <title>Rok Povšič blog &ndash; Tag: gitlab</title>
+  <title>Rok Povšič blog &ndash; My super title</title>
 </head>
 <body>
   <aside>
@@ -47,9 +47,9 @@
       <h1><a href="https://rokpovsic.com"></a></h1>
       <nav>
         <ul class="list">
-          <li><a href="https://rokpovsic.com/archives">All posts</a></li>
           <li><a href="https://rokpovsic.com/pages/about-me.html#about-me">About me</a></li>
           <li><a href="https://rokpovsic.com/pages/contact.html#contact">Contact</a></li>
+          <li><a href="https://rokpovsic.com/pages/my-super-title.html#my-super-title">My super title</a></li>
         </ul>
       </nav>
       <ul class="social">
@@ -83,28 +83,39 @@
   <main>
     <nav>
       <a href="https://rokpovsic.com">Home</a>
-      <a href="/archives">All posts</a>
+      <!---->
+      <!--<a href="/pages/about-me">About</a>-->
+      <!---->
+      <!--<a href="/pages/all-posts">All Posts</a>-->
+      <!---->
+      <!--<a href="/pages/contact">Contact</a>-->
+      <!---->
       <a href="https://rokpovsic.com/pages/about-me.html#about-me">About me</a>
       <a href="https://rokpovsic.com/pages/contact.html#contact">Contact</a>
+      <a href="https://rokpovsic.com/pages/my-super-title.html#my-super-title">My super title</a>
       <a href="https://rokpovsic.com/feeds/all.atom.xml">Atom</a>
     </nav>
 
 <article>
   <header>
-    <h2><a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html#a-continuous-integration-guide-for-net-with-gitlab-ci">A continuous integration guide for .NET with GitLab CI</a></h2>
-    <p>
-      Posted on Wed 24 May 2017 in <a href="https://rokpovsic.com/category/continuous-integration-gitlab-net.html">continuous-integration, gitlab, .net</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/continuous-integration.html">continuous-integration</a>,      <a href="https://rokpovsic.com/tag/gitlab.html">gitlab</a>,      <a href="https://rokpovsic.com/tag/net.html">.net</a>    </p>
+    <h1 id="my-super-title">My super title</h1>
   </header>
   <div>
-      
-      <a class="btn" href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html#a-continuous-integration-guide-for-net-with-gitlab-ci">Continue reading</a>
+    
+
+        <h3>RECENT POSTS</h3>
+        {% set recent_articles = articles if not all_articles else all_articles %}
+        {% for recent_article in recent_articles %}
+        {% if loop.index <= 6 %}
+            <p>
+            <a href="{{ SITEURL }}/{{ recent_article.url }}#{{ recent_article.slug }}#{{ recent_article.slug }}">{{ recent_article.title }}</a>
+            </p>
+        {% endif %}
+        {% endfor %}
+
+    
   </div>
 </article>
-
-  <div class="pagination">
-  </div>
 
     <footer>
         <p>&copy; Rok Povšič </p>
