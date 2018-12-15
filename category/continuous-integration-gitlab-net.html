@@ -1,132 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>-->
-
-    <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/font-awesome/css/font-awesome.min.css">
-
-  <!--<style>-->
-    <!--body {-->
-      <!--font-family: 'Arima Madurai', sans-serif;-->
-    <!--}-->
-  <!--</style>-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link href="https://rokpovsic.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rok Povšič blog Atom">
+        <title>Dev Log - Articles in the continuous-integration, gitlab, .net category</title>
+
+        <link href="feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Dev Log Full Atom Feed" />
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link href="../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="../theme/css/code_blocks/monokai.css" rel="stylesheet">
 
 
+        <!-- Custom Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="" />
-  <meta name="google-site-verification" content="Is7K2KzatasiLldRphQqXxXBUO1PGhQ8tMrItplD1tk" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-
-    <meta name="author" content="Rok Povšič" />
-    <meta name="description" content="" />
-<meta property="og:site_name" content="Rok Povšič blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Rok Povšič blog"/>
-<meta property="og:description" content=""/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rokpovsic.com"/>
-
-  <title>Rok Povšič blog &ndash; Category: continuous-integration, gitlab, .net</title>
+                <meta property="og:locale" content="en_US.UTF-8">
+		<meta property="og:site_name" content="Dev Log">
 </head>
-<body>
-  <aside>
-    <div>
-      <a href="https://rokpovsic.com">
-        <img src="https://rokpovsic.com/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="https://rokpovsic.com"></a></h1>
-      <nav>
-        <ul class="list">
-          <li><a href="https://rokpovsic.com/archives">All posts</a></li>
-          <li><a href="https://rokpovsic.com/pages/about-me.html">About me</a></li>
-          <li><a href="https://rokpovsic.com/pages/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <ul class="social">
-        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/365837/yper" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rok-povsic" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rokpovsic" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-rss" href="feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
-      </ul>
 
-      <h3>RECENT POSTS</h3>
-          <p>
-            <a href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html">How to upgrade Postgres on Ubuntu 16.04</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/a-list-of-useful-git-commands.html">A list of useful Git commands</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html">A continuous integration guide for .NET with GitLab CI</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html">Which language to use with TWS API (Interactive Brokers API)?</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html">What is the chance of losing money in the stock market?</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html">A short guide for new VIM users</a>
-          </p>
-    </div>
-  </aside>
-  <main>
-    <nav>
-      <a href="https://rokpovsic.com">Home</a>
-      <a href="/archives">All posts</a>
-      <a href="https://rokpovsic.com/pages/about-me.html">About me</a>
-      <a href="https://rokpovsic.com/pages/contact.html">Contact</a>
-      <a href="https://rokpovsic.com/feeds/all.atom.xml">Atom</a>
+<body class="category-continuous-integration-gitlab-net">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../">Dev Log</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/archives">All posts</a></li>
+
+                            <li><a href="../pages/about-me.html">About me</a></li>
+                            <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
 
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html">A continuous integration guide for .NET with GitLab CI</a></h2>
-    <p>
-      Posted on Wed 24 May 2017 in <a href="https://rokpovsic.com/category/continuous-integration-gitlab-net.html">continuous-integration, gitlab, .net</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/continuous-integration.html">continuous-integration</a>,      <a href="https://rokpovsic.com/tag/gitlab.html">gitlab</a>,      <a href="https://rokpovsic.com/tag/net.html">.net</a>    </p>
-  </header>
-  <div>
-      <p>Here, I describe the process of setting up <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration (CI)</a> for a C# project that is hosted on <a href="https://gitlab.com">GitLab</a>. GitLab is a code sharing platform similar to GitHub but has two distinct advantages:</p>
-<ul>
-<li>you can create private repositories for free,</li>
-<li>it includes a free continuous integration tool called <a href="https://about.gitlab.com/gitlab-ci/">GitLab ...</a></li></ul>
-      <a class="btn" href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html">Continue reading</a>
-  </div>
-</article>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-color: #1a4971">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Articles in the continuous-integration, gitlab, .net category</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <div class="pagination">
-  </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-preview">
+            <a href="../a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="bookmark" title="Permalink to A continuous integration guide for .NET with GitLab CI">
+                <h2 class="post-title">
+                    A continuous integration guide for .NET with GitLab CI
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2017-05-24 &nbsp; &bull; &nbsp;  
+<a href="../a-continuous-integration-guide-for-net-with-gitlab-ci.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>Here, I describe the process of setting up continuous integration (CI) for a C# project that is hosted on GitLab.</p>
 
+                </p>
+            <a href="../a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="bookmark" title="Permalink to A continuous integration guide for .NET with GitLab CI">Continue reading</a>
+            
+        </div>
+
+
+  <script data-isso="https://comments.rokpovsic.com/"
+    src="https://comments.rokpovsic.com/js/count.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; Rok Povšič </p>
-<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
-  </main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                            <li>
+                                <a href="http://stackoverflow.com/users/365837/yper">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/rok-povsic">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/rokpovsic">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="feeds/all.atom.xml">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                    </ul>
+<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2018
+</p>                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+        <!-- Custom Theme JavaScript -->
+        <script src="../theme/js/clean-blog.min.js"></script>
 
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Rok Povšič blog ",
-  "url" : "https://rokpovsic.com",
-  "image": "",
-  "description": ""
-}
-</script>
 </body>
+
 </html>

@@ -1,272 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>-->
-
-    <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rokpovsic.com/theme/font-awesome/css/font-awesome.min.css">
-
-  <!--<style>-->
-    <!--body {-->
-      <!--font-family: 'Arima Madurai', sans-serif;-->
-    <!--}-->
-  <!--</style>-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link href="https://rokpovsic.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rok Povšič blog Atom">
+        <title>Dev Log</title>
+
+        <link href="feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Dev Log Full Atom Feed" />
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link href="./theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
 
 
+        <!-- Custom Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="" />
-  <meta name="google-site-verification" content="Is7K2KzatasiLldRphQqXxXBUO1PGhQ8tMrItplD1tk" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-
-    <meta name="author" content="Rok Povšič" />
-    <meta name="description" content="" />
-<meta property="og:site_name" content="Rok Povšič blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Rok Povšič blog"/>
-<meta property="og:description" content=""/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rokpovsic.com"/>
-
-  <title>Rok Povšič blog</title>
+                <meta property="og:locale" content="en_US.UTF-8">
+		<meta property="og:site_name" content="Dev Log">
 </head>
-<body>
-  <aside>
-    <div>
-      <a href="https://rokpovsic.com">
-        <img src="https://rokpovsic.com/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="https://rokpovsic.com"></a></h1>
-      <nav>
-        <ul class="list">
-          <li><a href="https://rokpovsic.com/archives">All posts</a></li>
-          <li><a href="https://rokpovsic.com/pages/about-me.html">About me</a></li>
-          <li><a href="https://rokpovsic.com/pages/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <ul class="social">
-        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/365837/yper" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rok-povsic" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rokpovsic" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-rss" href="feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
-      </ul>
 
-      <h3>RECENT POSTS</h3>
-          <p>
-            <a href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html">How to upgrade Postgres on Ubuntu 16.04</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/a-list-of-useful-git-commands.html">A list of useful Git commands</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html">A continuous integration guide for .NET with GitLab CI</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html">Which language to use with TWS API (Interactive Brokers API)?</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html">What is the chance of losing money in the stock market?</a>
-          </p>
-          <p>
-            <a href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html">A short guide for new VIM users</a>
-          </p>
-    </div>
-  </aside>
-  <main>
-    <nav>
-      <a href="https://rokpovsic.com">Home</a>
-      <a href="/archives">All posts</a>
-      <a href="https://rokpovsic.com/pages/about-me.html">About me</a>
-      <a href="https://rokpovsic.com/pages/contact.html">Contact</a>
-      <a href="https://rokpovsic.com/feeds/all.atom.xml">Atom</a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">Dev Log</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/archives">All posts</a></li>
+
+                            <li><a href="./pages/about-me.html">About me</a></li>
+                            <li><a href="./pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
 
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html">How to upgrade Postgres on Ubuntu 16.04</a></h2>
-    <p>
-      Posted on Mon 23 July 2018 in <a href="https://rokpovsic.com/category/postgres.html">postgres</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/postgres.html">postgres</a>,      <a href="https://rokpovsic.com/tag/upgrade.html">upgrade</a>    </p>
-  </header>
-  <div>
-      <p>This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.</p>
-<blockquote>
-<p>Note: I've used these exact commands on Ubuntu 16.04. Your mileage may vary on other ...</p></blockquote>
-      <a class="btn" href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/a-list-of-useful-git-commands.html">A list of useful Git commands</a></h2>
-    <p>
-      Posted on Fri 29 June 2018 in <a href="https://rokpovsic.com/category/git.html">git</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/git.html">git</a>    </p>
-  </header>
-  <div>
-      <p>Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for ...</p>
-      <a class="btn" href="https://rokpovsic.com/a-list-of-useful-git-commands.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html">A continuous integration guide for .NET with GitLab CI</a></h2>
-    <p>
-      Posted on Wed 24 May 2017 in <a href="https://rokpovsic.com/category/continuous-integration-gitlab-net.html">continuous-integration, gitlab, .net</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/continuous-integration.html">continuous-integration</a>,      <a href="https://rokpovsic.com/tag/gitlab.html">gitlab</a>,      <a href="https://rokpovsic.com/tag/net.html">.net</a>    </p>
-  </header>
-  <div>
-      <p>Here, I describe the process of setting up <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration (CI)</a> for a C# project that is hosted on <a href="https://gitlab.com">GitLab</a>. GitLab is a code sharing platform similar to GitHub but has two distinct advantages:</p>
-<ul>
-<li>you can create private repositories for free,</li>
-<li>it includes a free continuous integration tool called <a href="https://about.gitlab.com/gitlab-ci/">GitLab ...</a></li></ul>
-      <a class="btn" href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html">Which language to use with TWS API (Interactive Brokers API)?</a></h2>
-    <p>
-      Posted on Sun 26 March 2017 in <a href="https://rokpovsic.com/category/finance.html">finance</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/investing.html">investing</a>,      <a href="https://rokpovsic.com/tag/api.html">api</a>,      <a href="https://rokpovsic.com/tag/interactive-brokers.html">interactive brokers</a>,      <a href="https://rokpovsic.com/tag/tws.html">tws</a>    </p>
-  </header>
-  <div>
-      <h1>TWS API</h1>
-<p>Interactive Brokers has an API called <a href="https://interactivebrokers.github.io">TWS API</a> which you can use to programmatically
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-color: #1a4971">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Dev Log</h1>
+                            <hr class="small">
+                            <span class="subheading">Tech blog by Rok Povšič</span>
+                            <ul class="list-inline text-center">
+                                <li>
+                                    <a href="http://stackoverflow.com/users/365837/yper">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/rok-povsic">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/rokpovsic">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="feeds/all.atom.xml">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-preview">
+            <a href="./how-to-upgrade-postgres-on-ubuntu-1604.html" rel="bookmark" title="Permalink to How to upgrade Postgres on Ubuntu 16.04">
+                <h2 class="post-title">
+                    How to upgrade Postgres on Ubuntu 16.04
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2018-07-23 &nbsp; &bull; &nbsp;  
+<a href="./how-to-upgrade-postgres-on-ubuntu-1604.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.</p>
+
+                </p>
+            <a href="./how-to-upgrade-postgres-on-ubuntu-1604.html" rel="bookmark" title="Permalink to How to upgrade Postgres on Ubuntu 16.04">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./a-list-of-useful-git-commands.html" rel="bookmark" title="Permalink to A list of useful Git commands">
+                <h2 class="post-title">
+                    A list of useful Git commands
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2018-06-29 &nbsp; &bull; &nbsp;  
+<a href="./a-list-of-useful-git-commands.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.</p>
+
+                </p>
+            <a href="./a-list-of-useful-git-commands.html" rel="bookmark" title="Permalink to A list of useful Git commands">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="bookmark" title="Permalink to A continuous integration guide for .NET with GitLab CI">
+                <h2 class="post-title">
+                    A continuous integration guide for .NET with GitLab CI
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2017-05-24 &nbsp; &bull; &nbsp;  
+<a href="./a-continuous-integration-guide-for-net-with-gitlab-ci.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>Here, I describe the process of setting up continuous integration (CI) for a C# project that is hosted on GitLab.</p>
+
+                </p>
+            <a href="./a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="bookmark" title="Permalink to A continuous integration guide for .NET with GitLab CI">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="bookmark" title="Permalink to Which language to use with TWS API (Interactive Brokers API)?">
+                <h2 class="post-title">
+                    Which language to use with TWS API (Interactive Brokers API)?
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2017-03-26 &nbsp; &bull; &nbsp;  
+<a href="./which-language-to-use-with-tws-api-interactive-brokers-api.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>Interactive Brokers has an API called <a href="https://interactivebrokers.github.io">TWS API</a> which you can use to programmatically
 execute trades, poll current/historical market data, get account info, open positions, etc.
-Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python.</p>
-<p>All the TWS API functionality is supported ...</p>
-      <a class="btn" href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html">What is the chance of losing money in the stock market?</a></h2>
-    <p>
-      Posted on Mon 23 January 2017 in <a href="https://rokpovsic.com/category/finance.html">finance</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/investing.html">investing</a>,      <a href="https://rokpovsic.com/tag/savings.html">savings</a>,      <a href="https://rokpovsic.com/tag/money.html">money</a>    </p>
-  </header>
-  <div>
-      <p>The first step of achieving good returns in the stock market is not losing money.
+Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python. All the TWS API functionality 
+is supported in all of those programming languages. Which language should you choose for your trading program?</p>
+
+                </p>
+            <a href="./which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="bookmark" title="Permalink to Which language to use with TWS API (Interactive Brokers API)?">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="bookmark" title="Permalink to What is the chance of losing money in the stock market?">
+                <h2 class="post-title">
+                    What is the chance of losing money in the stock market?
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2017-01-23 &nbsp; &bull; &nbsp;  
+<a href="./what-is-the-chance-of-losing-money-in-the-stock-market.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>The first step of achieving good returns in the stock market is not losing money.
 What is the percentage chance of losing money in the stock market?</p>
-<p>That depends on the investment style and can be hard to quantify. If you hold a small number of companies
-in the portfolio ...</p>
-      <a class="btn" href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html">A short guide for new VIM users</a></h2>
-    <p>
-      Posted on Sat 10 December 2016 in <a href="https://rokpovsic.com/category/vim.html">vim</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/vim.html">vim</a>    </p>
-  </header>
-  <div>
-      <p>VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast ...</p>
-      <a class="btn" href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html">Keyboard tricks to write code faster</a></h2>
-    <p>
-      Posted on Mon 31 October 2016 in <a href="https://rokpovsic.com/category/typing.html">typing</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/typing.html">typing</a>,      <a href="https://rokpovsic.com/tag/fast.html">fast</a>    </p>
-  </header>
-  <div>
-      <h2>Using English keyboard layout</h2>
-<p>Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching to the English layout made a great difference for me. It's simply faster ...</p>
-      <a class="btn" href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/using-pycharm-without-a-mouse.html">Using PyCharm without a mouse</a></h2>
-    <p>
-      Posted on Sat 29 October 2016 in <a href="https://rokpovsic.com/category/pycharm.html">pycharm</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/pycharm.html">pycharm</a>,      <a href="https://rokpovsic.com/tag/shortcuts.html">shortcuts</a>    </p>
-  </header>
-  <div>
-      <p>I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary ...</p>
-      <a class="btn" href="https://rokpovsic.com/using-pycharm-without-a-mouse.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html">How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</a></h2>
-    <p>
-      Posted on Fri 12 February 2016 in <a href="https://rokpovsic.com/category/vmware.html">vmware</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/vmware.html">vmware</a>,      <a href="https://rokpovsic.com/tag/bug.html">bug</a>    </p>
-  </header>
-  <div>
-      <p>There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. See the GIF below.</p>
-<p><img alt="VMWare bug" src="https://rokpovsic.com/images/vmware_bug.gif" /></p>
-<p><strong>How ...</strong></p>
-      <a class="btn" href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html">[C#] Why it’s better to have short-lived DataContext</a></h2>
-    <p>
-      Posted on Wed 20 August 2014 in <a href="https://rokpovsic.com/category/c.html">C#</a>
-      &#8226; Tagged with
-      <a href="https://rokpovsic.com/tag/c.html">c#</a>,      <a href="https://rokpovsic.com/tag/datacontext.html">datacontext</a>    </p>
-  </header>
-  <div>
-      <p>When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
+
+                </p>
+            <a href="./what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="bookmark" title="Permalink to What is the chance of losing money in the stock market?">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./a-short-guide-for-new-vim-users.html" rel="bookmark" title="Permalink to A short guide for new VIM users">
+                <h2 class="post-title">
+                    A short guide for new VIM users
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2016-12-10 &nbsp; &bull; &nbsp;  
+<a href="./a-short-guide-for-new-vim-users.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is <em>almost</em> like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you.</p>
+
+                </p>
+            <a href="./a-short-guide-for-new-vim-users.html" rel="bookmark" title="Permalink to A short guide for new VIM users">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./keyboard-tricks-to-write-code-faster.html" rel="bookmark" title="Permalink to Keyboard tricks to write code faster">
+                <h2 class="post-title">
+                    Keyboard tricks to write code faster
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2016-10-31 &nbsp; &bull; &nbsp;  
+<a href="./keyboard-tricks-to-write-code-faster.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using ...
+                </p>
+            <a href="./keyboard-tricks-to-write-code-faster.html" rel="bookmark" title="Permalink to Keyboard tricks to write code faster">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./using-pycharm-without-a-mouse.html" rel="bookmark" title="Permalink to Using PyCharm without a mouse">
+                <h2 class="post-title">
+                    Using PyCharm without a mouse
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2016-10-29 &nbsp; &bull; &nbsp;  
+<a href="./using-pycharm-without-a-mouse.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.</p>
+
+                </p>
+            <a href="./using-pycharm-without-a-mouse.html" rel="bookmark" title="Permalink to Using PyCharm without a mouse">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html" rel="bookmark" title="Permalink to How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host">
+                <h2 class="post-title">
+                    How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2016-02-12 &nbsp; &bull; &nbsp;  
+<a href="./how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. </p>
+
+                </p>
+            <a href="./how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html" rel="bookmark" title="Permalink to How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host">Continue reading</a>
+            
+        </div>
+        <div class="post-preview">
+            <a href="./c-why-its-better-to-have-short-lived-datacontext.html" rel="bookmark" title="Permalink to [C#] Why it’s better to have short-lived DataContext">
+                <h2 class="post-title">
+                    [C#] Why it’s better to have short-lived DataContext
+                </h2>
+            </a>
+            <p class="post-meta">Posted on 2014-08-20 &nbsp; &bull; &nbsp;  
+<a href="./c-why-its-better-to-have-short-lived-datacontext.html#isso-thread">Comments</a></p>
+                <p class="article-summary">
+                    <p>When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
 The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.</p>
-<p>If the project ...</p>
-      <a class="btn" href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html">Continue reading</a>
-  </div>
-</article>
 
-  <div class="pagination">
-  </div>
+                </p>
+            <a href="./c-why-its-better-to-have-short-lived-datacontext.html" rel="bookmark" title="Permalink to [C#] Why it’s better to have short-lived DataContext">Continue reading</a>
+            
+        </div>
 
+
+  <script data-isso="https://comments.rokpovsic.com/"
+    src="https://comments.rokpovsic.com/js/count.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; Rok Povšič </p>
-<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
-  </main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                            <li>
+                                <a href="http://stackoverflow.com/users/365837/yper">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/rok-povsic">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/rokpovsic">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="feeds/all.atom.xml">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                    </ul>
+<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2018
+</p>                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+        <!-- Custom Theme JavaScript -->
+        <script src="./theme/js/clean-blog.min.js"></script>
 
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Rok Povšič blog ",
-  "url" : "https://rokpovsic.com",
-  "image": "",
-  "description": ""
-}
-</script>
 </body>
+
 </html>
