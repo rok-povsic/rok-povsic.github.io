@@ -113,6 +113,8 @@ The way to use LINQ to SQL is to create an instance of DataContext for your spec
 <p>If the project is not too large, you could have all your dealings with database abstracted 
 in one class. That puts all your database logic in one place. You also can 
 easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.</p>
+<!-- PELICAN_END_SUMMARY -->
+
 <p>When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.</p>
 <div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseOperations</span> <span class="p">:</span> <span class="n">IDatabaseOperations</span>
 <span class="p">{</span>

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dev Log</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2018-07-23T19:25:00+02:00</updated><entry><title>How to upgrade Postgres on Ubuntu 16.04</title><link href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html" rel="alternate"></link><updated>2018-07-23T19:25:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-07-23:how-to-upgrade-postgres-on-ubuntu-1604.html</id><summary type="html">&lt;p&gt;This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dev Log</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2018-12-30T11:05:00+01:00</updated><entry><title>Setting up a static-site blog on GitHub pages on a custom domain, with comments</title><link href="https://rokpovsic.com/setting-up-a-static-site-blog-on-github-pages-on-a-custom-domain-with-comments.html" rel="alternate"></link><updated>2018-12-30T11:05:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-12-30:setting-up-a-static-site-blog-on-github-pages-on-a-custom-domain-with-comments.html</id><summary type="html">&lt;p&gt;This blog is built using a static-site generator named &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;. It converts the posts you write in Markdown directly to HTML files, which happens on your machine at "compile-time". This means there's no dynamic page generation on each HTTP request, which is fine (even preferred) for a blog-like website. Pelican is written in Python and using it &lt;em&gt;feels Pythonic&lt;/em&gt; (it uses configuration-as-code) which is great for any hardcore Pythonista. I've just recently also added a commenting system and will explain here what the blog's components are.&lt;/p&gt;
+
+
+&lt;p&gt;Pelican is very flexible allowing you to modify the blog to your needs. &lt;a href="https://github.com/getpelican/pelican-plugins"&gt;A number of quality plugins&lt;/a&gt; exist, of which I currently use &lt;strong&gt;summery&lt;/strong&gt;, allowing me to specify the exact text shown on the index page under post summary, and &lt;strong&gt;yuicompressor&lt;/strong&gt;, which at compile-time, minifies all CSS and JS files.&lt;/p&gt;
+&lt;p&gt;There exist a number of &lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican themes&lt;/a&gt;. I'm using the &lt;a href="https://github.com/gilsondev/pelican-clean-blog"&gt;Clean Blog theme&lt;/a&gt; which I've slightly modified. It's clean and simple, and hopefully won't end up looking outdated in a couple of years.&lt;/p&gt;
+&lt;p&gt;The blog is hosted on &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt; which is tightly integrated with the GitHub repository hosting the HTML files, allowing the deployment of the files solely using Git (&lt;code&gt;git push&lt;/code&gt; and that's it). The process of writing and publishing a new post is simple. Write the post, compile the HTML files, push them to the GitHub repository. &lt;a href="https://fedoramagazine.org/make-github-pages-blog-with-pelican/"&gt;Make a Github Pages blog with Pelican&lt;/a&gt; is the tutorial I've followed to set this up.&lt;/p&gt;
+&lt;p&gt;I've also setup my own domain name. I've registered it at &lt;a href="https://uk.godaddy.com/"&gt;GoDaddy&lt;/a&gt; and then followed the &lt;a href="https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/"&gt;Set Up SSL on Github Pages With Custom Domains for Free&lt;/a&gt; tutorial which uses Cloudflare to setup &lt;em&gt;https&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Recently, I've also added the commenting system. A usual choice of the platform would be &lt;a href="https://disqus.com"&gt;Disqus&lt;/a&gt; but I wanted find an alternative because of privacy concerns. Personally, I also don't find looks of Disqus attractive. I've instead chosen &lt;a href="https://posativ.org/isso/"&gt;Isso&lt;/a&gt; which I self-host with one of the cloud providers.&lt;/p&gt;
+&lt;p&gt;Isso integration to Pelican is quite simple but takes time to set everything up. Client-side, you only add a couple of lines of HTML/JavaScript code to your Pelican theme. Server-side, you have to setup an Nginx reverse-proxy which sends requests to your Isso application (I run it inside of a Docker container), setup some kind of Certificate Authority (in my case &lt;a href="https://letsencrypt.org/"&gt;Let's Encrypt&lt;/a&gt;) so you don't send user's comments over the wire unencrypted, and a SMTP send-mail server if you want to your commentators to be notified of replies via email.&lt;/p&gt;
+&lt;p&gt;All in all, this takes more time to setup than using some out-of-the-box solution (i.e. Wordpress). But the process was quite fun and at the end, the blog is more customizable, privacy-conscious, and efficient.&lt;/p&gt;</summary><category term="blog"></category><category term="pelican"></category><category term="isso"></category></entry><entry><title>How to upgrade Postgres on Ubuntu 16.04</title><link href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html" rel="alternate"></link><updated>2018-07-23T19:25:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-07-23:how-to-upgrade-postgres-on-ubuntu-1604.html</id><summary type="html">&lt;p&gt;This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.&lt;/p&gt;
 
 
 &lt;blockquote&gt;
@@ -87,6 +96,8 @@
 &lt;li&gt;it includes a free continuous integration tool called &lt;a href="https://about.gitlab.com/gitlab-ci/"&gt;GitLab CI&lt;/a&gt; that can be run either on GitLab CI servers, or on your own server.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Actually, GitLab even provides their CI servers for free, called Shared Runners, but at the time of this writing only Linux servers are available, so in this guide we are going to use our own Windows server to perform the actual builds and tests on. This means that to follow this guide, you &lt;strong&gt;have to have a Windows instance available&lt;/strong&gt; in order to run a build. For a production use this is ideally a computer that runs 24/7, i.e. a computer on premises or a VPS, but can, for starters, also be your own laptop/pc.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
 &lt;p&gt;The continuous integration process we will do will be the following:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;You commit &amp;amp; push a set of code changes to a GitLab repository.&lt;/li&gt;
@@ -177,6 +188,8 @@ the effect on the portfolio will be large.&lt;/p&gt;
 &lt;p&gt;But say you invest in a large number of companies, say in the companies of some stock index.
 We cannot be certain of any performance of the selected companies in the future.
 What we can do is we can look at how the stock market index performed in the past.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
 &lt;p&gt;To do this, I wanted to have as large amount of data as possible.
 The most data I could find, is for a stock index
 &lt;a href="https://en.wikipedia.org/wiki/S%26P_500_Index"&gt;S&amp;amp;P 500&lt;/a&gt;.
@@ -204,6 +217,8 @@ I've also tested the same thing but discounted returns for each year by whatever
 
 &lt;p&gt;The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.&lt;/p&gt;
 &lt;p&gt;The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
 &lt;h2&gt;Modes&lt;/h2&gt;
 &lt;p&gt;When writing code (or some other text) in a regular editor the key, the keys you press appear on the screen right away. Using VIM this will happen only if you are in so called &lt;em&gt;insert&lt;/em&gt; mode. When in this mode, VIM behaves as any other editor. After VIM has just started, it is in &lt;em&gt;normal&lt;/em&gt; mode. If you simply want to write some text, press &lt;strong&gt;i&lt;/strong&gt; to enter &lt;em&gt;insert&lt;/em&gt; mode. Now you can type anything you want. To exit &lt;em&gt;insert&lt;/em&gt; mode and go back to &lt;em&gt;normal&lt;/em&gt; mode, press &lt;strong&gt;ESC&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/modes.gif" /&gt;&lt;/p&gt;
@@ -249,6 +264,8 @@ Sterling Hayden&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/repeating.gif" /&gt;&lt;/p&gt;
 &lt;h2&gt;How to learn all this?&lt;/h2&gt;
 &lt;p&gt;There's no need to learn everything to start using VIM. I think that VIM has major advantages even when you use only a small subset of the provided functionality. Simply start using it by installing a VIM plugin for your code editor and using mostly &lt;em&gt;insert&lt;/em&gt; mode and maybe &lt;strong&gt;H&lt;/strong&gt;, &lt;strong&gt;J&lt;/strong&gt;, &lt;strong&gt;K&lt;/strong&gt; and &lt;strong&gt;L&lt;/strong&gt; (the keys to move in different directions, remember?) in the &lt;em&gt;normal&lt;/em&gt; mode instead of the arrow keys. After you get a grasp of that, add some other thing that sounds interesting. It's like driving a car - at first it's hard and complex, after a few months it's completely automatic and you don't even think about it.&lt;/p&gt;</summary><category term="vim"></category></entry><entry><title>Keyboard tricks to write code faster</title><link href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html" rel="alternate"></link><updated>2016-10-31T10:44:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-31:keyboard-tricks-to-write-code-faster.html</id><summary type="html">&lt;p&gt;Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching to the English layout made a great difference for me. It's simply faster to reach commonly used characters such as []{};:,@""&amp;lt;&amp;gt;= compared some (maybe all) other layouts. I've trained myself to always use English keyboard when programming and when writing in English language in general (such as now).  &lt;/p&gt;
+
+
 &lt;h2&gt;Using English keyboard layout&lt;/h2&gt;
 &lt;p&gt;When writing in Slovenian language I switch the keyboard layout to Slovenian and continue seamlessly as nothing changed. Then only keys that I sometimes use wrong on Slovenian layout are letters Y and Z which are for some reason switched in Slovenian keyboard layout.&lt;/p&gt;
 &lt;h2&gt;Try using VIM&lt;/h2&gt;
@@ -291,6 +308,8 @@ Sterling Hayden&lt;/p&gt;
 
 
 &lt;p&gt;See the GIF below.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
 &lt;p&gt;&lt;img alt="VMWare bug" src="https://rokpovsic.com/images/vmware_bug.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;How to fix it?&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -305,6 +324,8 @@ The way to use LINQ to SQL is to create an instance of DataContext for your spec
 &lt;p&gt;If the project is not too large, you could have all your dealings with database abstracted 
 in one class. That puts all your database logic in one place. You also can 
 easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
 &lt;p&gt;When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DatabaseOperations&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IDatabaseOperations&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
