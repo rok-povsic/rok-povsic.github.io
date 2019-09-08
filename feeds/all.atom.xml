@@ -75,7 +75,7 @@
 &lt;li&gt;&lt;code&gt;grbc&lt;/code&gt; (&lt;code&gt;git rebase --continue&lt;/code&gt;),&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gs&lt;/code&gt; (&lt;code&gt;git status&lt;/code&gt;).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I've also set up auto-completion, so when typing &lt;code&gt;gco mas&amp;lt;TAB&amp;gt;&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt; auto-completes. Here's what to put to &lt;code&gt;~/.bash_aliases&lt;/code&gt; (or some other place from where your terminal loads custom code from) to set all this up: &lt;a href="https://rokpovsic.com/pages/git-aliases.html"&gt;Git Aliases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I've also set up auto-completion, so when typing &lt;code&gt;gco mas&amp;lt;TAB&amp;gt;&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt; auto-completes. Here's what to put to &lt;code&gt;~/.bash_aliases&lt;/code&gt; (or some other place from where your terminal loads custom code from) to set all this up: &lt;a href="https://gist.github.com/rok-povsic/7272ef83462fc6720e1d40355a5e4d37"&gt;Git Aliases&lt;/a&gt;&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/git-aliases.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
 &lt;hr /&gt;
