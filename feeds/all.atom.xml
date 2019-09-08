@@ -83,7 +83,7 @@
 &lt;p&gt;Gnome Shell has an excellent &lt;a href="https://extensions.gnome.org/"&gt;extension system&lt;/a&gt; which provides some truly great extensions. Here's a couple I use.&lt;/p&gt;
 &lt;h3 id="gtile"&gt;Gtile&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://extensions.gnome.org/extension/28/gtile/"&gt;Gtile&lt;/a&gt; provides the functionality of re-positioning of windows within a workspace, similar to what is done when using a tiled window manager. Instead of grabbing a mouse and dragging/resizing a window, use one of the numerous Gtile shortcuts I've set up that position my windows to the places I most often want them to be. For example, I've set up the shortcuts &lt;code&gt;CTRL+WIN+U/I/N/M&lt;/code&gt; to move the currently focused window to top-left/top-right/bottom-left/bottom-right quarter of the screen, respectively.&lt;/p&gt;
-&lt;video width="600" src="videos/vid1.webm" controls preload="metadata"&gt;&lt;/video&gt;
+&lt;video width="600" src="videos/efficiency-hacks/gtile.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
 &lt;h3 id="impatience"&gt;Impatience&lt;/h3&gt;
 &lt;p&gt;To speed up animations that take place when switching between workspaces (see below), I use the extension called &lt;a href="https://extensions.gnome.org/extension/277/impatience/"&gt;Impatiance&lt;/a&gt; which makes animations go faster.&lt;/p&gt;
