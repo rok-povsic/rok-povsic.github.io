@@ -129,27 +129,23 @@
 <p><img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /></p>
 <p>To do this, let's create a test project in Visual Studio. We are going to do the build first and add automatic testing later.</p>
 <p>This is the sample code we are going to build:</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">Program</span>
+<pre><code>class Program
 {
-    <span class="n">static</span> <span class="nb">void</span> <span class="n">Main</span>(<span class="n">string</span>[] <span class="n">args</span>)
+    static void Main(string[] args)
     {
-        <span class="n">Console</span>.<span class="n">WriteLine</span>(<span class="s">&quot;Hello, World!&quot;</span>);
+        Console.WriteLine("Hello, World!");
     }
 }
-</pre></div>
-
-
+</code></pre>
 <p>Create a new repository on GitLab. Next, install GitLab Runner, which is a program that runs on your Windows machine that is connected to the repository and that runs the build. Download the program from <a href="https://docs.gitlab.com/runner/install/windows.html">here</a> where you will also find more details on how to install it. It's not complicated, but the one thing you'll also need is a <em>token</em> with which you connect Runner with the repository. You find it by opening your repository, and going to <em>Settings</em> -&gt; <em>CI/CD Pipelines</em>. Copy the token and follow the instructions on how to install and connect the runner.</p>
 <p>Note: If you only want to build this project on your server, click <em>Disable Shared Runners</em> so GitLab won't try to build this project on their servers.</p>
 <p>After this, the next step is to configure how exactly the build should be performed. This is done by creating a <code>.gitlab-ci.yml</code> file in the root of the project directory and specifying how to do the build. Here's a simple example:</p>
-<div class="highlight"><pre><span class="n">build</span><span class="o">:</span>
-    <span class="n">stage</span><span class="o">:</span> <span class="n">build</span>
-    <span class="n">script</span><span class="o">:</span>
-            <span class="o">-</span> <span class="n">C</span><span class="o">:\</span><span class="n">Tools</span><span class="o">\</span><span class="n">nuget</span><span class="o">.</span><span class="na">exe</span> <span class="n">restore</span>
-            <span class="o">-</span> <span class="n">cmd</span><span class="o">.</span><span class="na">exe</span> <span class="sr">/C &quot; &quot;C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe&quot; /p:Configuration=Release /</span><span class="n">t</span><span class="o">:</span><span class="n">Clean</span><span class="o">;</span><span class="n">Build</span> <span class="n">YourSolutionName</span><span class="o">.</span><span class="na">sln</span> <span class="err">&quot;</span> <span class="o">&amp;&amp;</span> <span class="n">exit</span> <span class="o">%%</span><span class="n">ERRORLEVEL</span><span class="o">%%</span>
-</pre></div>
-
-
+<pre><code>build:
+    stage: build
+    script:
+            - C:\Tools\nuget.exe restore
+            - cmd.exe /C " "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Configuration=Release /t:Clean;Build YourSolutionName.sln " &amp;&amp; exit %%ERRORLEVEL%%
+</code></pre>
 <p>You have to specify your location of <code>nuget.exe</code> and <code>MSBuild.exe</code>, and the solution name. You may download <code>nuget.exe</code> from <a href="http://dist.nuget.org/">here</a>. See <a href="https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal">this StackOverflow page</a> to find out how to get <code>MSBuild.exe</code>.</p>
 <p>After that, every time a code is pushed on the repository, it will be automatically downloaded to the Windows machine that is running GitLab Runner. The build status will be reported under <em>Pipelines</em>.</p>
 <p><img alt="GitLab Pipelines" src="https://rokpovsic.com/images/ci-gitlab/ci-pipelines.png" /></p>
@@ -217,7 +213,7 @@
                                 </a>
                             </li>
                     </ul>
-<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2018
+<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2019
 </p>                </div>
             </div>
         </div>

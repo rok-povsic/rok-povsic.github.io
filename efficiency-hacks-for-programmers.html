@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Efficiency hacks for programmers</title>
+
+        <link href="feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Dev Log Full Atom Feed" />
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link href="./theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+        <!-- Custom Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+        <meta name="description" content="Over the years, I've found a number of efficiency hacks which make using the computer as a software developer much more smooth and ...">
+
+        <meta name="author" content="Rok Povšič">
+
+        <meta name="tags" content="programming">
+        <meta name="tags" content="efficiency">
+        <meta name="tags" content="hacks">
+        <meta name="tags" content="tips">
+        <meta name="tags" content="tricks">
+        <meta name="tags" content="linux">
+        <meta name="tags" content="gnome">
+        <meta name="tags" content="vim">
+        <meta name="tags" content="extensions">
+
+	                <meta property="og:locale" content="en_US.UTF-8">
+		<meta property="og:site_name" content="Dev Log">
+
+	<meta property="og:type" content="article">
+            <meta property="article:author" content="./author/rok-povsic.html">
+	<meta property="og:url" content="./efficiency-hacks-for-programmers.html">
+	<meta property="og:title" content="Efficiency hacks for programmers">
+	<meta property="article:published_time" content="2019-09-08 11:04:00+02:00">
+            <meta property="og:description" content="Over the years, I've found a number of efficiency hacks which make using the computer as a software developer much more smooth and ...">
+
+            <meta property="og:image" content="./theme/images/post-bg.jpg">
+</head>
+
+<body class="article-efficiency-hacks-for-programmers">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./">Dev Log</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/archives">All posts</a></li>
+
+                            <li><a href="./pages/about-me.html">About me</a></li>
+                            <li><a href="./pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-color: #1a4971">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Efficiency hacks for programmers</h1>
+                        <span class="meta">Posted on 2019-09-08
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>Over the years, I've found a number of <em>efficiency hacks</em> which make using the computer as a software developer much more smooth and elegant. This involves how I use the OS, the IDE, and other tools. I've found it pays to sharpen the saw and make the flow of work as hurdle-free as possible, especially for the tasks that are repeated many times. The cost of setting things up and learning to use any particular hack non-trivial but fixed, and the benefit is ongoing. In this post, I describe the hacks that made the most impact for me.</p>
+
+
+<h2 id="table-of-concents">Table of Concents</h2>
+<div>
+    <ol>
+        <li>
+            <a href="#1-vim-everywhere">Vim everywhere</a>
+            <ul>
+                <li><a href="#programming">Programming</a> </li>
+                <li><a href="#browser">Browser</a> </li>
+                <li><a href="#terminal">Terminal</a> </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#2-terminal-usage">Terminal usage</a>
+            <ul>
+                <li><a href="#better-command-history-with-ctrlr">Better command history with CTRL+R</a> </li>
+                <li><a href="#git-command-line-shortcuts">Git command line shortcuts</a> </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#3-gnome-shell">Gnome Shell</a>
+            <ul>
+                <li><a href="#gtile">Gtile</a> </li>
+                <li><a href="#impatience">Impatience</a> </li>
+                <li><a href="#drop-down-terminal">Drop down terminal</a> </li>
+                <li><a href="#hide-top-bar-no-title-bar">Hide top bar / No title bar</a> </li>
+                <li><a href="#gnome-shell-workspaces">Gnome Shell workspaces</a> </li>
+            </ul>
+        </li>
+        <li><a href="#4-conclusion">Summary</a></li>
+    </ul>
+</div>
+
+<p>My observation is that efficiency of using a computer <em>is</em> important when it comes to software development. Even if the process of programming involves a lot (or even the majority) of thinking instead of typing, the ability to move these thoughts into computer as quickly as possible is of great benefit. How quickly would we build software if we could make the code appear, move around, refactor, delete instantly, all with the power of our thoughts? We cannot do that (at least not in in 2019), but we can definitely make improvements in how we use the currently available interface - the keyboard.</p>
+<blockquote>
+<p>Warning: Certain tips only apply to *nix system, and some only to the Gnome window manager.</p>
+</blockquote>
+<hr />
+<h2 id="1-vim-everywhere">1. Vim everywhere</h2>
+<h3 id="programming">Programming</h3>
+<p>I use Vim-mode everywhere I need to type text. This includes programming, of course, but other interfaces as well. Most modern IDEs have some variant of a "Vim mode" or a "Vim plugin" (at least do the JetBrains IDEs, Visual Studio, Eclipse, VS Code, Sublime, Atom). While these are only simulations of the original Vim and do not behave <em>exactly</em> the same in all cases, the commands that I actually use are available and mostly identical. Some tinkering is required to resolve any keyboard shortcuts conflicts between the IDE and Vim. But once this is done, programming is faster, and in my experience, more enjoyable.</p>
+<video width="600" src="videos/efficiency-hacks/vim.webm" controls preload="metadata"></video>
+
+<h3 id="browser">Browser</h3>
+<p>I also use a Vim extension in the browsers I use, both in <a href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/">Firefox</a> and <a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Chrome</a>. It makes it possible to browse without leaving the home row position, using K/J to move up/down (I use U/D do move up/down with greater speed), and using F + some-key-combination to visit links. I've also added shortcuts ALT+H and ALT+L to move to back/forward, as I have the same shortcuts for Back and Forward in my IDEs as well.</p>
+<video width="600" src="videos/efficiency-hacks/browser.webm" controls preload="metadata"></video>
+
+<h3 id="terminal">Terminal</h3>
+<p>I've also have enabled <a href="http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal">vi-mode</a> in my Bash terminal. By default, you're in the insert mode, so the command line behaves as it would on some other machine. But you can, of course, switch to the command mode pressing ESC. This comes in handy when there's a long command I'm working on, and can quickly move between the words (with W and B), delete words (DW etc.), insert and beginning/end of the line with I and A, etc.</p>
+<video width="600" src="videos/efficiency-hacks/terminal.webm" controls preload="metadata"></video>
+
+<hr />
+<h2 id="2-terminal-usage">2. Terminal usage</h2>
+<h3 id="better-command-history-with-ctrlr">Better command history with CTRL+R</h3>
+<p><a href="https://github.com/junegunn/fzf">fzf</a> is an excellent tool providing fuzzy (i.e. non-exact) search. This comes in handy when searching for a command which has been executed in the past. The default CTRL+R shell already gives the functionality to scroll through the last commands, and fzf is an improved replacement of that, providing fuzzy search of past commands, and giving a better overview of the history last few commands.</p>
+<video width="600" src="videos/efficiency-hacks/fzf.webm" controls preload="metadata"></video>
+
+<h3 id="git-command-line-shortcuts">Git command line shortcuts</h3>
+<p>One of the terminal commands I use the most is <code>git</code>. But typing out the <code>git &lt;something&gt;</code> commands many times each day became repetitive, so I've set up a number of Git aliases (I got the idea from <a href="https://jonsuh.com/blog/git-command-line-shortcuts/">this blog post</a>).</p>
+<p>The shortcuts I mostly use are:</p>
+<ul>
+<li><code>gaa</code> (<code>git add .</code>), </li>
+<li><code>gcm</code> (<code>git commit --message</code>), </li>
+<li><code>gco</code> (<code>git checkout</code>),</li>
+<li><code>gcob</code> (<code>git checkout --branch</code>),</li>
+<li><code>gd</code> (<code>git diff</code>), </li>
+<li><code>gds</code> (<code>git diff --staged</code>), </li>
+<li><code>gld</code> (<code>git log --pretty=format:"%h %ad %s" --date=short --all</code>),</li>
+<li><code>gpoh</code> (<code>git push origin HEAD</code>), </li>
+<li><code>grb</code> (<code>git rebase</code>), </li>
+<li><code>grba</code> (<code>git rebase --abort</code>), </li>
+<li><code>grbc</code> (<code>git rebase --continue</code>),</li>
+<li><code>gs</code> (<code>git status</code>).</li>
+</ul>
+<p>I've also set up auto-completion, so when typing <code>gco mas&lt;TAB&gt;</code>, <code>master</code> auto-completes. Here's what to put to <code>~/.bash_aliases</code> (or some other place from where your terminal loads custom code from) to set all this up: <a href="https://rokpovsic.com/pages/git-aliases.html">Git Aliases</a></p>
+<video width="600" src="videos/efficiency-hacks/git-aliases.webm" controls preload="metadata"></video>
+
+<hr />
+<h2 id="3-gnome-shell">3. Gnome Shell</h2>
+<p>Gnome Shell has an excellent <a href="https://extensions.gnome.org/">extension system</a> which provides some truly great extensions. Here's a couple I use.</p>
+<h3 id="gtile">Gtile</h3>
+<p><a href="https://extensions.gnome.org/extension/28/gtile/">Gtile</a> provides the functionality of re-positioning of windows within a workspace, similar to what is done when using a tiled window manager. Instead of grabbing a mouse and dragging/resizing a window, use one of the numerous Gtile shortcuts I've set up that position my windows to the places I most often want them to be. For example, I've set up the shortcuts <code>CTRL+WIN+U/I/N/M</code> to move the currently focused window to top-left/top-right/bottom-left/bottom-right quarter of the screen, respectively.</p>
+<video width="600" src="videos/vid1.webm" controls preload="metadata"></video>
+
+<h3 id="impatience">Impatience</h3>
+<p>To speed up animations that take place when switching between workspaces (see below), I use the extension called <a href="https://extensions.gnome.org/extension/277/impatience/">Impatiance</a> which makes animations go faster.</p>
+<h3 id="drop-down-terminal">Drop down terminal</h3>
+<p>The <a href="https://extensions.gnome.org/extension/442/drop-down-terminal/">Drop down terminal</a> extension displays a quick terminal window on the top of the screen, after pressing <code>CTRL+ALT+F11</code>.</p>
+<video width="600" src="videos/efficiency-hacks/top-terminal.webm" controls preload="metadata"></video>
+
+<h3 id="hide-top-bar-no-title-bar">Hide top bar / No title bar</h3>
+<p>The <a href="https://extensions.gnome.org/extension/545/hide-top-bar/">Hide top bar</a> and <a href="https://extensions.gnome.org/extension/1267/no-title-bar/">No title bar</a> extensions make every program, when on full-screen, use all the available screen real-estate. To me, immersion is increased when the display is showing strictly what's necessary for work to get done.</p>
+<h3 id="gnome-shell-workspaces">Gnome Shell workspaces</h3>
+<p>This is actually not an extension but a part of the base Gnome system. It allows you to have windows in multiple workspaces, between which you can move using a keyboard or a mouse. I use 4 workspaces in one row and move between them using shortcuts <code>CTRL+ALT+H</code>/<code>CTRL+ALT+L</code> to switch to a workspace on the left/right, and <code>CTRL+SHIFT+ALT+H/L</code> to move a window to a workspace on the left/right. I usually use the first workspace to host IDEs and terminals, the second to host Firefox and Slack, and the other two for various less-accessed programs such as KeePass. Using workspaces means in such a way means better organization and fewer pressings of <code>ALT+TAB</code>.</p>
+<hr />
+<h2 id="4-conclusion">4. Conclusion</h2>
+<p>These efficiency hacks did make my computer usage flow smoother and more enjoyable. It takes time to set everything up, but what I've described here is more or less a fixed cost. One could spend <em>too much</em> time if tinkering with it all the time, but from my experience once I add a tool and get used to it, the fixed setup costs are soon reimbursed by increased speed and enjoyment. I highly recommend you give some of these a try.</p>
+    </article>
+
+        <div class="tags">
+            <p>tags: <a href="./tag/programming.html">programming</a>, <a href="./tag/efficiency.html">efficiency</a>, <a href="./tag/hacks.html">hacks</a>, <a href="./tag/tips.html">tips</a>, <a href="./tag/tricks.html">tricks</a>, <a href="./tag/linux.html">linux</a>, <a href="./tag/gnome.html">gnome</a>, <a href="./tag/vim.html">vim</a>, <a href="./tag/extensions.html">extensions</a></p>
+        </div>
+
+    <hr>
+
+
+    <section id="isso-thread"></section>
+
+    <div style="font-size: 0.7em; color: gray;">
+        Note: Comments are not shared with any 3rd party service. Email (which is optional) will not be published.
+    </div>
+
+    <script data-isso="https://comments.rokpovsic.com/" 
+            src="https://comments.rokpovsic.com/js/embed.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                            <li>
+                                <a href="http://stackoverflow.com/users/365837/yper">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/rok-povsic">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/rokpovsic">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="feeds/all.atom.xml">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                    </ul>
+<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2019
+</p>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="./theme/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
