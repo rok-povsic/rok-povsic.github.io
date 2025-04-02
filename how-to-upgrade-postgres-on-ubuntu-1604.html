@@ -34,7 +34,7 @@
 
 
 
-        <meta name="description" content="This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and ...">
+        <meta name="description" content="This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and...">
 
         <meta name="author" content="Rok Povšič">
 
@@ -49,7 +49,7 @@
 	<meta property="og:url" content="./how-to-upgrade-postgres-on-ubuntu-1604.html">
 	<meta property="og:title" content="How to upgrade Postgres on Ubuntu 16.04">
 	<meta property="article:published_time" content="2018-07-23 19:25:00+02:00">
-            <meta property="og:description" content="This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and ...">
+            <meta property="og:description" content="This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and...">
 
             <meta property="og:image" content="./theme/images/post-bg.jpg">
 </head>
@@ -112,36 +112,42 @@
 <blockquote>
 <p>Note: I've used these exact commands on Ubuntu 16.04. Your mileage may vary on other OSes and Postgres versions.</p>
 </blockquote>
-<h3 id="1-install-the-new-version">1. Install the new version</h3>
-<p><code>python
-sudo apt-get install postgresql-9.6</code></p>
-<h3 id="2-make-sure-both-version-are-installed-and-running">2. Make sure both version are installed and running</h3>
-<p><code>python
-sudo pg_lsclusters</code></p>
+<h3>1. Install the new version</h3>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">postgresql</span><span class="o">-</span><span class="mf">9.6</span>
+</code></pre></div>
+
+<h3>2. Make sure both version are installed and running</h3>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">pg_lsclusters</span>
+</code></pre></div>
+
 <p>The output should be something like:</p>
-<p><code>python
-Ver Cluster Port Status Owner    Data directory               Log file
-9.5 main    5432 online postgres /var/lib/postgresql/9.5/main /var/log/postgresql/postgresql-9.5-main.log
-9.6 main    5433 online postgres /var/lib/postgresql/9.6/main /var/log/postgresql/postgresql-9.6-main.log</code></p>
-<h3 id="3-migrate-the-data-from-old-to-new">3. Migrate the data from old to new</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Ver</span> <span class="n">Cluster</span> <span class="n">Port</span> <span class="n">Status</span> <span class="n">Owner</span>    <span class="n">Data</span> <span class="n">directory</span>               <span class="n">Log</span> <span class="n">file</span>
+<span class="mf">9.5</span> <span class="n">main</span>    <span class="mi">5432</span> <span class="n">online</span> <span class="n">postgres</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.5</span><span class="o">/</span><span class="n">main</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">postgresql</span><span class="o">-</span><span class="mf">9.5</span><span class="o">-</span><span class="n">main</span><span class="o">.</span><span class="n">log</span>
+<span class="mf">9.6</span> <span class="n">main</span>    <span class="mi">5433</span> <span class="n">online</span> <span class="n">postgres</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.6</span><span class="o">/</span><span class="n">main</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">postgresql</span><span class="o">-</span><span class="mf">9.6</span><span class="o">-</span><span class="n">main</span><span class="o">.</span><span class="n">log</span>
+</code></pre></div>
+
+<h3>3. Migrate the data from old to new</h3>
 <p>Your ports may be different, check the previous command's output.</p>
-<p><code>python
-sudo -u postgres -i
-pg_dumpall -p 5432 | psql -d postgres -p 5433
-exit</code></p>
-<h3 id="4-update-the-ports">4. Update the ports</h3>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">pg_dumpall</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">|</span> <span class="n">psql</span> <span class="o">-</span><span class="n">d</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5433</span>
+<span class="n">exit</span>
+</code></pre></div>
+
+<h3>4. Update the ports</h3>
 <p>Open <code>postgresql.conf</code> and set the <code>port</code> value of the 9.6 instance in to 5432. If you're going to keep the 9.5 version, also set its port to some other integer (e.g. 5433).</p>
-<p><code>python
-sudo vim /etc/postgresql/9.5/main/postgresql.conf
-sudo vim /etc/postgresql/9.6/main/postgresql.conf</code></p>
-<h3 id="5-uninstall-the-old-version-optional">5. Uninstall the old version (optional)</h3>
-<p><code>python
-sudo apt-get purge postgresql-9.5</code></p>
-<h3 id="6-ensure-the-new-version-is-up">6. Ensure the new version is up</h3>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.5</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="mf">9.6</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">conf</span>
+</code></pre></div>
+
+<h3>5. Uninstall the old version (optional)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="n">postgresql</span><span class="o">-</span><span class="mf">9.5</span>
+</code></pre></div>
+
+<h3>6. Ensure the new version is up</h3>
 <p>Make sure the port is set correctly.</p>
-<p><code>python
-sudo service postgresql start
-sudo pg_lsclusters</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">service</span> <span class="n">postgresql</span> <span class="n">start</span>
+<span class="n">sudo</span> <span class="n">pg_lsclusters</span>
+</code></pre></div>
     </article>
 
         <div class="tags">
@@ -204,7 +210,7 @@ sudo pg_lsclusters</code></p>
                                 </a>
                             </li>
                     </ul>
-<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2019
+<p class="copyright text-muted">        &copy;  Rok Povšič 2014 - 2025
 </p>                </div>
             </div>
         </div>

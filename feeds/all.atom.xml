@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dev Log</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2019-09-08T11:04:00+02:00</updated><entry><title>Efficiency hacks for programmers</title><link href="https://rokpovsic.com/efficiency-hacks-for-programmers.html" rel="alternate"></link><updated>2019-09-08T11:04:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2019-09-08:efficiency-hacks-for-programmers.html</id><summary type="html">&lt;p&gt;Over the years, I've found a number of &lt;em&gt;efficiency hacks&lt;/em&gt; which make using the computer as a software developer much more smooth and elegant. This involves how I use the OS, the IDE, and other tools. I've found it pays to sharpen the saw and make the flow of work as hurdle-free as possible, especially for the tasks that are repeated many times. The cost of setting things up and learning to use any particular hack non-trivial but fixed, and the benefit is ongoing. In this post, I describe the hacks that made the most impact for me.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dev Log</title><link href="https://rokpovsic.com/" rel="alternate"></link><link href="https://rokpovsic.com/feeds/all.atom.xml" rel="self"></link><id>https://rokpovsic.com/</id><updated>2019-09-08T11:04:00+02:00</updated><subtitle>Tech blog by Rok Povšič</subtitle><entry><title>Efficiency hacks for programmers</title><link href="https://rokpovsic.com/efficiency-hacks-for-programmers.html" rel="alternate"></link><published>2019-09-08T11:04:00+02:00</published><updated>2019-09-08T11:04:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2019-09-08:/efficiency-hacks-for-programmers.html</id><summary type="html">&lt;p&gt;Over the years, I've found a number of &lt;em&gt;efficiency hacks&lt;/em&gt; which make using the computer as a software developer much more smooth and elegant. This involves how I use the OS, the IDE, and other tools. I've found it pays to sharpen the saw and make the flow of work as hurdle-free as possible, especially for the tasks that are repeated many times. The cost of setting things up and learning to use any particular hack non-trivial but fixed, and the benefit is ongoing. In this post, I describe the hacks that made the most impact for me.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Over the years, I've found a number of &lt;em&gt;efficiency hacks&lt;/em&gt; which make using the computer as a software developer much more smooth and elegant. This involves how I use the OS, the IDE, and other tools. I've found it pays to sharpen the saw and make the flow of work as hurdle-free as possible, especially for the tasks that are repeated many times. The cost of setting things up and learning to use any particular hack non-trivial but fixed, and the benefit is ongoing. In this post, I describe the hacks that made the most impact for me.&lt;/p&gt;
 
 
-&lt;h2 id="table-of-concents"&gt;Table of Concents&lt;/h2&gt;
+&lt;h2&gt;Table of Concents&lt;/h2&gt;
 &lt;div&gt;
     &lt;ol&gt;
         &lt;li&gt;
@@ -38,27 +39,27 @@
 &lt;blockquote&gt;
 &lt;p&gt;Warning: Certain tips only apply to *nix system, and some only to the Gnome window manager.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h2 id="1-vim-everywhere"&gt;1. Vim everywhere&lt;/h2&gt;
-&lt;h3 id="programming"&gt;Programming&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2&gt;1. Vim everywhere&lt;/h2&gt;
+&lt;h3&gt;Programming&lt;/h3&gt;
 &lt;p&gt;I use Vim-mode everywhere I need to type text. This includes programming, of course, but other interfaces as well. Most modern IDEs have some variant of a "Vim mode" or a "Vim plugin" (at least do the JetBrains IDEs, Visual Studio, Eclipse, VS Code, Sublime, Atom). While these are only simulations of the original Vim and do not behave &lt;em&gt;exactly&lt;/em&gt; the same in all cases, the commands that I actually use are available and mostly identical. Some tinkering is required to resolve any keyboard shortcuts conflicts between the IDE and Vim. But once this is done, programming is faster, and in my experience, more enjoyable.&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/vim.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;h3 id="browser"&gt;Browser&lt;/h3&gt;
+&lt;h3&gt;Browser&lt;/h3&gt;
 &lt;p&gt;I also use a Vim extension in the browsers I use, both in &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/"&gt;Firefox&lt;/a&gt; and &lt;a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb"&gt;Chrome&lt;/a&gt;. It makes it possible to browse without leaving the home row position, using K/J to move up/down (I use U/D do move up/down with greater speed), and using F + some-key-combination to visit links. I've also added shortcuts ALT+H and ALT+L to move to back/forward, as I have the same shortcuts for Back and Forward in my IDEs as well.&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/browser.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;h3 id="terminal"&gt;Terminal&lt;/h3&gt;
+&lt;h3&gt;Terminal&lt;/h3&gt;
 &lt;p&gt;I've also have enabled &lt;a href="http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal"&gt;vi-mode&lt;/a&gt; in my Bash terminal. By default, you're in the insert mode, so the command line behaves as it would on some other machine. But you can, of course, switch to the command mode pressing ESC. This comes in handy when there's a long command I'm working on, and can quickly move between the words (with W and B), delete words (DW etc.), insert and beginning/end of the line with I and A, etc.&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/terminal.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;hr /&gt;
-&lt;h2 id="2-terminal-usage"&gt;2. Terminal usage&lt;/h2&gt;
-&lt;h3 id="better-command-history-with-ctrlr"&gt;Better command history with CTRL+R&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2&gt;2. Terminal usage&lt;/h2&gt;
+&lt;h3&gt;Better command history with CTRL+R&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/junegunn/fzf"&gt;fzf&lt;/a&gt; is an excellent tool providing fuzzy (i.e. non-exact) search. This comes in handy when searching for a command which has been executed in the past. The default CTRL+R shell already gives the functionality to scroll through the last commands, and fzf is an improved replacement of that, providing fuzzy search of past commands, and giving a better overview of the history last few commands.&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/fzf.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;h3 id="git-command-line-shortcuts"&gt;Git command line shortcuts&lt;/h3&gt;
+&lt;h3&gt;Git command line shortcuts&lt;/h3&gt;
 &lt;p&gt;One of the terminal commands I use the most is &lt;code&gt;git&lt;/code&gt;. But typing out the &lt;code&gt;git &amp;lt;something&amp;gt;&lt;/code&gt; commands many times each day became repetitive, so I've set up a number of Git aliases (I got the idea from &lt;a href="https://jonsuh.com/blog/git-command-line-shortcuts/"&gt;this blog post&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;The shortcuts I mostly use are:&lt;/p&gt;
 &lt;ul&gt;
@@ -78,26 +79,27 @@
 &lt;p&gt;I've also set up auto-completion, so when typing &lt;code&gt;gco mas&amp;lt;TAB&amp;gt;&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt; auto-completes. Here's what to put to &lt;code&gt;~/.bash_aliases&lt;/code&gt; (or some other place from where your terminal loads custom code from) to set all this up: &lt;a href="https://gist.github.com/rok-povsic/7272ef83462fc6720e1d40355a5e4d37"&gt;Git Aliases&lt;/a&gt;&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/git-aliases.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;hr /&gt;
-&lt;h2 id="3-gnome-shell"&gt;3. Gnome Shell&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2&gt;3. Gnome Shell&lt;/h2&gt;
 &lt;p&gt;Gnome Shell has an excellent &lt;a href="https://extensions.gnome.org/"&gt;extension system&lt;/a&gt; which provides some truly great extensions. Here's a couple I use.&lt;/p&gt;
-&lt;h3 id="gtile"&gt;Gtile&lt;/h3&gt;
+&lt;h3&gt;Gtile&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://extensions.gnome.org/extension/28/gtile/"&gt;Gtile&lt;/a&gt; provides the functionality of re-positioning of windows within a workspace, similar to what is done when using a tiled window manager. Instead of grabbing a mouse and dragging/resizing a window, use one of the numerous Gtile shortcuts I've set up that position my windows to the places I most often want them to be. For example, I've set up the shortcuts &lt;code&gt;CTRL+WIN+U/I/N/M&lt;/code&gt; to move the currently focused window to top-left/top-right/bottom-left/bottom-right quarter of the screen, respectively.&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/gtile.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;h3 id="impatience"&gt;Impatience&lt;/h3&gt;
+&lt;h3&gt;Impatience&lt;/h3&gt;
 &lt;p&gt;To speed up animations that take place when switching between workspaces (see below), I use the extension called &lt;a href="https://extensions.gnome.org/extension/277/impatience/"&gt;Impatiance&lt;/a&gt; which makes animations go faster.&lt;/p&gt;
-&lt;h3 id="drop-down-terminal"&gt;Drop down terminal&lt;/h3&gt;
+&lt;h3&gt;Drop down terminal&lt;/h3&gt;
 &lt;p&gt;The &lt;a href="https://extensions.gnome.org/extension/442/drop-down-terminal/"&gt;Drop down terminal&lt;/a&gt; extension displays a quick terminal window on the top of the screen, after pressing &lt;code&gt;CTRL+ALT+F11&lt;/code&gt;.&lt;/p&gt;
 &lt;video width="600" src="videos/efficiency-hacks/top-terminal.webm" controls preload="metadata"&gt;&lt;/video&gt;
 
-&lt;h3 id="hide-top-bar-no-title-bar"&gt;Hide top bar / No title bar&lt;/h3&gt;
+&lt;h3&gt;Hide top bar / No title bar&lt;/h3&gt;
 &lt;p&gt;The &lt;a href="https://extensions.gnome.org/extension/545/hide-top-bar/"&gt;Hide top bar&lt;/a&gt; and &lt;a href="https://extensions.gnome.org/extension/1267/no-title-bar/"&gt;No title bar&lt;/a&gt; extensions make every program, when on full-screen, use all the available screen real-estate. To me, immersion is increased when the display is showing strictly what's necessary for work to get done.&lt;/p&gt;
-&lt;h3 id="gnome-shell-workspaces"&gt;Gnome Shell workspaces&lt;/h3&gt;
+&lt;h3&gt;Gnome Shell workspaces&lt;/h3&gt;
 &lt;p&gt;This is actually not an extension but a part of the base Gnome system. It allows you to have windows in multiple workspaces, between which you can move using a keyboard or a mouse. I use 4 workspaces in one row and move between them using shortcuts &lt;code&gt;CTRL+ALT+H&lt;/code&gt;/&lt;code&gt;CTRL+ALT+L&lt;/code&gt; to switch to a workspace on the left/right, and &lt;code&gt;CTRL+SHIFT+ALT+H/L&lt;/code&gt; to move a window to a workspace on the left/right. I usually use the first workspace to host IDEs and terminals, the second to host Firefox and Slack, and the other two for various less-accessed programs such as KeePass. Using workspaces means in such a way means better organization and fewer pressings of &lt;code&gt;ALT+TAB&lt;/code&gt;.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2 id="4-conclusion"&gt;4. Conclusion&lt;/h2&gt;
-&lt;p&gt;These efficiency hacks did make my computer usage flow smoother and more enjoyable. It takes time to set everything up, but what I've described here is more or less a fixed cost. One could spend &lt;em&gt;too much&lt;/em&gt; time if tinkering with it all the time, but from my experience once I add a tool and get used to it, the fixed setup costs are soon reimbursed by increased speed and enjoyment. I highly recommend you give some of these a try.&lt;/p&gt;</summary><category term="programming"></category><category term="efficiency"></category><category term="hacks"></category><category term="tips"></category><category term="tricks"></category><category term="linux"></category><category term="gnome"></category><category term="vim"></category><category term="extensions"></category></entry><entry><title>Setting up a static-site blog on GitHub pages on a custom domain, with comments</title><link href="https://rokpovsic.com/setting-up-a-static-site-blog-on-github-pages-on-a-custom-domain-with-comments.html" rel="alternate"></link><updated>2018-12-30T11:05:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-12-30:setting-up-a-static-site-blog-on-github-pages-on-a-custom-domain-with-comments.html</id><summary type="html">&lt;p&gt;This blog is built using a static-site generator named &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;. It converts the posts you write in Markdown directly to HTML files, which happens on your machine at "compile-time". This means there's no dynamic page generation on each HTTP request, which is fine (even preferred) for a blog-like website. Pelican is written in Python and using it &lt;em&gt;feels Pythonic&lt;/em&gt; (it uses configuration-as-code) which is great for any hardcore Pythonista. I've just recently also added a commenting system and will explain here what the blog's components are.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4. Conclusion&lt;/h2&gt;
+&lt;p&gt;These efficiency hacks did make my computer usage flow smoother and more enjoyable. It takes time to set everything up, but what I've described here is more or less a fixed cost. One could spend &lt;em&gt;too much&lt;/em&gt; time if tinkering with it all the time, but from my experience once I add a tool and get used to it, the fixed setup costs are soon reimbursed by increased speed and enjoyment. I highly recommend you give some of these a try.&lt;/p&gt;</content><category term="efficiency"></category><category term="programming"></category><category term="efficiency"></category><category term="hacks"></category><category term="tips"></category><category term="tricks"></category><category term="linux"></category><category term="gnome"></category><category term="vim"></category><category term="extensions"></category></entry><entry><title>Setting up a static-site blog on GitHub pages on a custom domain, with comments</title><link href="https://rokpovsic.com/setting-up-a-static-site-blog-on-github-pages-on-a-custom-domain-with-comments.html" rel="alternate"></link><published>2018-12-30T11:05:00+01:00</published><updated>2018-12-30T11:05:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-12-30:/setting-up-a-static-site-blog-on-github-pages-on-a-custom-domain-with-comments.html</id><summary type="html">&lt;p&gt;This blog is built using a static-site generator named &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;. It converts the posts you write in Markdown directly to HTML files, which happens on your machine at "compile-time". This means there's no dynamic page generation on each HTTP request, which is fine (even preferred) for a blog-like website. Pelican is written in Python and using it &lt;em&gt;feels Pythonic&lt;/em&gt; (it uses configuration-as-code) which is great for any hardcore Pythonista. I've just recently also added a commenting system and will explain here what the blog's components are.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;This blog is built using a static-site generator named &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;. It converts the posts you write in Markdown directly to HTML files, which happens on your machine at "compile-time". This means there's no dynamic page generation on each HTTP request, which is fine (even preferred) for a blog-like website. Pelican is written in Python and using it &lt;em&gt;feels Pythonic&lt;/em&gt; (it uses configuration-as-code) which is great for any hardcore Pythonista. I've just recently also added a commenting system and will explain here what the blog's components are.&lt;/p&gt;
 
 
 &lt;p&gt;Pelican is very flexible allowing you to modify the blog to your needs. &lt;a href="https://github.com/getpelican/pelican-plugins"&gt;A number of quality plugins&lt;/a&gt; exist, of which I currently use &lt;strong&gt;summery&lt;/strong&gt;, allowing me to specify the exact text shown on the index page under post summary, and &lt;strong&gt;yuicompressor&lt;/strong&gt;, which at compile-time, minifies all CSS and JS files.&lt;/p&gt;
@@ -106,64 +108,78 @@
 &lt;p&gt;I've also setup my own domain name. I've registered it at &lt;a href="https://uk.godaddy.com/"&gt;GoDaddy&lt;/a&gt; and then followed the &lt;a href="https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/"&gt;Set Up SSL on Github Pages With Custom Domains for Free&lt;/a&gt; tutorial which uses Cloudflare to setup &lt;em&gt;https&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Recently, I've also added the commenting system. A usual choice of the platform would be &lt;a href="https://disqus.com"&gt;Disqus&lt;/a&gt; but I wanted find an alternative because of privacy concerns. Personally, I also don't find looks of Disqus attractive. I've instead chosen &lt;a href="https://posativ.org/isso/"&gt;Isso&lt;/a&gt; which I self-host with one of the cloud providers.&lt;/p&gt;
 &lt;p&gt;Isso integration to Pelican is quite simple but takes time to set everything up. Client-side, you only add a couple of lines of HTML/JavaScript code to your Pelican theme. Server-side, you have to setup an Nginx reverse-proxy which sends requests to your Isso application (I run it inside of a Docker container), setup some kind of Certificate Authority (in my case &lt;a href="https://letsencrypt.org/"&gt;Let's Encrypt&lt;/a&gt;) so you don't send user's comments over the wire unencrypted, and a SMTP send-mail server if you want to your commentators to be notified of replies via email.&lt;/p&gt;
-&lt;p&gt;All in all, this takes more time to setup than using some out-of-the-box solution (i.e. Wordpress). But the process was quite fun and at the end, the blog is more customizable, privacy-conscious, and efficient.&lt;/p&gt;</summary><category term="blog"></category><category term="pelican"></category><category term="isso"></category></entry><entry><title>How to upgrade Postgres on Ubuntu 16.04</title><link href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html" rel="alternate"></link><updated>2018-07-23T19:25:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-07-23:how-to-upgrade-postgres-on-ubuntu-1604.html</id><summary type="html">&lt;p&gt;This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.&lt;/p&gt;
+&lt;p&gt;All in all, this takes more time to setup than using some out-of-the-box solution (i.e. Wordpress). But the process was quite fun and at the end, the blog is more customizable, privacy-conscious, and efficient.&lt;/p&gt;</content><category term="blog, pelican, isso"></category><category term="blog"></category><category term="pelican"></category><category term="isso"></category></entry><entry><title>How to upgrade Postgres on Ubuntu 16.04</title><link href="https://rokpovsic.com/how-to-upgrade-postgres-on-ubuntu-1604.html" rel="alternate"></link><published>2018-07-23T19:25:00+02:00</published><updated>2018-07-23T19:25:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-07-23:/how-to-upgrade-postgres-on-ubuntu-1604.html</id><summary type="html">&lt;p&gt;This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.&lt;/p&gt;
 
 
 &lt;blockquote&gt;
 &lt;p&gt;Note: I've used these exact commands on Ubuntu 16.04. Your mileage may vary on other OSes and Postgres versions.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id="1-install-the-new-version"&gt;1. Install the new version&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;python
-sudo apt-get install postgresql-9.6&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="2-make-sure-both-version-are-installed-and-running"&gt;2. Make sure both version are installed and running&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;python
-sudo pg_lsclusters&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;1. Install the new version&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;9.6&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;2. Make sure both version are installed and running&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pg_lsclusters&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;The output should be something like:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python
-Ver Cluster Port Status Owner    Data directory               Log file
-9.5 main    5432 online postgres /var/lib/postgresql/9.5/main /var/log/postgresql/postgresql-9.5-main.log
-9.6 main    5433 online postgres /var/lib/postgresql/9.6/main /var/log/postgresql/postgresql-9.6-main.log&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="3-migrate-the-data-from-old-to-new"&gt;3. Migrate the data from old to new&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Ver&lt;/span&gt; &lt;span class="n"&gt;Cluster&lt;/span&gt; &lt;span class="n"&gt;Port&lt;/span&gt; &lt;span class="n"&gt;Status&lt;/span&gt; &lt;span class="n"&gt;Owner&lt;/span&gt;    &lt;span class="n"&gt;Data&lt;/span&gt; &lt;span class="n"&gt;directory&lt;/span&gt;               &lt;span class="n"&gt;Log&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;
+&lt;span class="mf"&gt;9.5&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;    &lt;span class="mi"&gt;5432&lt;/span&gt; &lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="n"&gt;postgres&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;9.5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;9.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;
+&lt;span class="mf"&gt;9.6&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;    &lt;span class="mi"&gt;5433&lt;/span&gt; &lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="n"&gt;postgres&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;9.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;9.6&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;3. Migrate the data from old to new&lt;/h3&gt;
 &lt;p&gt;Your ports may be different, check the previous command's output.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python
-sudo -u postgres -i
-pg_dumpall -p 5432 | psql -d postgres -p 5433
-exit&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="4-update-the-ports"&gt;4. Update the ports&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="n"&gt;postgres&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+&lt;span class="n"&gt;pg_dumpall&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;5432&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;psql&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="n"&gt;postgres&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;5433&lt;/span&gt;
+&lt;span class="n"&gt;exit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;4. Update the ports&lt;/h3&gt;
 &lt;p&gt;Open &lt;code&gt;postgresql.conf&lt;/code&gt; and set the &lt;code&gt;port&lt;/code&gt; value of the 9.6 instance in to 5432. If you're going to keep the 9.5 version, also set its port to some other integer (e.g. 5433).&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python
-sudo vim /etc/postgresql/9.5/main/postgresql.conf
-sudo vim /etc/postgresql/9.6/main/postgresql.conf&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="5-uninstall-the-old-version-optional"&gt;5. Uninstall the old version (optional)&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;python
-sudo apt-get purge postgresql-9.5&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="6-ensure-the-new-version-is-up"&gt;6. Ensure the new version is up&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;9.5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;9.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;5. Uninstall the old version (optional)&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;purge&lt;/span&gt; &lt;span class="n"&gt;postgresql&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;9.5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;6. Ensure the new version is up&lt;/h3&gt;
 &lt;p&gt;Make sure the port is set correctly.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python
-sudo service postgresql start
-sudo pg_lsclusters&lt;/code&gt;&lt;/p&gt;</summary><category term="postgres"></category><category term="upgrade"></category></entry><entry><title>A list of useful Git commands</title><link href="https://rokpovsic.com/a-list-of-useful-git-commands.html" rel="alternate"></link><updated>2018-06-29T22:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-06-29:a-list-of-useful-git-commands.html</id><summary type="html">&lt;p&gt;Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="n"&gt;postgresql&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pg_lsclusters&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="postgres"></category><category term="postgres"></category><category term="upgrade"></category></entry><entry><title>A list of useful Git commands</title><link href="https://rokpovsic.com/a-list-of-useful-git-commands.html" rel="alternate"></link><published>2018-06-29T22:06:00+02:00</published><updated>2018-06-29T22:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2018-06-29:/a-list-of-useful-git-commands.html</id><summary type="html">&lt;p&gt;Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.&lt;/p&gt;
 
 
-&lt;h2 id="remove-all-changes-from-staging-but-keep-the-actual-changes"&gt;Remove all changes from staging (but keep the actual changes)&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;python
-git reset HEAD -- .&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="delete-last-commit-but-keep-the-changes"&gt;Delete last commit but keep the changes&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;python
-git reset HEAD^&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="delete-all-unstaged-changes"&gt;Delete all unstaged changes&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;python
-git clean -df
-git checkout -- .&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="revert-an-accidentally-executed-git-commit-amend"&gt;Revert an accidentally executed &lt;code&gt;git commit --amend&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;python
-git reset --soft HEAD@{1}&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="reset-the-local-branch-to-be-exactly-like-the-remote-branch"&gt;Reset the local branch to be exactly like the remote branch&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;python
- git fetch origin
- git reset --hard origin/branch_name&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="start-the-modification-of-the-last-three-commits-for-example-to-rename-them"&gt;Start the modification of the last three commits (for example to rename them)&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;python
-git rebase -i HEAD~3&lt;/code&gt;&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>A continuous integration guide for .NET with GitLab CI</title><link href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="alternate"></link><updated>2017-05-24T18:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-05-24:a-continuous-integration-guide-for-net-with-gitlab-ci.html</id><summary type="html">&lt;p&gt;Here, I describe the process of setting up continuous integration (CI) for a C# project that is hosted on GitLab.&lt;/p&gt;
+&lt;h2&gt;Remove all changes from staging (but keep the actual changes)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Delete last commit but keep the changes&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Delete all unstaged changes&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clean&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Revert an accidentally executed &lt;code&gt;git commit --amend&lt;/code&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;soft&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Reset the local branch to be exactly like the remote branch&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;fetch&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;
+ &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;hard&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;branch_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Start the modification of the last three commits (for example to rename them)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;rebase&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="git"></category><category term="git"></category></entry><entry><title>A continuous integration guide for .NET with GitLab CI</title><link href="https://rokpovsic.com/a-continuous-integration-guide-for-net-with-gitlab-ci.html" rel="alternate"></link><published>2017-05-24T18:06:00+02:00</published><updated>2017-05-24T18:06:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-05-24:/a-continuous-integration-guide-for-net-with-gitlab-ci.html</id><summary type="html">&lt;p&gt;Here, I describe the process of setting up continuous integration (CI) for a C# project that is hosted on GitLab.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Here, I describe the process of setting up continuous integration (CI) for a C# project that is hosted on GitLab.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="https://gitlab.com"&gt;GitLab&lt;/a&gt; is a code sharing platform similar to GitHub but has two distinct advantages:&lt;/p&gt;
@@ -182,49 +198,55 @@ git rebase -i HEAD~3&lt;/code&gt;&lt;/p&gt;</summary><category term="git"></cate
 &lt;li&gt;Badges are updated with the status.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In the end, you get a report of everything that happened, together with a badge like this (if the build was successful):&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png"&gt;&lt;/p&gt;
 &lt;p&gt;To do this, let's create a test project in Visual Studio. We are going to do the build first and add automatic testing later.&lt;/p&gt;
 &lt;p&gt;This is the sample code we are going to build:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;class Program
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;
 {
-    static void Main(string[] args)
+    &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Main&lt;/span&gt;(&lt;span class="n"&gt;string&lt;/span&gt;[] &lt;span class="nb"&gt;args&lt;/span&gt;)
     {
-        Console.WriteLine("Hello, World!");
+        &lt;span class="n"&gt;Console&lt;/span&gt;.&lt;span class="n"&gt;WriteLine&lt;/span&gt;(&lt;span class="s"&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;);
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Create a new repository on GitLab. Next, install GitLab Runner, which is a program that runs on your Windows machine that is connected to the repository and that runs the build. Download the program from &lt;a href="https://docs.gitlab.com/runner/install/windows.html"&gt;here&lt;/a&gt; where you will also find more details on how to install it. It's not complicated, but the one thing you'll also need is a &lt;em&gt;token&lt;/em&gt; with which you connect Runner with the repository. You find it by opening your repository, and going to &lt;em&gt;Settings&lt;/em&gt; -&amp;gt; &lt;em&gt;CI/CD Pipelines&lt;/em&gt;. Copy the token and follow the instructions on how to install and connect the runner.&lt;/p&gt;
 &lt;p&gt;Note: If you only want to build this project on your server, click &lt;em&gt;Disable Shared Runners&lt;/em&gt; so GitLab won't try to build this project on their servers.&lt;/p&gt;
 &lt;p&gt;After this, the next step is to configure how exactly the build should be performed. This is done by creating a &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; file in the root of the project directory and specifying how to do the build. Here's a simple example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;build:
-    stage: build
-    script:
-            - C:\Tools\nuget.exe restore
-            - cmd.exe /C " "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Configuration=Release /t:Clean;Build YourSolutionName.sln " &amp;amp;&amp;amp; exit %%ERRORLEVEL%%
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;stage&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;:\&lt;/span&gt;&lt;span class="n"&gt;Tools&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="n"&gt;nuget&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;exe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;restore&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;exe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="sr"&gt;/C &amp;quot; &amp;quot;C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe&amp;quot; /p:Configuration=Release /&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Clean&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Build&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;YourSolutionName&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sln&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="n"&gt;ERRORLEVEL&lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;You have to specify your location of &lt;code&gt;nuget.exe&lt;/code&gt; and &lt;code&gt;MSBuild.exe&lt;/code&gt;, and the solution name. You may download &lt;code&gt;nuget.exe&lt;/code&gt; from &lt;a href="http://dist.nuget.org/"&gt;here&lt;/a&gt;. See &lt;a href="https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal"&gt;this StackOverflow page&lt;/a&gt; to find out how to get &lt;code&gt;MSBuild.exe&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;After that, every time a code is pushed on the repository, it will be automatically downloaded to the Windows machine that is running GitLab Runner. The build status will be reported under &lt;em&gt;Pipelines&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="GitLab Pipelines" src="https://rokpovsic.com/images/ci-gitlab/ci-pipelines.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitLab Pipelines" src="https://rokpovsic.com/images/ci-gitlab/ci-pipelines.png"&gt;&lt;/p&gt;
 &lt;p&gt;Next, you can show the latest build status on the main repository page by copying a Markdown badge code, located under &lt;em&gt;Settings&lt;/em&gt; -&amp;gt; &lt;em&gt;CI/CD Pipelines&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png" /&gt;&lt;/p&gt;</summary><category term="continuous-integration"></category><category term="gitlab"></category><category term=".net"></category></entry><entry><title>Which language to use with TWS API (Interactive Brokers API)?</title><link href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="alternate"></link><updated>2017-03-26T21:23:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-03-26:which-language-to-use-with-tws-api-interactive-brokers-api.html</id><summary type="html">&lt;p&gt;Interactive Brokers has an API called &lt;a href="https://interactivebrokers.github.io"&gt;TWS API&lt;/a&gt; which you can use to programmatically
+&lt;p&gt;&lt;img alt="A Success Build Badge" src="https://rokpovsic.com/images/ci-gitlab/success-badge.png"&gt;&lt;/p&gt;</content><category term="continuous-integration, gitlab, .net"></category><category term="continuous-integration"></category><category term="gitlab"></category><category term=".net"></category></entry><entry><title>Which language to use with TWS API (Interactive Brokers API)?</title><link href="https://rokpovsic.com/which-language-to-use-with-tws-api-interactive-brokers-api.html" rel="alternate"></link><published>2017-03-26T21:23:00+02:00</published><updated>2017-03-26T21:23:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-03-26:/which-language-to-use-with-tws-api-interactive-brokers-api.html</id><summary type="html">&lt;p&gt;Interactive Brokers has an API called &lt;a href="https://interactivebrokers.github.io"&gt;TWS API&lt;/a&gt; which you can use to programmatically
+execute trades, poll current/historical market data, get account info, open positions, etc.
+Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python. All the TWS API functionality 
+is supported in all of those programming languages. Which language should you choose for your trading program?&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Interactive Brokers has an API called &lt;a href="https://interactivebrokers.github.io"&gt;TWS API&lt;/a&gt; which you can use to programmatically
 execute trades, poll current/historical market data, get account info, open positions, etc.
 Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python. All the TWS API functionality 
 is supported in all of those programming languages. Which language should you choose for your trading program?&lt;/p&gt;
 
 
-&lt;h3 id="c"&gt;C&amp;#35;&lt;/h3&gt;
+&lt;h3&gt;C&amp;#35;&lt;/h3&gt;
 &lt;p&gt;C# is a programming language made by Microsoft, although you can run it on Linux too. It's a statically-typed, which means all variable types
 are known at the compile time. That means your IDE, in this case probably Visual Studio, knows all the variable types and can help you
 a lot when writing code.&lt;/p&gt;
 &lt;p&gt;Since C# is primarily a language that runs on Windows, you'll most likely want to use it on that platform.
 These days when .NET is becoming more platform-independent, it could maybe be used on Linux/Max also although I haven't tried it yet.
 Most likely I'd just use Java on those platforms.&lt;/p&gt;
-&lt;h3 id="java"&gt;Java&lt;/h3&gt;
+&lt;h3&gt;Java&lt;/h3&gt;
 &lt;p&gt;Java is similar to C# (it's more proper to say it the other way around since C# was created after and was greatly inspired by Java)
 although it's more bare-boned. You could argue there's less
 batteries included although that'd probably depend on the developer.&lt;/p&gt;
 &lt;p&gt;You can run trading programs written in Java on Linux, Windows, and Mac.&lt;/p&gt;
-&lt;h3 id="c_1"&gt;C++&lt;/h3&gt;
+&lt;h3&gt;C++&lt;/h3&gt;
 &lt;p&gt;C++ is the oldest programming language here, and the most low-level. Its advantages are speed and the increased control.&lt;/p&gt;
 &lt;p&gt;There several reasons why I don't recommend using C++ for the use with TWS API. The first is that the development speed is much slower.
 With increased control comes increased needed time investment to do an equivalent trading program in C++ compared to other
@@ -234,9 +256,9 @@ Interactive Brokers might not be the best option. Its servers are probably locat
 located, and the time needed for the data to travel over the network is probably much larger than that of running the trading program.&lt;/p&gt;
 &lt;p&gt;I'd only use C++ in the case where a heavy algorithm needs to be run in real-time, calculating, for example, some large matrixes.
 Although even in that case it'd probably be better to use single-threaded Java with Garbage Collector disabled, or something like that.&lt;/p&gt;
-&lt;h3 id="vb"&gt;VB&lt;/h3&gt;
+&lt;h3&gt;VB&lt;/h3&gt;
 &lt;p&gt;You don't want to use VB. Its variants take 3 out of 4 places for the most dreaded languages in the &lt;a href="https://stackoverflow.com/insights/survey/2017"&gt;Stack Overflow's 2017 Developer Survey&lt;/a&gt;. Use it only if its the only language you know.&lt;/p&gt;
-&lt;h3 id="python"&gt;Python&lt;/h3&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;Although still only supported by the TWS API Beta at the time of this writing, all functionality is implemented.
 Python is relatively easy-to-use programming language in which you can write code fast. Since it's not statically-typed, there are limitations
 to how much IDE can help you with hints, but the advantage is that less code is required.&lt;/p&gt;
@@ -244,13 +266,15 @@ to how much IDE can help you with hints, but the advantage is that less code is 
 the languages equally well). It's quite easy to make trading program and a backtest that use the same trading-logic code, which is what
 you want to do if you want to be sure the backtest works correctly. This would take more time in C# or Java.&lt;/p&gt;
 &lt;p&gt;It runs on Windows, Linux, and Mac.&lt;/p&gt;
-&lt;h2 id="the-winner"&gt;The Winner&lt;/h2&gt;
+&lt;h2&gt;The Winner&lt;/h2&gt;
 &lt;p&gt;In most cases, probably 80%+, I'd recommend Python, especially once it comes out of Beta. Smaller and middle-sized trading programs will benefit the most from
 the easiness-of-use that comes with Python.&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;But I would not recommend Python when the project is going to be larger. I'd say that is more than around 10,000 lines of code. With the increased size the lack of static types can hurt the ability to write robust code. It's easier to introduce bugs. After a certain project size, it just takes longer to read/write Python code than when using one of the more strict programming languages. I'd choose C# when using Windows and Java when using other platforms.&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Edit: I wouldn't anymore insist of choosing C#/Java over Python. I've participated in large-scale financial Python projects where the Python's lack of static types did not increase the amount of subtle bugs. This was achieved by having a thorough set of unit and integration tests, by giving additional information to functions, arguments, fields and variables with the &lt;a href="https://docs.python.org/3/library/typing.html"&gt;typing module&lt;/a&gt; of Python 3.5+, and by using static analysis tools such as pylint, flake8 and mypy. Using such good software engineering practices with Python gives you the flexibility of a dynamically-typed language while keeping a strong and robust code base.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In the end, you want to choose the programming language you or your team knows best.
-If you know all equally well, I'd recommend what I've written above - Python.&lt;/p&gt;</summary><category term="investing"></category><category term="api"></category><category term="interactive brokers"></category><category term="tws"></category></entry><entry><title>What is the chance of losing money in the stock market?</title><link href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="alternate"></link><updated>2017-01-23T23:45:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-01-23:what-is-the-chance-of-losing-money-in-the-stock-market.html</id><summary type="html">&lt;p&gt;The first step of achieving good returns in the stock market is not losing money.
+If you know all equally well, I'd recommend what I've written above - Python.&lt;/p&gt;</content><category term="finance"></category><category term="investing"></category><category term="api"></category><category term="interactive brokers"></category><category term="tws"></category></entry><entry><title>What is the chance of losing money in the stock market?</title><link href="https://rokpovsic.com/what-is-the-chance-of-losing-money-in-the-stock-market.html" rel="alternate"></link><published>2017-01-23T23:45:00+01:00</published><updated>2017-01-23T23:45:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2017-01-23:/what-is-the-chance-of-losing-money-in-the-stock-market.html</id><summary type="html">&lt;p&gt;The first step of achieving good returns in the stock market is not losing money.
+What is the percentage chance of losing money in the stock market?&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;The first step of achieving good returns in the stock market is not losing money.
 What is the percentage chance of losing money in the stock market?&lt;/p&gt;
 
 
@@ -272,7 +296,7 @@ The source of all data is &lt;a href="multpl.com"&gt;multpl.com&lt;/a&gt;.&lt;/p
 &lt;p&gt;Let's say you invested your money into the S&amp;amp;P 500 index at some random year after year 1871, on the January 1, for X number of years.
 What's the chance your return is positive or negative?&lt;/p&gt;
 &lt;p&gt;Let's look at the data. Here we suppose all the dividends are paid on the January 1 and reinvested immediately. No tax is applied.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SPY chance of losing money, no inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_no_inflation.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SPY chance of losing money, no inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_no_inflation.png"&gt;&lt;/p&gt;
 &lt;p&gt;We can see that chance of being profitable depends a lot on how long you are invested.
 As the common wisdom says, investing in the stock market should be done for a longer term.&lt;/p&gt;
 &lt;p&gt;The data above used nominal prices, i.e. was not adjusted for inflation. The chart above should be therefore relevant to you if you
@@ -281,48 +305,49 @@ consider either investing in the stock market or holding cash.&lt;/p&gt;
 financial vehicle (i.e. &lt;a href="http://www.investopedia.com/terms/t/tips.asp"&gt;TIPS&lt;/a&gt;, or perhaps a very diverse commodity index),
 I've also tested the same thing but discounted returns for each year by whatever the inflation (US CPI) was (dividends included).&lt;/p&gt;
 &lt;p&gt;The chance of beating that vehicle, investing for X years, is shown in the chart below.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SPY chance of losing money, inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_inflation.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SPY chance of losing money, inflation" src="https://rokpovsic.com/images/lose_money_chance/spy_losing_chance_inflation.png"&gt;&lt;/p&gt;
 &lt;!-- TODO:
 - S&amp;P 500
--  --&gt;</summary><category term="investing"></category><category term="savings"></category><category term="money"></category></entry><entry><title>A short guide for new VIM users</title><link href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html" rel="alternate"></link><updated>2016-12-10T08:30:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-12-10:a-short-guide-for-new-vim-users.html</id><summary type="html">&lt;p&gt;VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is &lt;em&gt;almost&lt;/em&gt; like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you.&lt;/p&gt;
+-  --&gt;</content><category term="finance"></category><category term="investing"></category><category term="savings"></category><category term="money"></category></entry><entry><title>A short guide for new VIM users</title><link href="https://rokpovsic.com/a-short-guide-for-new-vim-users.html" rel="alternate"></link><published>2016-12-10T08:30:00+01:00</published><updated>2016-12-10T08:30:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-12-10:/a-short-guide-for-new-vim-users.html</id><summary type="html">&lt;p&gt;VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is &lt;em&gt;almost&lt;/em&gt; like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is &lt;em&gt;almost&lt;/em&gt; like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you.&lt;/p&gt;
 
 
 &lt;p&gt;The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.&lt;/p&gt;
 &lt;p&gt;The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
-&lt;h2 id="modes"&gt;Modes&lt;/h2&gt;
+&lt;h2&gt;Modes&lt;/h2&gt;
 &lt;p&gt;When writing code (or some other text) in a regular editor the key, the keys you press appear on the screen right away. Using VIM this will happen only if you are in so called &lt;em&gt;insert&lt;/em&gt; mode. When in this mode, VIM behaves as any other editor. After VIM has just started, it is in &lt;em&gt;normal&lt;/em&gt; mode. If you simply want to write some text, press &lt;strong&gt;i&lt;/strong&gt; to enter &lt;em&gt;insert&lt;/em&gt; mode. Now you can type anything you want. To exit &lt;em&gt;insert&lt;/em&gt; mode and go back to &lt;em&gt;normal&lt;/em&gt; mode, press &lt;strong&gt;ESC&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/modes.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="moving-around"&gt;Moving around&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/modes.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Moving around&lt;/h2&gt;
 &lt;p&gt;So why would is this &lt;em&gt;normal&lt;/em&gt; mode even needed if we use keyboard to type characters on the screen and the only way we can do that is by being in the &lt;em&gt;insert&lt;/em&gt; mode. Well, VIM makes the keyboard much more versatile tool. For example, when in &lt;em&gt;normal&lt;/em&gt; mode, you can use keys &lt;strong&gt;H&lt;/strong&gt;, &lt;strong&gt;J&lt;/strong&gt;, &lt;strong&gt;K&lt;/strong&gt; and &lt;strong&gt;L&lt;/strong&gt; in order to move LEFT, DOWN, UP and RIGHT, respectively. That's very useful since it removes the need to always move your hand to the arrow keys. It takes some time to get used to but once you know it, it's hard to go back. When the hands are in the typing position (left index finger on &lt;strong&gt;F&lt;/strong&gt; and right index finger on &lt;strong&gt;J&lt;/strong&gt;) it's much more convenient to simply press &lt;strong&gt;ESC&lt;/strong&gt; (which I even virtually switched with &lt;strong&gt;CAPS LOCK&lt;/strong&gt; to have it closer to the standard position) and use &lt;strong&gt;H&lt;/strong&gt;, &lt;strong&gt;J&lt;/strong&gt;, &lt;strong&gt;K&lt;/strong&gt; and &lt;strong&gt;L&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Moving to the start of the next word is done by pressing &lt;strong&gt;W&lt;/strong&gt; and moving to the start of previous word by pressing &lt;strong&gt;B&lt;/strong&gt;. It's similar to pressing &lt;strong&gt;CTRL + LEFT/RIGHT&lt;/strong&gt; when using regular editor, without the need to move right hand away from natural position and pressing two keys at the same time.&lt;/p&gt;
 &lt;p&gt;Another thing I use a lot is pressing &lt;strong&gt;{&lt;/strong&gt; and &lt;strong&gt;}&lt;/strong&gt; which will jump the cursor to previous and to next paragraph (in &lt;strong&gt;normal&lt;/strong&gt; mode of course) and pressing &lt;strong&gt;0&lt;/strong&gt; and &lt;strong&gt;$$&lt;/strong&gt; which move the cursor to the beginning or end of the line you are currently on.&lt;/p&gt;
 &lt;p&gt;I think that this alone is worth using VIM when writing code or anything else.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/hjkl.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="copying-deleting-and-pasting-lines"&gt;Copying, deleting and pasting lines&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/hjkl.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Copying, deleting and pasting lines&lt;/h2&gt;
 &lt;p&gt;When writing code it's common to copy a line and paste it somewhere else. Copying a line is done by pressing &lt;strong&gt;YY&lt;/strong&gt; (i.e. pressing &lt;strong&gt;Y&lt;/strong&gt; twice). After that you can move anywhere else and with pressing &lt;strong&gt;P&lt;/strong&gt; the line will be pasted under the line your cursor is on.&lt;/p&gt;
 &lt;p&gt;Deleting a line is done by pressing &lt;strong&gt;DD&lt;/strong&gt;. We can imagine it's similar to cutting a line as you can still paste it using &lt;strong&gt;P&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/copy_paste.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="undo-redo"&gt;Undo / Redo&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/copy_paste.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Undo / Redo&lt;/h2&gt;
 &lt;p&gt;Undoing the last command (i.e. inserting, deleting, pasting, etc.) is done by pressing &lt;strong&gt;U&lt;/strong&gt;. The redo command is &lt;strong&gt;CTRL + R&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/undo.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="selecting-lines"&gt;Selecting lines&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/undo.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Selecting lines&lt;/h2&gt;
 &lt;p&gt;Another very useful command is &lt;strong&gt;SHIFT + V&lt;/strong&gt; which starts to select lines. After moving up or down (preferably with &lt;strong&gt;K&lt;/strong&gt; or &lt;strong&gt;J&lt;/strong&gt;) you press &lt;strong&gt;Y&lt;/strong&gt; to copy them. Now you can move to some other place and press &lt;strong&gt;P&lt;/strong&gt; to paste copied lines (use &lt;strong&gt;D&lt;/strong&gt; instead of &lt;strong&gt;Y&lt;/strong&gt; to delete them).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/selecting.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="saving-positions-and-jumping"&gt;Saving positions and jumping&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/selecting.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Saving positions and jumping&lt;/h2&gt;
 &lt;p&gt;Wherever your cursor is located you can press &lt;strong&gt;M&lt;/strong&gt; followed by any character an the position will be saved. After that you can press &lt;strong&gt;'&lt;/strong&gt; followed by the character you used previously and your cursor will jump to saved position. Very useful!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/save.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="searching"&gt;Searching&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/save.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Searching&lt;/h2&gt;
 &lt;p&gt;Searching is done by simply pressing &lt;strong&gt;/&lt;/strong&gt;, typing the word to search for and pressing &lt;strong&gt;ENTER&lt;/strong&gt;. The cursor is moved to the first found word. After that, pressing &lt;strong&gt;N&lt;/strong&gt; will move the cursor to the next found word (and &lt;strong&gt;SHIFT + N&lt;/strong&gt; will move it to the previous found word).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/searching.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="replacing"&gt;Replacing&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/searching.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Replacing&lt;/h2&gt;
 &lt;p&gt;Often you need to replace all words with some other words in a given text. First, you select the text (by using &lt;strong&gt;SHIFT + V&lt;/strong&gt;, remember?) and then typing this (without the &amp;lt; and &amp;gt;): &lt;strong&gt;:s/&amp;lt;text to search&amp;gt;/&amp;lt;text to replace it with&amp;gt;/g&lt;/strong&gt;. It might sound complex but once you get used to it it's so much faster and easier than using the default Find &amp;amp; Replace functionality of whatever IDE you are using at this moment.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/replacing.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="other-small-things"&gt;Other small things&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/replacing.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Other small things&lt;/h2&gt;
 &lt;p&gt;Pressing &lt;strong&gt;SHIFT + I&lt;/strong&gt; will open &lt;em&gt;insert&lt;/em&gt; mode in the beginning of the row and &lt;strong&gt;SHIFT + A&lt;/strong&gt; will open &lt;em&gt;insert&lt;/em&gt; mode at the end of the row.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/other.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="repeating-commands-machine"&gt;Repeating commands machine&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/other.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;Repeating commands machine&lt;/h2&gt;
 &lt;p&gt;Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing &lt;strong&gt;Q&amp;lt;some key, say A&amp;gt;&lt;/strong&gt;, executing the commands, and then pressing &lt;strong&gt;Q&lt;/strong&gt; to end the execution and save it. Then you can replay it by pressing &lt;strong&gt;&amp;lt;number of times to repeat&amp;gt;@a&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Let's look at an example. Say I have these lines in my editor and I want to add parenthesis around them, with a comma on the right and a tab on the left.&lt;/p&gt;
 &lt;p&gt;Marlon Brando
@@ -333,33 +358,35 @@ Robert Duvall
 Sterling Hayden&lt;/p&gt;
 &lt;p&gt;I could do it by hand or I could utilize the great power of VIM and do it singlehandedly, wizard-style. I'll do it by first moving to the first line and pressing &lt;strong&gt;QA&lt;/strong&gt; - that will start recording my commands under the key A. Then I do &lt;strong&gt;SHIFT + I&lt;/strong&gt; to move to the beginning of the line and open &lt;em&gt;normal&lt;/em&gt; mode, followed by pressing TAB and ". Then I press &lt;strong&gt;ESC&lt;/strong&gt; to exit &lt;em&gt;insert&lt;/em&gt; mode and return to &lt;em&gt;normal&lt;/em&gt; mode and do &lt;strong&gt;SHIFT + A&lt;/strong&gt; to open &lt;em&gt;insert&lt;/em&gt; mode at the end of the line. Next, I press " and ,. I exit &lt;em&gt;insert&lt;/em&gt; mode again and press &lt;strong&gt;J&lt;/strong&gt; to move one line down. My execution sequence is finished so I complete it by pressing &lt;strong&gt;Q&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Now VIM has remember the whole execution and will execute it any number of times. I simply do &lt;strong&gt;5@A&lt;/strong&gt; and the execution will be repeated 5 times, fixing all my lines.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/repeating.gif" /&gt;&lt;/p&gt;
-&lt;h2 id="how-to-learn-all-this"&gt;How to learn all this?&lt;/h2&gt;
-&lt;p&gt;There's no need to learn everything to start using VIM. I think that VIM has major advantages even when you use only a small subset of the provided functionality. Simply start using it by installing a VIM plugin for your code editor and using mostly &lt;em&gt;insert&lt;/em&gt; mode and maybe &lt;strong&gt;H&lt;/strong&gt;, &lt;strong&gt;J&lt;/strong&gt;, &lt;strong&gt;K&lt;/strong&gt; and &lt;strong&gt;L&lt;/strong&gt; (the keys to move in different directions, remember?) in the &lt;em&gt;normal&lt;/em&gt; mode instead of the arrow keys. After you get a grasp of that, add some other thing that sounds interesting. It's like driving a car - at first it's hard and complex, after a few months it's completely automatic and you don't even think about it.&lt;/p&gt;</summary><category term="vim"></category></entry><entry><title>Keyboard tricks to write code faster</title><link href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html" rel="alternate"></link><updated>2016-10-31T10:44:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-31:keyboard-tricks-to-write-code-faster.html</id><summary type="html">&lt;p&gt;Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching to the English layout made a great difference for me. It's simply faster to reach commonly used characters such as []{};:,@""&amp;lt;&amp;gt;= compared some (maybe all) other layouts. I've trained myself to always use English keyboard when programming and when writing in English language in general (such as now).  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://rokpovsic.com/images/vim_short/repeating.gif"&gt;&lt;/p&gt;
+&lt;h2&gt;How to learn all this?&lt;/h2&gt;
+&lt;p&gt;There's no need to learn everything to start using VIM. I think that VIM has major advantages even when you use only a small subset of the provided functionality. Simply start using it by installing a VIM plugin for your code editor and using mostly &lt;em&gt;insert&lt;/em&gt; mode and maybe &lt;strong&gt;H&lt;/strong&gt;, &lt;strong&gt;J&lt;/strong&gt;, &lt;strong&gt;K&lt;/strong&gt; and &lt;strong&gt;L&lt;/strong&gt; (the keys to move in different directions, remember?) in the &lt;em&gt;normal&lt;/em&gt; mode instead of the arrow keys. After you get a grasp of that, add some other thing that sounds interesting. It's like driving a car - at first it's hard and complex, after a few months it's completely automatic and you don't even think about it.&lt;/p&gt;</content><category term="vim"></category><category term="vim"></category></entry><entry><title>Keyboard tricks to write code faster</title><link href="https://rokpovsic.com/keyboard-tricks-to-write-code-faster.html" rel="alternate"></link><published>2016-10-31T10:44:00+01:00</published><updated>2016-10-31T10:44:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-31:/keyboard-tricks-to-write-code-faster.html</id><summary type="html">&lt;p&gt;Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching to the English layout made a great difference for me. It's simply faster to reach commonly used characters such as []{};:,@""&amp;lt;&amp;gt;= compared some (maybe all) other layouts. I've trained myself to always use English keyboard when programming and when writing in English language in general (such as now).  &lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching to the English layout made a great difference for me. It's simply faster to reach commonly used characters such as []{};:,@""&amp;lt;&amp;gt;= compared some (maybe all) other layouts. I've trained myself to always use English keyboard when programming and when writing in English language in general (such as now).  &lt;/p&gt;
 
 
-&lt;h2 id="using-english-keyboard-layout"&gt;Using English keyboard layout&lt;/h2&gt;
+&lt;h2&gt;Using English keyboard layout&lt;/h2&gt;
 &lt;p&gt;When writing in Slovenian language I switch the keyboard layout to Slovenian and continue seamlessly as nothing changed. Then only keys that I sometimes use wrong on Slovenian layout are letters Y and Z which are for some reason switched in Slovenian keyboard layout.&lt;/p&gt;
-&lt;h2 id="try-using-vim"&gt;Try using VIM&lt;/h2&gt;
+&lt;h2&gt;Try using VIM&lt;/h2&gt;
 &lt;p&gt;The next level mastery is not only to stop reaching for a mouse but also stop reaching for the movement keys (UP, DOWN, LEFT and RIGHT). They are also quite far away from the keys you use to do the actual writing. When programming we use movement keys a lot and minimizing or entirely removing the need to access them saves time and thousands of unnecessary hand movements.&lt;/p&gt;
-&lt;h2 id="switch-caps-lock-and-esc-keys"&gt;Switch Caps Lock and Esc keys&lt;/h2&gt;
+&lt;h2&gt;Switch Caps Lock and Esc keys&lt;/h2&gt;
 &lt;p&gt;Since I press Esc much more than Caps Lock, I switched the two keys (functionally, not physically). I use software called &lt;a href="https://sharpkeys.codeplex.com/"&gt;SharpKeys&lt;/a&gt; to do that. It's much more enjoyable to use the keyboard like that.&lt;/p&gt;
 &lt;p&gt;I also considered switching Backspace with some other key but haven't so far found a good replacement. I thought about Right Shift, which I don't use a lot, but it's not that of a good improvement. &lt;/p&gt;
-&lt;h2 id="shorter-delay-when-holding-a-key"&gt;Shorter delay when holding a key&lt;/h2&gt;
+&lt;h2&gt;Shorter delay when holding a key&lt;/h2&gt;
 &lt;p&gt;When programming you often have to hold down a certain key - one of the arrow keys, backspace, or, if you use VIM, one of the keys h, j, k, l, w, b, etc. I've found out that, for me, the delay between the appearance of the first character and the following is too great. I've reduced the delay to 250ms and typing seems much more responsive and enjoyable. At this speed it's still quite rare for me to produce a duplicated key when I don't intend to do one.&lt;/p&gt;
-&lt;p&gt;In Linux, the delay is set by adding the following line to &lt;code&gt;.bashrc&lt;/code&gt;:
-&lt;code&gt;python
-xset r rate 250&lt;/code&gt;&lt;/p&gt;</summary><category term="typing"></category><category term="fast"></category></entry><entry><title>Using PyCharm without a mouse</title><link href="https://rokpovsic.com/using-pycharm-without-a-mouse.html" rel="alternate"></link><updated>2016-10-29T16:30:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-29:using-pycharm-without-a-mouse.html</id><summary type="html">&lt;p&gt;I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.&lt;/p&gt;
+&lt;p&gt;In Linux, the delay is set by adding the following line to &lt;code&gt;.bashrc&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;xset&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;rate&lt;/span&gt; &lt;span class="mi"&gt;250&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="typing"></category><category term="typing"></category><category term="fast"></category></entry><entry><title>Using PyCharm without a mouse</title><link href="https://rokpovsic.com/using-pycharm-without-a-mouse.html" rel="alternate"></link><published>2016-10-29T16:30:00+02:00</published><updated>2016-10-29T16:30:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-10-29:/using-pycharm-without-a-mouse.html</id><summary type="html">&lt;p&gt;I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.&lt;/p&gt;
 
 
-&lt;h2 id="run-the-program"&gt;Run the program&lt;/h2&gt;
+&lt;h2&gt;Run the program&lt;/h2&gt;
 &lt;p&gt;So how do you go about using keyboard more and using mouse less? Well, start off by learning how to run your program with only the keyboard.&lt;/p&gt;
 &lt;p&gt;How to do that? To run currently open file press &lt;strong&gt;CTRL + SHIFT + F10&lt;/strong&gt;. To run lastly open file, even if you are currently in another file, press &lt;strong&gt;SHIFT + F10&lt;/strong&gt;. To run an arbitrarily chosen file press &lt;strong&gt;SHIFT + ALT + F10&lt;/strong&gt; to open a dialog box where you select which file to run.&lt;/p&gt;
-&lt;h4 id="hide-output-window"&gt;Hide output window&lt;/h4&gt;
+&lt;h4&gt;Hide output window&lt;/h4&gt;
 &lt;p&gt;After you run the program output window will appear if it wasn't shown before. Unlike in Visual Studio, this output window will not hide automatically. This can be annoying if you want a large screen space for code. Well, there's a simple shortcut for hiding a window you are in (besides grabbing the mouse and clicking hide window button on top right) and it's &lt;strong&gt;SHIFT + ESC&lt;/strong&gt;. Press that after running the program and output window will close leaving your focus in the code and you can start typing again.&lt;/p&gt;
-&lt;h2 id="go-to-a-file"&gt;Go to a file&lt;/h2&gt;
+&lt;h2&gt;Go to a file&lt;/h2&gt;
 &lt;p&gt;Press &lt;strong&gt;CTRL + SHIFT + N&lt;/strong&gt; and start writing name of a file to jump to it. I've remapped the shortcut to  &lt;strong&gt;CTRL + T&lt;/strong&gt; to be equal to the same shortcut in ReSharper (Visual Studio).&lt;/p&gt;
-&lt;h2 id="refactoring"&gt;Refactoring&lt;/h2&gt;
+&lt;h2&gt;Refactoring&lt;/h2&gt;
 &lt;p&gt;The best advantage of PyCharm is its refactoring capability. Being positioned on a variable/function/class and doing &lt;strong&gt;CTRL + SHIFT + ALT + T&lt;/strong&gt;. It gives you lots of refactoring options such as:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;rename,&lt;/li&gt;
@@ -369,27 +396,30 @@ xset r rate 250&lt;/code&gt;&lt;/p&gt;</summary><category term="typing"></catego
 &lt;/ul&gt;
 &lt;p&gt;These PyCharm refactoring functionalities are not only huge time savers but also, unlike we humans, they don't make mistakes.&lt;/p&gt;
 &lt;p&gt;Since this shortcut involves four keys, I've remapped it to &lt;strong&gt;CTRL + SHIFT + R&lt;/strong&gt; (same as refactoring using ReSharper in Visual Studio).&lt;/p&gt;
-&lt;h4 id="confirm-refactoring"&gt;Confirm refactoring&lt;/h4&gt;
+&lt;h4&gt;Confirm refactoring&lt;/h4&gt;
 &lt;p&gt;When refactoring, PyCharm sometimes requires a confirmation of the refactoring (e.g. after renaming a function). The button you have to click says "Do Refactor" and it's located in another window. This used to annoy me a lot since I didn't know how to press this button via keyboard. But I found the solution. After doing the renaming, simply press &lt;strong&gt;ALT + D&lt;/strong&gt; and the "Do Refactor" button will be clicked. After that press &lt;strong&gt;SHIFT + ESC&lt;/strong&gt; to close the refactoring window.&lt;/p&gt;
-&lt;h2 id="toggle-full-screen"&gt;Toggle full screen&lt;/h2&gt;
+&lt;h2&gt;Toggle full screen&lt;/h2&gt;
 &lt;p&gt;You can add your own shortcut to toggle full screen if you go to Settings -&amp;gt; Keymap (shorcut to doing that is pressing &lt;strong&gt;CTRL + ALT + S&lt;/strong&gt; and typing &lt;strong&gt;Keymap&lt;/strong&gt;) since there is no default shortcut.&lt;/p&gt;
 &lt;p&gt;But you can still do it with your keyboard pretty fast by pressing &lt;strong&gt;ALT + V&lt;/strong&gt; to open the View menu and pressing &lt;strong&gt;up arrow&lt;/strong&gt; and &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;I got used to that even though it's not the completely fastest way although it's pretty fast.&lt;/p&gt;
-&lt;h2 id="you-cant-do-everything-with-a-keyboard"&gt;You can't do everything with a keyboard&lt;/h2&gt;
-&lt;p&gt;I don't use solely keyboard for every single thing in PyCharm. I still use the mouse to scroll up and down in the output window. I use the mouse to open a file for which I am not exactly sure what its name is but I know where it's located in the folder hierarchy. My goal is not to never use the mouse but to not use it when there's a fast and comfortable alternative. There is a lot of these kinds of shortcuts and they keep surprising you if you look for them.&lt;/p&gt;</summary><category term="pycharm"></category><category term="shortcuts"></category></entry><entry><title>How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</title><link href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html" rel="alternate"></link><updated>2016-02-12T18:44:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-02-12:how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html</id><summary type="html">&lt;p&gt;There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. &lt;/p&gt;
+&lt;h2&gt;You can't do everything with a keyboard&lt;/h2&gt;
+&lt;p&gt;I don't use solely keyboard for every single thing in PyCharm. I still use the mouse to scroll up and down in the output window. I use the mouse to open a file for which I am not exactly sure what its name is but I know where it's located in the folder hierarchy. My goal is not to never use the mouse but to not use it when there's a fast and comfortable alternative. There is a lot of these kinds of shortcuts and they keep surprising you if you look for them.&lt;/p&gt;</content><category term="pycharm"></category><category term="pycharm"></category><category term="shortcuts"></category></entry><entry><title>How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</title><link href="https://rokpovsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html" rel="alternate"></link><published>2016-02-12T18:44:00+01:00</published><updated>2016-02-12T18:44:00+01:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2016-02-12:/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-81-host.html</id><summary type="html">&lt;p&gt;There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. &lt;/p&gt;
+</summary><content type="html">&lt;p&gt;There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. &lt;/p&gt;
 
 
 &lt;p&gt;See the GIF below.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
-&lt;p&gt;&lt;img alt="VMWare bug" src="https://rokpovsic.com/images/vmware_bug.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="VMWare bug" src="https://rokpovsic.com/images/vmware_bug.gif"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;How to fix it?&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Locate VMWare Workstation, right click and open Properties.&lt;/li&gt;
 &lt;li&gt;Under Compatibility check Disable display scaling on high DPI settings.&lt;/li&gt;
 &lt;li&gt;Restart VMWare Workstation.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The mouse should now behave normally.&lt;/p&gt;</summary><category term="vmware"></category><category term="bug"></category></entry><entry><title>[C#] Why it’s better to have short-lived DataContext</title><link href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html" rel="alternate"></link><updated>2014-08-20T10:20:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2014-08-20:c-why-its-better-to-have-short-lived-datacontext.html</id><summary type="html">&lt;p&gt;When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
+&lt;p&gt;The mouse should now behave normally.&lt;/p&gt;</content><category term="vmware"></category><category term="vmware"></category><category term="bug"></category></entry><entry><title>[C#] Why it’s better to have short-lived DataContext</title><link href="https://rokpovsic.com/c-why-its-better-to-have-short-lived-datacontext.html" rel="alternate"></link><published>2014-08-20T10:20:00+02:00</published><updated>2014-08-20T10:20:00+02:00</updated><author><name>Rok Povšič</name></author><id>tag:rokpovsic.com,2014-08-20:/c-why-its-better-to-have-short-lived-datacontext.html</id><summary type="html">&lt;p&gt;When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
+The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
 The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.&lt;/p&gt;
 
 
@@ -399,63 +429,63 @@ easily mock this class (as opposed to mocking DataContext). Let’s call this Da
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;p&gt;When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.&lt;/p&gt;
-&lt;p&gt;```csharp
-public class DatabaseOperations : IDatabaseOperations
-{
-    private readonly MyDatabaseDataContext _context;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public DatabaseOperations(MyDatabaseDataContext context)
-{
-    _context = context;
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;DatabaseOperations&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IDatabaseOperations&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;readonly&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;_context&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-public List&amp;lt;User&amp;gt; GetUsers()
-{
-    // Retrieve users by using _context.
-}
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;DatabaseOperations&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;_context&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-public List&amp;lt;Role&amp;gt; GetRoles()
-{
-    // Retrieve roles by using _context.
-}
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GetUsers&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;// Retrieve users by using _context.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-public List&amp;lt;Group&amp;gt; GetGroups()
-{
-    // Retrieve groups by using _context.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}
-```&lt;/p&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Role&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GetRoles&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;// Retrieve roles by using _context.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Group&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GetGroups&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;// Retrieve groups by using _context.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Another way would be without the context instance as a field. Here each method creates and closes its own context. Sample code:&lt;/p&gt;
-&lt;p&gt;```csharp
-public class DatabaseOperations : IDatabaseOperations
-{
-    private readonly string _connectionString = "myConnStr";&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public List&amp;lt;User&amp;gt; GetUsers()
-{
-    using (var context = new MyDatabaseDataContext(_connectionString))
-    {
-        // Retrieve users by using context.
-    }
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;DatabaseOperations&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IDatabaseOperations&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;readonly&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;myConnStr&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-public List&amp;lt;Role&amp;gt; GetRoles()
-{
-    using (var context = new MyDatabaseDataContext(_connectionString))
-    {
-        // Retrieve roles by using context.
-    }
-}
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GetUsers&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="c1"&gt;// Retrieve users by using context.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-public List&amp;lt;Group&amp;gt; GetGroups()
-{
-    using (var context = new MyDatabaseDataContext(_connectionString))
-    {
-        // Retrieve groups by using context.
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}
-```&lt;/p&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Role&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GetRoles&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="c1"&gt;// Retrieve roles by using context.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Group&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GetGroups&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MyDatabaseDataContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_connectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="c1"&gt;// Retrieve groups by using context.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;At first, the second approach may seem to be more wasteful as each function has to create the context. That creates some amount of duplicated code. However, there are two reasons why this second approach is preferred.&lt;/p&gt;
 &lt;p&gt;The first reason is that in the first example the instance of a class DatabaseOperations can live a long time. You probably do not create new instance of the class each time you call function inside. Long lived DatabaseOperations instance means also that the injected DataContext lives long time. The DataContext, however, is supposed to be used on only small units of work. The reason is that in the first example, one instance of DataContext has to track the changes that happen in returned objects.&lt;/p&gt;
 &lt;p&gt;More info in the &lt;a href="http://msdn.microsoft.com/en-us/library/system.data.linq.datacontext(v=vs.110).aspx"&gt;official documentation&lt;/a&gt;:&lt;/p&gt;
@@ -466,4 +496,4 @@ public List&amp;lt;Group&amp;gt; GetGroups()
 &lt;p&gt;For more info see &lt;a href="http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/"&gt;this blog article&lt;/a&gt; by Miško Hevery (who is the author of JavaScript framework AngularJS).&lt;/p&gt;
 &lt;p&gt;You could, of course, also have DataContext as a parameter in every function. That would allow your class to be a Service Object which has no Value Objects in the constructor parameter list. However, the first reason would still be violated if that DataContext is long-lived or, as the documentation says, used for more than one “unit of work”.&lt;/p&gt;
 &lt;p&gt;In order to somehow mitigate the duplication of code by creating a new DataContext in every method, you might be able to use the trick from &lt;a href="http://stackoverflow.com/a/23367569/365837"&gt;this StackOverflow answer&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;That might or might not be useful for you, depending on where you store and how you obtain the connection string. For example, if you have it stored as a static class field, then it is appropriate. If you have to get the connection string from a file or another database, then it might get a bit complicated (in my last project, I decided against it and just used the simple approach shown in the second example).&lt;/p&gt;</summary><category term="c#"></category><category term="datacontext"></category></entry></feed>
+&lt;p&gt;That might or might not be useful for you, depending on where you store and how you obtain the connection string. For example, if you have it stored as a static class field, then it is appropriate. If you have to get the connection string from a file or another database, then it might get a bit complicated (in my last project, I decided against it and just used the simple approach shown in the second example).&lt;/p&gt;</content><category term="C#"></category><category term="c#"></category><category term="datacontext"></category></entry></feed>
